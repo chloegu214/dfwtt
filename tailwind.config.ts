@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-// all in fixtures is set to tailwind v3 as interims solutions
+// All fixtures are set to Tailwind v3 as an interim solution
 
 const config: Config = {
     darkMode: ["class"],
