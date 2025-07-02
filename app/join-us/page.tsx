@@ -15,7 +15,6 @@ const membershipOptions = [
       "Equipment available",
     ],
     buttonText: "Join Now",
-    buttonAction: () => console.log("Join Cimarron/Marcus/Timberglen"),
   },
   {
     name: "Heights Recreation",
@@ -30,7 +29,6 @@ const membershipOptions = [
     ],
     popular: true,
     buttonText: "Join Now",
-    buttonAction: () => console.log("Join Heights"),
   },
   {
     name: "Day Pass Option",
@@ -44,7 +42,6 @@ const membershipOptions = [
       "Same great facilities",
     ],
     buttonText: "Get Day Pass",
-    buttonAction: () => console.log("Get Day Pass"),
   },
 ]
 
