@@ -51,7 +51,7 @@ const coaches = [
     image: "/placeholder.svg?height=120&width=120",
     specialties: ["Competition Coaching", "Advanced Techniques", "Tournament Preparation", "International Experience"],
     experience: "15+ years coaching and competing",
-    rating: "2361",
+    rating: "2275",
     certifications: ["ITTF Level 2 Certified Coach", "USATT Certified Regional Coach", "USATT Certified Umpire"],
     description:
       "Experienced coach and competitor with international experience in the United States, Latin America, and France.",
