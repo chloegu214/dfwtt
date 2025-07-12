@@ -62,6 +62,23 @@ const coaches = [
       { year: "2010-2014", title: "US Open Participant", event: "Multiple Years" },
     ],
   },
+  {
+  name: "Seth Pech",
+  title: "USATT Regional Coach",
+  image: "/placeholder.svg?height=120&width=120",
+  specialties: ["Youth Development", "Technical Fundamentals", "Motivational Coaching", "Tournament Strategy"],
+  experience: "10+ years coaching and competing",
+  rating: "2300",
+  certifications: ["USATT Certified Regional Coach", "SafeSport Trained"],
+  description:
+    "Dedicated coach focused on building strong fundamentals and confidence in players of all levels, with a passion for developing junior talent.",
+  achievements: [
+    { year: "2019", title: "US National Championships - U21 Quarterfinalist", event: "USA" },
+    { year: "2018", title: "US Open U2300 Finalist", event: "Las Vegas, NV" },
+    { year: "2016-2020", title: "Multiple-time Texas State Championships Medalist", event: "Texas" },
+    { year: "2015", title: "Junior Olympics Participant", event: "USA" },
+  ],
+}
 ]
 
 export default function CoachingPage() {
