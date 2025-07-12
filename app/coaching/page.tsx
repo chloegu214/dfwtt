@@ -73,7 +73,7 @@ const coaches = [
     "Junior Development and Competitive Training"
   ],
   experience: "10+ years playing and coaching internationally",
-  rating: "USATT Highest Rating: 2477",
+  rating: "USATT Highest Rating: 2525",
   certifications: [
     "USATT Level 1 Certified Coach",
     "USATT Certified Umpire",
