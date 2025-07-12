@@ -2,7 +2,7 @@ import { Users, User, Clock, DollarSign, AlertCircle } from "lucide-react"
 
 const programs = [
   {
-    title: "Junior (U-9) One-on-One",
+    title: "Junior Beginner (U-9) One-on-One",
     price: "$120",
     duration: "4 lessons",
     sessionLength: "1 hour per lesson",
