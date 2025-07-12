@@ -101,8 +101,7 @@ export default function CoachingPage() {
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
               Learn from USATT Certified Coaches with international experience and proven track records. Whether you're
               a beginner or advanced player, our coaching programs will help you reach your potential.
-            </p>
-        
+            </p>      
           </div>
         </div>
       </section>
