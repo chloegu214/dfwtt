@@ -15,7 +15,7 @@ const programs = [
       "Flexible scheduling",
       "Parent progress updates",
     ],
-    popular: true,
+    popular: false,
   },
   {
     title: "Adult Beginner Lessons",
