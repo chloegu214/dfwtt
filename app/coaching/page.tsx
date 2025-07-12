@@ -102,14 +102,7 @@ export default function CoachingPage() {
               Learn from USATT Certified Coaches with international experience and proven track records. Whether you're
               a beginner or advanced player, our coaching programs will help you reach your potential.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors">
-                Book a Session
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-medium transition-colors">
-                Meet Our Coaches
-              </button>
-            </div>
+        
           </div>
         </div>
       </section>
