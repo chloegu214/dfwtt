@@ -5,7 +5,7 @@ const programs = [
     title: "Junior Beginner (U-9) One-on-One",
     price: "$120",
     duration: "4 lessons",
-    sessionLength: "1 hour per lesson",
+    sessionLength: "55 minutes per lesson",
     description: "Personalized training for young players",
     icon: <User className="h-8 w-8 text-blue-600" />,
     features: [
@@ -21,7 +21,7 @@ const programs = [
     title: "Adult Beginner Lessons",
     price: "$40",
     duration: "per lesson",
-    sessionLength: "1 hour per lesson",
+    sessionLength: "55 minutes per lesson",
     description: "Start your table tennis journey",
     icon: <Clock className="h-8 w-8 text-blue-600" />,
     features: [
@@ -37,7 +37,7 @@ const programs = [
     title: "Advanced One-on-One",
     price: "$45 - $60",
     duration: "per lesson",
-    sessionLength: "1 hour per lesson",
+    sessionLength: "55 minutes per lesson",
     description: "Take your game to the next level",
     icon: <DollarSign className="h-8 w-8 text-blue-600" />,
     features: [
