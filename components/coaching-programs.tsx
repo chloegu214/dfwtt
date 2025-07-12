@@ -2,22 +2,6 @@ import { Users, User, Clock, DollarSign, AlertCircle } from "lucide-react"
 
 const programs = [
   {
-    title: "Junior (U-9) Group Lessons",
-    price: "$80",
-    duration: "4 lessons",
-    sessionLength: "1 hour per lesson",
-    description: "Perfect for young players under 9 years old",
-    icon: <Users className="h-8 w-8 text-blue-600" />,
-    features: [
-      "Minimum two players required",
-      "Age-appropriate training methods",
-      "Fun and engaging activities",
-      "USATT Certified Coaches",
-      "Focus on fundamentals",
-    ],
-    popular: false,
-  },
-  {
     title: "Junior (U-9) One-on-One",
     price: "$120",
     duration: "4 lessons",

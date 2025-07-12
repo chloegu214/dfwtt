@@ -133,7 +133,7 @@ export default function CoachingPage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Certified Coaches</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Certified Coaches</h3> 
               <p className="text-gray-600">
                 All our coaches are USATT and ITTF certified with extensive competitive and coaching experience.
               </p>
