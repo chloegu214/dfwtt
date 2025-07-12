@@ -46,27 +46,6 @@ const coaches = [
     ],
   },
   {
-    name: "Bruno Ventura Dos Anjos",
-    title: "International Coach & Former Pro Player",
-    image: "/placeholder.svg?height=120&width=120",
-    specialties: [
-      "Elite Player Development",
-      "National Team Training",
-      "Junior Champions",
-      "International Competition",
-    ],
-    experience: "15+ years coaching elite players",
-    certifications: ["Professional Coach Certification", "National Team Coach Experience"],
-    description:
-      "Former professional player and coach of Santa Cecilia/Saldanha team, one of Brazil's best teams, with multiple national champions.",
-    achievements: [
-      { year: "2015", title: "Silver Medal NCTTA National Championship", event: "Singles, Doubles, Teams" },
-      { year: "2015", title: "Bronze Medal Texas State Championship", event: "State Championship" },
-      { year: "2007", title: "Brazilian National Champion", event: "Singles" },
-      { year: "2003", title: "Silver Medal Pan American Games", event: "Doubles" },
-    ],
-  },
-  {
     name: "Keith Pech",
     title: "USATT Regional Coach",
     image: "/placeholder.svg?height=120&width=120",
