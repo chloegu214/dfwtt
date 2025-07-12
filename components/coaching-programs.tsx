@@ -35,7 +35,7 @@ const programs = [
   },
   {
     title: "Advanced One-on-One",
-    price: "$45",
+    price: "$45 - $60",
     duration: "per lesson",
     sessionLength: "1 hour per lesson",
     description: "Take your game to the next level",
