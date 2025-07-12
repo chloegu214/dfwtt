@@ -64,19 +64,28 @@ const coaches = [
   },
   {
   name: "Seth Pech",
-  title: "USATT Regional Coach",
+  title: "Professional Table Tennis Player & Coach",
   image: "/placeholder.svg?height=120&width=120",
-  specialties: ["Youth Development", "Technical Fundamentals", "Motivational Coaching", "Tournament Strategy"],
-  experience: "10+ years coaching and competing",
-  rating: "2300",
-  certifications: ["USATT Certified Regional Coach", "SafeSport Trained"],
+  specialties: [
+    "Technical & Tactical Coaching",
+    "Serve and Short Game Strategy",
+    "Match Analysis and Mental Preparation",
+    "Junior Development and Competitive Training"
+  ],
+  experience: "10+ years playing and coaching internationally",
+  rating: "USATT Highest Rating: 2477",
+  certifications: [
+    "USATT Level 1 Certified Coach",
+    "USATT Certified Umpire",
+    "SafeSport Trained"
+  ],
   description:
-    "Dedicated coach focused on building strong fundamentals and confidence in players of all levels, with a passion for developing junior talent.",
+    "A professional table tennis player and coach with experience competing in Sweden and the United States. Known for his deep understanding of technical play, strong focus on player development, and dedication to the sport.",
   achievements: [
-    { year: "2019", title: "US National Championships - U21 Quarterfinalist", event: "USA" },
-    { year: "2018", title: "US Open U2300 Finalist", event: "Las Vegas, NV" },
-    { year: "2016-2020", title: "Multiple-time Texas State Championships Medalist", event: "Texas" },
-    { year: "2015", title: "Junior Olympics Participant", event: "USA" },
+    { year: "2016", title: "Aurora Cup U2400 Champion", event: "USA" },
+    { year: "2017", title: "Aurora Cup U2600 3rd Place", event: "USA" },
+    { year: "2017", title: "Erie PA Open Champion", event: "USA" },
+    { year: "2018", title: "Swedish Division 1 League Player (Lyckeby BTK)", event: "Sweden" },
   ],
 }
 ]
