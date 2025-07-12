@@ -102,15 +102,7 @@ export default function CoachingPrograms() {
                 ))}
               </ul>
 
-              <button
-                className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
-                  program.popular
-                    ? "bg-blue-600 hover:bg-blue-700 text-white"
-                    : "bg-gray-100 hover:bg-gray-200 text-gray-900"
-                }`}
-              >
-                Book Now
-              </button>
+              
             </div>
           ))}
         </div>
