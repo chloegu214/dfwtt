@@ -1,5 +1,5 @@
-import LocationCard from "@/components/location-card"
-import { MapPin, Clock, Info, Phone, Mail } from "lucide-react"
+import LocationCard from "@/components/location-card";
+import { MapPin, Clock, Info, Phone, Mail } from "lucide-react";
 
 const locations = [
   {
@@ -63,7 +63,7 @@ const locations = [
       image: "/placeholder.svg?height=40&width=40",
     },
   },
-]
+];
 
 export default function PlacesToPlayPage() {
   return (
@@ -72,19 +72,14 @@ export default function PlacesToPlayPage() {
       <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Places to Play</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Places to Play
+            </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-              Find the perfect location to play table tennis in the Dallas-Fort Worth area. All our locations feature
-              excellent playing conditions with great lighting, flooring, and tournament-quality tables.
+              Find the perfect location to play table tennis in the Dallas-Fort
+              Worth area. All our locations feature excellent playing conditions
+              with great lighting, flooring, and tournament-quality tables.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors">
-                View All Locations
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-medium transition-colors">
-                Contact Us
-              </button>
-            </div>
           </div>
         </div>
       </section>
@@ -95,7 +90,8 @@ export default function PlacesToPlayPage() {
           <div className="flex items-center justify-center gap-3 text-yellow-800">
             <Info className="h-5 w-5" />
             <p className="text-sm font-medium">
-              All locations are subject to recreation center availability. Please call ahead to confirm playing times.
+              All locations are subject to recreation center availability.
+              Please call ahead to confirm playing times.
             </p>
           </div>
         </div>
@@ -105,10 +101,13 @@ export default function PlacesToPlayPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Playing Locations</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Playing Locations
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              DFWTT operates at multiple recreation centers throughout the Dallas-Fort Worth metroplex. Each location
-              offers quality facilities and welcoming communities for players of all levels.
+              DFWTT operates at multiple recreation centers throughout the
+              Dallas-Fort Worth metroplex. Each location offers quality
+              facilities and welcoming communities for players of all levels.
             </p>
           </div>
 
@@ -128,9 +127,12 @@ export default function PlacesToPlayPage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Multiple Locations</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Multiple Locations
+              </h3>
               <p className="text-gray-600">
-                Convenient locations throughout the DFW area, making it easy to find a place to play near you.
+                Convenient locations throughout the DFW area, making it easy to
+                find a place to play near you.
               </p>
             </div>
 
@@ -138,9 +140,12 @@ export default function PlacesToPlayPage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Flexible Schedule</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Flexible Schedule
+              </h3>
               <p className="text-gray-600">
-                Various playing times throughout the week to accommodate different schedules and preferences.
+                Various playing times throughout the week to accommodate
+                different schedules and preferences.
               </p>
             </div>
 
@@ -148,10 +153,12 @@ export default function PlacesToPlayPage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Info className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Quality Facilities</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Quality Facilities
+              </h3>
               <p className="text-gray-600">
-                All locations feature excellent lighting, proper flooring, and tournament-quality tables for the best
-                playing experience.
+                All locations feature excellent lighting, proper flooring, and
+                tournament-quality tables for the best playing experience.
               </p>
             </div>
           </div>
@@ -163,7 +170,8 @@ export default function PlacesToPlayPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Playing?</h2>
           <p className="text-gray-300 mb-8 text-lg">
-            Visit any of our locations during playing hours, or contact us for more information about joining DFWTT.
+            Visit any of our locations during playing hours, or contact us for
+            more information about joining DFWTT.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="flex items-center gap-2 text-gray-300">
@@ -178,5 +186,5 @@ export default function PlacesToPlayPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
