@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <main>
       <AboutHero />
-      <AboutPartners />
+      {/* <AboutPartners /> */}
       <AboutStats />
     </main>
   )
