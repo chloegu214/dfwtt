@@ -5,9 +5,7 @@ import AboutPartners from "@/components/about-partners"
 export default function AboutPage() {
   return (
     <main>
-      <AboutHero />
-      {/* <AboutPartners /> */}
-      <AboutStats />
+      {/* <AboutHero /> */}
     </main>
   )
 }
