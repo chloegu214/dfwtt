@@ -21,7 +21,7 @@ const navigationItems: NavItem[] = [
     label: "News & Info",
     children: [
       { label: "2025 News", href: "/news/" },
-      { label: "Archive", href: "/news/archive" },
+      { label: "Archive", href: "/news/archive/2024" },
       { label: "Memories", href: "/news/memories" }
     ],
   },
