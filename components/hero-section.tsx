@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import { Clock, ChevronLeft, ChevronRight } from "lucide-react"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { Clock, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface NewsItem {
-  id: number
-  category: string
-  title: string
-  image: string
-  timestamp: string
-  featured?: boolean
+  id: number;
+  category: string;
+  title: string;
+  image: string;
+  timestamp: string;
+  featured?: boolean;
 }
 
 interface CarouselSlide {
-  id: number
-  category: string
-  title: string
-  image: string
-  timestamp: string
+  id: number;
+  category: string;
+  title: string;
+  image: string;
+  timestamp: string;
 }
 
 const carouselSlides: CarouselSlide[] = [
@@ -43,7 +43,7 @@ const carouselSlides: CarouselSlide[] = [
     image: "/placeholder.svg?height=400&width=600",
     timestamp: "1 day ago",
   },
-]
+];
 
 const newsItems: NewsItem[] = [
   {
@@ -75,27 +75,29 @@ const newsItems: NewsItem[] = [
     image: "/placeholder.svg?height=80&width=80",
     timestamp: "2 hr",
   },
-]
+];
 
 export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [activeTab, setActiveTab] = useState<"recent" | "top">("recent")
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeTab, setActiveTab] = useState<"recent" | "top">("recent");
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselSlides.length)
-    }, 5000)
+      setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
+    }, 5000);
 
-    return () => clearInterval(timer)
-  }, [])
+    return () => clearInterval(timer);
+  }, []);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselSlides.length)
-  }
+    setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
+  };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)
-  }
+    setCurrentSlide(
+      (prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length
+    );
+  };
 
   return (
     <section className="pt-16 bg-gray-50">
@@ -111,7 +113,12 @@ export default function HeroSection() {
                     index === currentSlide ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <Image src={slide.image || "/placeholder.svg"} alt={slide.title} fill className="object-cover" />
+                  <Image
+                    src={slide.image || "/placeholder.svg"}
+                    alt={slide.title}
+                    fill
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <div className="flex items-center gap-4 mb-3">
@@ -123,7 +130,9 @@ export default function HeroSection() {
                         <span>{slide.timestamp}</span>
                       </div>
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-bold leading-tight">{slide.title}</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold leading-tight">
+                      {slide.title}
+                    </h2>
                   </div>
                 </div>
               ))}
@@ -165,20 +174,15 @@ export default function HeroSection() {
                 <button
                   onClick={() => setActiveTab("recent")}
                   className={`flex-1 px-4 py-3 text-sm font-medium transition-colors relative ${
-                    activeTab === "recent" ? "text-blue-600 bg-blue-50" : "text-gray-600 hover:text-gray-900"
+                    activeTab === "recent"
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-600 hover:text-gray-900"
                   }`}
                 >
                   Recent News
-                  {activeTab === "recent" && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600" />}
-                </button>
-                <button
-                  onClick={() => setActiveTab("top")}
-                  className={`flex-1 px-4 py-3 text-sm font-medium transition-colors relative ${
-                    activeTab === "top" ? "text-blue-600 bg-blue-50" : "text-gray-600 hover:text-gray-900"
-                  }`}
-                >
-                  Top Story
-                  {activeTab === "top" && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600" />}
+                  {activeTab === "recent" && (
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600" />
+                  )}
                 </button>
               </div>
             </div>
@@ -204,11 +208,17 @@ export default function HeroSection() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-medium text-blue-600">{item.category}</span>
+                        <span className="text-xs font-medium text-blue-600">
+                          {item.category}
+                        </span>
                         <span className="text-xs text-gray-500">•</span>
-                        <span className="text-xs text-gray-500">{item.timestamp}</span>
+                        <span className="text-xs text-gray-500">
+                          {item.timestamp}
+                        </span>
                       </div>
-                      <h3 className="text-sm font-medium text-gray-900 line-clamp-2 leading-tight">{item.title}</h3>
+                      <h3 className="text-sm font-medium text-gray-900 line-clamp-2 leading-tight">
+                        {item.title}
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -218,5 +228,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

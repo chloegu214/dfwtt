@@ -15,7 +15,6 @@ const navigationItems: NavItem[] = [
   {
     label: "About DFWTT",href: "/about"
   },
-     { label: "Join Us", href: "/join-us" },
   { label: "Places to Play", href: "/places-to-play" },
   { label: "Coaching", href: "/coaching" },
   {

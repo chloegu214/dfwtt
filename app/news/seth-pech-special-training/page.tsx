@@ -26,7 +26,7 @@ export default function SethPechArticlePage() {
             </div>
             <div className="flex items-center gap-2">
               <User className="h-4 w-4" />
-              <span>DFWTT Staff</span>
+              <span>Donna Chen</span>
             </div>
             <span>4 min read</span>
           </div>
