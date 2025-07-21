@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Star, Phone, Mail } from "lucide-react"
+import openPlay2025 from "./../public/2025 DFWTT Summer Open.jpg";
 
 export default function AboutHero() {
   return (
@@ -50,7 +51,7 @@ export default function AboutHero() {
           <div className="relative">
             <div className="bg-gray-100 rounded-2xl p-8 shadow-xl">
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src={openPlay2025}
                 alt="Table tennis players in action"
                 width={500}
                 height={400}

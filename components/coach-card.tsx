@@ -1,27 +1,26 @@
-import { Award, Calendar, Trophy, Users } from "lucide-react"
+import { Award, Calendar, Trophy, Users } from "lucide-react";
 
 interface Achievement {
-  year: string
-  title: string
-  event: string
+  year: string;
+  title: string;
+  event: string;
 }
 
 interface CoachCardProps {
-  name: string
-  title: string
-  image: string
-  specialties: string[]
-  experience: string
-  certifications: string[]
-  achievements: Achievement[]
-  rating?: string
-  description: string
+  name: string;
+  title: string;
+  image: string;
+  specialties: string[];
+  experience: string;
+  certifications: string[];
+  achievements: Achievement[];
+  rating?: string;
+  description: string;
 }
 
 export default function CoachCard({
   name,
   title,
-  image,
   specialties,
   experience,
   certifications,
@@ -70,7 +69,10 @@ export default function CoachCard({
           </h4>
           <div className="flex flex-wrap gap-2">
             {specialties.map((specialty, index) => (
-              <span key={index} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-medium">
+              <span
+                key={index}
+                className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-medium"
+              >
                 {specialty}
               </span>
             ))}
@@ -85,7 +87,10 @@ export default function CoachCard({
           </h4>
           <ul className="space-y-1">
             {certifications.map((cert, index) => (
-              <li key={index} className="text-sm text-gray-600 flex items-start gap-2">
+              <li
+                key={index}
+                className="text-sm text-gray-600 flex items-start gap-2"
+              >
                 <span className="text-blue-600 mt-1">•</span>
                 {cert}
               </li>
@@ -103,23 +108,26 @@ export default function CoachCard({
             <div className="space-y-2 max-h-32 overflow-y-auto">
               {achievements.slice(0, 3).map((achievement, index) => (
                 <div key={index} className="text-sm">
-                  <span className="font-medium text-gray-900">{achievement.year}</span>
+                  <span className="font-medium text-gray-900">
+                    {achievement.year}
+                  </span>
                   <span className="text-gray-600"> - {achievement.title}</span>
-                  {achievement.event && <div className="text-xs text-gray-500 ml-4">{achievement.event}</div>}
+                  {achievement.event && (
+                    <div className="text-xs text-gray-500 ml-4">
+                      {achievement.event}
+                    </div>
+                  )}
                 </div>
               ))}
               {achievements.length > 3 && (
-                <p className="text-xs text-blue-600 font-medium">+{achievements.length - 3} more achievements</p>
+                <p className="text-xs text-blue-600 font-medium">
+                  +{achievements.length - 3} more achievements
+                </p>
               )}
             </div>
           </div>
         )}
-
-        {/* Contact Button */}
-        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors">
-          Book Session with {name.split(" ")[0]}
-        </button>
       </div>
     </div>
-  )
+  );
 }

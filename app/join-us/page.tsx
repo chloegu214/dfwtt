@@ -1,4 +1,3 @@
-import PricingCard from "@/components/pricing-card";
 import TrainingPrograms from "@/components/training-programs";
 import {
   Trophy,
@@ -8,49 +7,6 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
-
-const membershipOptions = [
-  {
-    name: "Cimarron, Marcus & Timberglen",
-    price: "$5",
-    description: "With City ID Card",
-    features: [
-      "Access to 3 locations",
-      "All regular playing sessions",
-      "Community tournaments",
-      "League participation",
-      "Equipment available",
-    ],
-    buttonText: "Join Now",
-  },
-  {
-    name: "Heights Recreation",
-    price: "$5",
-    description: "With City ID Card",
-    features: [
-      "Premium location access",
-      "Extended playing hours",
-      "Tournament hosting",
-      "Advanced player community",
-      "Professional coaching available",
-    ],
-    popular: true,
-    buttonText: "Join Now",
-  },
-  {
-    name: "Day Pass Option",
-    price: "$8-$10",
-    description: "Without City ID Card",
-    features: [
-      "No membership required",
-      "Try before you commit",
-      "Access to all locations",
-      "Perfect for visitors",
-      "Same great facilities",
-    ],
-    buttonText: "Get Day Pass",
-  },
-];
 
 const offerings = [
   {
@@ -123,36 +79,6 @@ export default function JoinUsPage() {
               Become part of the premier table tennis community in Dallas-Fort
               Worth. Whether you're a beginner or advanced player, we have
               programs designed for your success.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Membership Pricing */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Membership Options
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the membership option that works best for you. All
-              memberships include access to our quality facilities and welcoming
-              community.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {membershipOptions.map((option, index) => (
-              <PricingCard key={index} {...option} />
-            ))}
-          </div>
-
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
-            <p className="text-blue-800">
-              <strong>Note:</strong> Heights location is $8 without City ID
-              Card. Day passes add $5 to the base price for locations without
-              City ID Card.
             </p>
           </div>
         </div>

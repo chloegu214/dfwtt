@@ -43,11 +43,11 @@ export default function PricingCard({
           ))}
         </ul>
       </CardContent>
-      <CardFooter>
+      {/* <CardFooter>
         <Button className="w-full" variant={popular ? "default" : "outline"}>
           {buttonText}
         </Button>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   )
 }
