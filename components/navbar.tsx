@@ -44,7 +44,6 @@ const navigationItems: NavItem[] = [
     label: "Gallery",
     children: [
       { label: "2025", href: "/gallery" },
-      { label: "Archive", href: "/gallery/archive" },
     ],
   },
   {
