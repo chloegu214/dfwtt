@@ -38,8 +38,6 @@ const navigationItems: NavItem[] = [
       { label: "Spectator's Guide", href: "/spectators-guide" },
       { label: "Rules", href: "/rules" },
       { label: "TT Equipment", href: "/equipment" }
-      //{ label: "Archive", href: "/competitions/archive" },
-      //{ label: "Memories", href: "/competitions/memories" },
     ],
   },
   {
