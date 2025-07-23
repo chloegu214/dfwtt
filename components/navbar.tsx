@@ -1,88 +1,190 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Disclosure } from "@headlessui/react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
+import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import { ChevronDown, Menu, X } from "lucide-react";
 
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-
-  return (
-    <Disclosure as="nav" className="bg-blue-900">
-      {({ open }) => (
-        <>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <span className="font-bold text-xl text-yellow-400">My App</span>
-                </div>
-                <div className="hidden md:block">
-                  <div className="ml-10 flex items-baseline space-x-4">
-                    <a href="#" className="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium">
-                      Home
-                    </a>
-                    <a href="#" className="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium">
-                      About
-                    </a>
-                    <a href="#" className="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium">
-                      Services
-                    </a>
-                    <a href="#" className="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium">
-                      Contact
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="-mr-2 flex md:hidden">
-                {/* Mobile menu button */}
-                <Disclosure.Button className="bg-blue-900 inline-flex items-center justify-center p-2 rounded-md text-white hover:text-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white">
-                  {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-            </div>
-          </div>
-
-          <Disclosure.Panel className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Home
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
-              >
-                About
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Services
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Contact
-              </Disclosure.Button>
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
-  )
+interface NavItem {
+  label: string;
+  href?: string;
+  children?: NavItem[];
 }
 
-export default Navbar
+const navigationItems: NavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "Places to Play", href: "/places-to-play" },
+  { label: "Coaching", href: "/coaching" },
+  {
+    label: "News & Info",
+    children: [
+      { label: "2025 News", href: "/news/" },
+      { label: "Archive", href: "/news/archive/2024" },
+      { label: "Memories", href: "/news/memories" },
+    ],
+  },
+  {
+    label: "Competitions",
+    children: [
+      { label: "Sunday Singles RR", href: "/sunday-rr" },
+      { label: "Monthly Doubles", href: "/monthly-doubles" },
+      { label: "Scoreboard", href: "/scoreboard" },
+      { label: "Spectator's Guide", href: "/spectators-guide" },
+      { label: "Rules", href: "/rules" },
+      { label: "TT Equipment", href: "/equipment" },
+    ],
+  },
+  {
+    label: "Gallery",
+    children: [{ label: "2025", href: "/gallery" }],
+  },
+  {
+    label: "Support Us",
+    children: [
+      { label: "Sponsors", href: "/support-us/sponsors" },
+      { label: "Patrons", href: "/support-us/patrons" },
+      { label: "Community", href: "/support-us/community" },
+    ],
+  },
+];
+
+export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout>();
+
+  const handleMouseEnter = (label: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setActiveDropdown(label);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 150);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
+  const renderNavItem = (item: NavItem, isMobile = false) => {
+    const hasChildren = item.children && item.children.length > 0;
+
+    if (isMobile) {
+      return (
+        <div key={item.label} className="border-b border-gray-200">
+          {hasChildren ? (
+            <details className="group">
+              <summary className="flex items-center justify-between px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 cursor-pointer list-none">
+                <span className="font-medium">{item.label}</span>
+                <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
+              </summary>
+              <div className="bg-gray-50">
+                {item.children.map((child) => (
+                  <Link
+                    key={child.label}
+                    href={child.href || "#"}
+                    className="block px-8 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-white transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {child.label}
+                  </Link>
+                ))}
+              </div>
+            </details>
+          ) : (
+            <Link
+              href={item.href || "#"}
+              className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 font-medium transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          )}
+        </div>
+      );
+    }
+
+    return (
+      <div
+        key={item.label}
+        className="relative group"
+        onMouseEnter={() => hasChildren && handleMouseEnter(item.label)}
+        onMouseLeave={handleMouseLeave}
+      >
+        <Link
+          href={item.href || "#"}
+          className="flex items-center px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+        >
+          {item.label}
+          {hasChildren && (
+            <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+          )}
+        </Link>
+
+        {hasChildren && activeDropdown === item.label && (
+          <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+            {item.children.map((child) => (
+              <Link
+                key={child.label}
+                href={child.href || "#"}
+                className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-150"
+              >
+                {child.label}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              DFWTT
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1">
+            {navigationItems.map((item) => renderNavItem(item))}
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="max-h-96 overflow-y-auto">
+            {navigationItems.map((item) => renderNavItem(item, true))}
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}
