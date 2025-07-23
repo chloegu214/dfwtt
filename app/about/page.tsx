@@ -1,12 +1,20 @@
-import AboutHero from "@/components/about-hero"
-import AboutStats from "@/components/about-stats"
-import AboutPartners from "@/components/about-partners"
-import LocationCard from "@/components/location-card"
-import Footer from "@/components/footer"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { Users, Trophy, MapPin, Calendar, Globe, Heart, GraduationCap } from "lucide-react"
+import AboutHero from "@/components/about-hero";
+import AboutStats from "@/components/about-stats";
+import AboutPartners from "@/components/about-partners";
+import LocationCard from "@/components/location-card";
+import Footer from "@/components/footer";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import {
+  Users,
+  Trophy,
+  MapPin,
+  Calendar,
+  Globe,
+  Heart,
+  GraduationCap,
+} from "lucide-react";
 
 const locations = [
   {
@@ -66,29 +74,7 @@ const locations = [
       image: "/placeholder.svg?height=40&width=40",
     },
   },
-]
-
-const countries = [
-  "Taiwan",
-  "China",
-  "India",
-  "Malaysia",
-  "Venezuela",
-  "Honduras",
-  "Korea",
-  "Hungary",
-  "Russia",
-  "Thailand",
-  "Vietnam",
-  "Indonesia",
-  "England",
-  "Philippines",
-  "Mexico",
-  "Japan",
-  "Sweden",
-  "Jamaica",
-  "United States",
-]
+];
 
 export default function AboutPage() {
   return (
@@ -103,15 +89,20 @@ export default function AboutPage() {
             <AlertDescription className="text-yellow-800">
               <div className="space-y-2">
                 <p className="font-semibold text-lg">
-                  Attention Elementary, Middle, and High School Table Tennis Players!
+                  Attention Elementary, Middle, and High School Table Tennis
+                  Players!
                 </p>
                 <p>
                   Please email us at{" "}
-                  <a href="mailto:dfwtt1@gmail.com" className="font-medium text-blue-600 hover:text-blue-800 underline">
+                  <a
+                    href="mailto:dfwtt1@gmail.com"
+                    className="font-medium text-blue-600 hover:text-blue-800 underline"
+                  >
                     dfwtt1@gmail.com
                   </a>{" "}
-                  if your school has a table tennis club. Also email us if you are interested in playing in an upcoming
-                  School Tournament. You can also email us with any comments or suggestions.
+                  if your school has a table tennis club. Also email us if you
+                  are interested in playing in an upcoming School Tournament.
+                  You can also email us with any comments or suggestions.
                 </p>
               </div>
             </AlertDescription>
@@ -123,10 +114,13 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Mission
+            </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Our main goal is to build a stronger table tennis community in the Metroplex! DFWTT is open to all ages,
-              ethnicities, genders and playing levels.
+              Our main goal is to build a stronger table tennis community in the
+              Metroplex! DFWTT is open to all ages, ethnicities, genders and
+              playing levels.
             </p>
           </div>
 
@@ -138,8 +132,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  We promote table tennis through family values, creating a welcoming environment for players of all
-                  backgrounds.
+                  We promote table tennis through family values, creating a
+                  welcoming environment for players of all backgrounds.
                 </p>
               </CardContent>
             </Card>
@@ -151,8 +145,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  We strive for excellence and quality in a sportsmanship environment, helping players reach their full
-                  potential.
+                  We strive for excellence and quality in a sportsmanship
+                  environment, helping players reach their full potential.
                 </p>
               </CardContent>
             </Card>
@@ -164,8 +158,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Players have the opportunity to learn skills, make lasting friends, and have lots of fun in our
-                  amazing community.
+                  Players have the opportunity to learn skills, make lasting
+                  friends, and have lots of fun in our amazing community.
                 </p>
               </CardContent>
             </Card>
@@ -178,15 +172,17 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our History & Growth</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Our History & Growth
+              </h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <Calendar className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h3 className="font-semibold text-lg">Established 1996</h3>
                     <p className="text-gray-600">
-                      DFWTT is one of the largest and well established table tennis organizations in the Dallas and Fort
-                      Worth area.
+                      DFWTT is one of the largest and well established table
+                      tennis organizations in the Dallas and Fort Worth area.
                     </p>
                   </div>
                 </div>
@@ -194,10 +190,13 @@ export default function AboutPage() {
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-green-600 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-lg">Multiple Locations</h3>
+                    <h3 className="font-semibold text-lg">
+                      Multiple Locations
+                    </h3>
                     <p className="text-gray-600">
-                      In the past decade, DFWTT has grown from one to multiple locations with excellent playing
-                      conditions and tournament-quality tables.
+                      In the past decade, DFWTT has grown from one to multiple
+                      locations with excellent playing conditions and
+                      tournament-quality tables.
                     </p>
                   </div>
                 </div>
@@ -205,10 +204,13 @@ export default function AboutPage() {
                 <div className="flex items-start gap-4">
                   <Users className="h-6 w-6 text-purple-600 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-lg">100+ Active Members</h3>
+                    <h3 className="font-semibold text-lg">
+                      100+ Active Members
+                    </h3>
                     <p className="text-gray-600">
-                      Our community has grown to over 100 active members, ranging from beginners to elite players with
-                      2000+ ratings.
+                      Our community has grown to over 100 active members,
+                      ranging from beginners to elite players with 2000+
+                      ratings.
                     </p>
                   </div>
                 </div>
@@ -234,23 +236,21 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <Globe className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">A Global Community</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              A Global Community
+            </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Our players come from all over the world, creating a diverse and vibrant table tennis community. No matter
-              what level you are at, you will always find someone of your level to play with at our locations.
+              Our players come from all over the world, creating a diverse and
+              vibrant table tennis community. No matter what level you are at,
+              you will always find someone of your level to play with at our
+              locations.
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {countries.map((country, index) => (
-              <Badge key={index} variant="secondary" className="text-sm">
-                {country}
-              </Badge>
-            ))}
-          </div>
-
           <div className="text-center">
-            <p className="text-lg text-gray-700 font-medium">Fun is always our motto! 🏓</p>
+            <p className="text-lg text-gray-700 font-medium">
+              Fun is always our motto! 🏓
+            </p>
           </div>
         </div>
       </section>
@@ -259,10 +259,12 @@ export default function AboutPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Coaching & Programs</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Coaching & Programs
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide quality table tennis training with USATT certified coaches and offer instructions at all
-              levels.
+              We provide quality table tennis training with USATT certified
+              coaches and offer instructions at all levels.
             </p>
           </div>
 
@@ -273,7 +275,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
-                  One-on-one coaching tailored to your specific needs and skill level.
+                  One-on-one coaching tailored to your specific needs and skill
+                  level.
                 </p>
               </CardContent>
             </Card>
@@ -283,7 +286,9 @@ export default function AboutPage() {
                 <CardTitle className="text-lg">Group Training</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center">Learn with others in a fun, supportive group environment.</p>
+                <p className="text-gray-600 text-center">
+                  Learn with others in a fun, supportive group environment.
+                </p>
               </CardContent>
             </Card>
 
@@ -293,7 +298,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
-                  We specialize in the development and training of junior players.
+                  We specialize in the development and training of junior
+                  players.
                 </p>
               </CardContent>
             </Card>
@@ -304,7 +310,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
-                  From beginners to advanced players - we have programs for everyone.
+                  From beginners to advanced players - we have programs for
+                  everyone.
                 </p>
               </CardContent>
             </Card>
@@ -317,10 +324,13 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <Trophy className="h-16 w-16 text-yellow-500 mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Tournaments & Events</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Tournaments & Events
+            </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              DFWTT facilitates and organizes sanctioned and non-sanctioned tournaments on a regular basis. Our members
-              have participated in many major national and regional table tennis tournaments.
+              DFWTT facilitates and organizes sanctioned and non-sanctioned
+              tournaments on a regular basis. Our members have participated in
+              many major national and regional table tennis tournaments.
             </p>
           </div>
 
@@ -330,7 +340,10 @@ export default function AboutPage() {
                 <CardTitle>Sanctioned Tournaments</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Official USATT sanctioned tournaments with rating points and rankings.</p>
+                <p className="text-gray-600">
+                  Official USATT sanctioned tournaments with rating points and
+                  rankings.
+                </p>
               </CardContent>
             </Card>
 
@@ -339,7 +352,10 @@ export default function AboutPage() {
                 <CardTitle>Leagues</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Regular league play for consistent competition and improvement.</p>
+                <p className="text-gray-600">
+                  Regular league play for consistent competition and
+                  improvement.
+                </p>
               </CardContent>
             </Card>
 
@@ -348,7 +364,9 @@ export default function AboutPage() {
                 <CardTitle>Corporate Events</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Corporate challenge events and team building activities.</p>
+                <p className="text-gray-600">
+                  Corporate challenge events and team building activities.
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -358,11 +376,14 @@ export default function AboutPage() {
       {/* Places to Play Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Places to Play</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Places to Play
+          </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Find the perfect location to play table tennis in the Dallas-Fort Worth area. All our locations feature
-            excellent lighting, flooring, and brand new tournament tables.
+            Find the perfect location to play table tennis in the Dallas-Fort
+            Worth area. All our locations feature excellent lighting, flooring,
+            and brand new tournament tables.
           </p>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
@@ -386,8 +407,9 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Join DFWTT?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            If you are new to table tennis or interested in joining DFWTT, browse our website, give us a call, or visit
-            us during club hours. We'll be happy to welcome you to our organization!
+            If you are new to table tennis or interested in joining DFWTT,
+            browse our website, give us a call, or visit us during club hours.
+            We'll be happy to welcome you to our organization!
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -403,12 +425,13 @@ export default function AboutPage() {
           </div>
 
           <p className="mt-6 text-blue-200">
-            DFWTT is the place where you can enjoy great table tennis, make new friends, or compete!
+            DFWTT is the place where you can enjoy great table tennis, make new
+            friends, or compete!
           </p>
         </div>
       </section>
 
       <Footer />
     </main>
-  )
+  );
 }
