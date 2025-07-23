@@ -28,9 +28,9 @@ export default function AboutStats() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Building a stronger <span className="text-gray-500">table tennis community</span>
-              <span className="text-gray-400"> in the Metroplex</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+              Building a stronger <span className="text-blue-500">table tennis community</span>
+              <span className="text-blue-400"> in the Metroplex</span>
             </h2>
           </div>
 

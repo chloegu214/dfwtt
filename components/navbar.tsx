@@ -1,20 +1,17 @@
-"use client"
+"use client";
 
-import { useState, useRef, useEffect } from "react"
-import Link from "next/link"
-import { ChevronDown, Menu, X } from "lucide-react"
+import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 interface NavItem {
-  label: string
-  href?: string
-  children?: NavItem[]
+  label: string;
+  href?: string;
+  children?: NavItem[];
 }
 
 const navigationItems: NavItem[] = [
   { label: "Home", href: "/" },
-  {
-    label: "About DFWTT",href: "/about"
-  },
   { label: "Places to Play", href: "/places-to-play" },
   { label: "Coaching", href: "/coaching" },
   {
@@ -22,29 +19,23 @@ const navigationItems: NavItem[] = [
     children: [
       { label: "2025 News", href: "/news/" },
       { label: "Archive", href: "/news/archive/2024" },
-      { label: "Memories", href: "/news/memories" }
+      { label: "Memories", href: "/news/memories" },
     ],
   },
   {
     label: "Competitions",
     children: [
-      //{ label: "Tournaments", href: "/competitions/tournaments" },
-      //{ label: "Sunday Singles RR", href: "/competitions/sunday-singles" },
       { label: "Sunday Singles RR", href: "/sunday-rr" },
-      //{ label: "Monthly Doubles", href: "/competitions/monthly-doubles" },
       { label: "Monthly Doubles", href: "/monthly-doubles" },
-      //{ label: "2-Man Teams", href: "/competitions/2-man-teams" },
       { label: "Scoreboard", href: "/scoreboard" },
       { label: "Spectator's Guide", href: "/spectators-guide" },
       { label: "Rules", href: "/rules" },
-      { label: "TT Equipment", href: "/equipment" }
+      { label: "TT Equipment", href: "/equipment" },
     ],
   },
   {
     label: "Gallery",
-    children: [
-      { label: "2025", href: "/gallery" },
-    ],
+    children: [{ label: "2025", href: "/gallery" }],
   },
   {
     label: "Support Us",
@@ -54,36 +45,36 @@ const navigationItems: NavItem[] = [
       { label: "Community", href: "/support-us/community" },
     ],
   },
-]
+];
 
 export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const timeoutRef = useRef<NodeJS.Timeout>()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout>();
 
   const handleMouseEnter = (label: string) => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(timeoutRef.current);
     }
-    setActiveDropdown(label)
-  }
+    setActiveDropdown(label);
+  };
 
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null)
-    }, 150)
-  }
+      setActiveDropdown(null);
+    }, 150);
+  };
 
   useEffect(() => {
     return () => {
       if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current)
+        clearTimeout(timeoutRef.current);
       }
-    }
-  }, [])
+    };
+  }, []);
 
   const renderNavItem = (item: NavItem, isMobile = false) => {
-    const hasChildren = item.children && item.children.length > 0
+    const hasChildren = item.children && item.children.length > 0;
 
     if (isMobile) {
       return (
@@ -117,7 +108,7 @@ export default function Navbar() {
             </Link>
           )}
         </div>
-      )
+      );
     }
 
     return (
@@ -151,8 +142,8 @@ export default function Navbar() {
           </div>
         )}
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
@@ -176,7 +167,11 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -185,9 +180,11 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="max-h-96 overflow-y-auto">{navigationItems.map((item) => renderNavItem(item, true))}</div>
+          <div className="max-h-96 overflow-y-auto">
+            {navigationItems.map((item) => renderNavItem(item, true))}
+          </div>
         </div>
       )}
     </nav>
-  )
+  );
 }
