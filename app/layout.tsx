@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Join the premier table tennis community in Dallas-Fort Worth. Tournaments, coaching, training programs, and more for players of all levels.",
   keywords: "table tennis, ping pong, Dallas, Fort Worth, tournaments, coaching, training",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )
