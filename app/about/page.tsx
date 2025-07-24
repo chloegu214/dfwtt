@@ -4,7 +4,6 @@ import AboutPartners from "@/components/about-partners";
 import LocationCard from "@/components/location-card";
 import Footer from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   Users,
@@ -15,6 +14,8 @@ import {
   Heart,
   GraduationCap,
 } from "lucide-react";
+import Image from "next/image";
+import clubScene from "../../public/club-scene.jpg";
 
 const locations = [
   {
@@ -218,8 +219,8 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <img
-                src="/placeholder.svg?height=400&width=600"
+              <Image
+                src={clubScene}
                 alt="DFWTT Community Playing Together"
                 className="rounded-lg shadow-lg w-full"
               />

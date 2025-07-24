@@ -1,7 +1,8 @@
 import type React from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Heart, Calendar, ExternalLink } from "lucide-react"
+import { Heart, Calendar, ExternalLink, ImageIcon } from "lucide-react"
+import Image from "next/image"
 
 type Memory = {
   name: string
@@ -15,6 +16,7 @@ const memories: Memory[] = [
   {
     name: "Harry McKeever",
     years: "1928-2016",
+    imageUrl: "/placeholder.svg?height=200&width=200&text=Harry+McKeever",
     content: (
       <>
         <p className="mb-4">
@@ -66,6 +68,7 @@ const memories: Memory[] = [
   {
     name: "Dorothea Taschner",
     years: "1928-2012",
+    imageUrl: "/placeholder.svg?height=200&width=200&text=Dorothea+Taschner",
     content: (
       <>
         <p className="mb-4">
@@ -84,6 +87,7 @@ const memories: Memory[] = [
   },
   {
     name: "Hollis Hall",
+    imageUrl: "/placeholder.svg?height=200&width=200&text=Hollis+Hall",
     content: (
       <>
         <p className="mb-4">
@@ -100,6 +104,7 @@ const memories: Memory[] = [
   {
     name: "Frank Opp",
     years: "1931-2006",
+    imageUrl: "/placeholder.svg?height=200&width=200&text=Frank+Opp",
     content: (
       <>
         <p className="mb-4">
@@ -164,27 +169,54 @@ function MemoryCard({ memory }: { memory: Memory }) {
         </div>
       </CardHeader>
       <CardContent className="pt-6">
-        <div className="text-gray-700 leading-relaxed">{memory.content}</div>
-        {memory.links && (
-          <div className="mt-6 pt-4 border-t border-gray-200">
-            <h4 className="font-semibold text-blue-900 mb-2">Related Links:</h4>
-            <ul className="space-y-2">
-              {memory.links.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 hover:underline transition-colors"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        <div className="flex flex-col md:flex-row gap-6">
+          {/* Image Section */}
+          <div className="flex-shrink-0">
+            <div className="relative w-48 h-48 mx-auto md:mx-0">
+              {memory.imageUrl ? (
+                <Image
+                  src={memory.imageUrl || "/placeholder.svg"}
+                  alt={`Photo of ${memory.name}`}
+                  fill
+                  className="rounded-lg object-cover border-2 border-gray-200 shadow-md"
+                />
+              ) : (
+                <div className="w-full h-full bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
+                  <div className="text-center text-gray-500">
+                    <ImageIcon className="h-12 w-12 mx-auto mb-2" />
+                    <p className="text-sm">Photo placeholder</p>
+                    <p className="text-xs">for {memory.name}</p>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-        )}
+
+          {/* Content Section */}
+          <div className="flex-1">
+            <div className="text-gray-700 leading-relaxed">{memory.content}</div>
+            {memory.links && (
+              <div className="mt-6 pt-4 border-t border-gray-200">
+                <h4 className="font-semibold text-blue-900 mb-2">Related Links:</h4>
+                <ul className="space-y-2">
+                  {memory.links.map((link, index) => (
+                    <li key={index}>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
       </CardContent>
     </Card>
   )
@@ -205,7 +237,7 @@ export default function MemoriesPage() {
       </div>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-6 py-12">
+      <main className="max-w-6xl mx-auto px-6 py-12">
         <div className="space-y-8">
           {memories.map((memory, index) => (
             <MemoryCard key={index} memory={memory} />
