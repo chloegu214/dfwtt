@@ -1,245 +1,394 @@
+import type { Metadata } from "next"
 import Link from "next/link"
-import { Calendar, ExternalLink, Camera, Trophy, ArrowLeft } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Calendar, Camera, Trophy, ExternalLink, Users, MapPin } from "lucide-react"
 
-const news2021 = [
-  {
-    date: "November 29, 2021",
-    title: "2021 WTT Championships",
-    content:
-      "The World Table Tennis Championships were held in Houston, Texas at the George R Brown Convention Center on November 23-29th. This was a major international event hosted in Texas.",
-    category: "Championship",
-    hasPhotos: true,
-    links: [
-      { text: "Photos", url: "https://1drv.ms/u/s!AvhT8JQccNisiNV7gEIboJry69njfw?e=2JSau7" },
-      { text: "Results & Summary", url: "https://worldtabletennis.com/results?selectedTab=COMPLETED" },
-    ],
-  },
-  {
-    date: "November 13, 2021",
-    title: "2021 DFWTT Fall Open",
-    content:
-      "DFWTT hosted its yearly Fall Open on November 13th. The tournament was held in Dallas at the Bachman Recreation Center.",
-    category: "Tournament",
-    hasPhotos: true,
-    hasResults: true,
-    links: [
-      { text: "Photos", url: "https://1drv.ms/u/s!AvhT8JQccNisiMsC-FGbYlSJ0pRSEQ?e=U6s32Y" },
-      { text: "Results", url: "/results/2021#2021FallOpen" },
-    ],
-  },
-  {
-    date: "October 17, 2021",
-    title: "2021 DFWTT League Singles",
-    content:
-      "Starting October 17, DFWTT began League Singles at the Heights Recreation Center (Most Sundays 2:10 - 4:50 pm). This provided regular competitive play for members.",
-    category: "League",
-    links: [{ text: "Information", url: "/join-us" }],
-  },
-  {
-    date: "October 9, 2021",
-    title: "2021 Chinese Double Ten",
-    content:
-      "DFWTT hosted its yearly Chinese Double Ten Celebration tournament on October 9th. The tournament was held in Irving at the Cimarron Recreation Center.",
-    category: "Tournament",
-    hasPhotos: true,
-    hasResults: true,
-    links: [
-      { text: "Photos", url: "https://1drv.ms/u/s!AvhT8JQccNisiMdMffcXjgXp_8ik8Q?e=hdQdQf" },
-      { text: "Results", url: "/results/2021#2021DoubleTen" },
-    ],
-  },
-  {
-    date: "September 18, 2021",
-    title: "2021 Dallas Golden Games",
-    content:
-      "DFWTT hosted the Dallas Golden Games Table Tennis Tournament on September 18th at the Marcus Recreation Center in Dallas. This event is part of the Dallas Park and Recreation's Golden Games which includes 8 different competitive sports.",
-    category: "Tournament",
-    hasPhotos: true,
-    hasResults: true,
-    links: [
-      { text: "Photos", url: "https://1drv.ms/u/s!AvhT8JQccNisiMUlx2xwdg4uD6jN0A?e=hgxJ5f" },
-      { text: "Results", url: "/results/2021#2021DallasGoldenGames" },
-    ],
-  },
-  {
-    date: "August 29, 2021",
-    title: "2021 DFWTT League Singles - August Session",
-    content:
-      "DFWTT started League Singles at the Heights Recreation Center (Every Sunday 2:10 - 4:50 pm, from August 29 to September 26). This provided regular competitive opportunities for players.",
-    category: "League",
-    links: [{ text: "Information", url: "/join-us" }],
-  },
-  {
-    date: "July 25, 2021",
-    title: "Heights Recreation Center Grand Opening",
-    content:
-      "Grand opening of the Heights Recreation Center location in Richardson, Sunday afternoons 2:00 to 5:00 pm. Free sessions were offered on July 25, August 1, and August 8.",
-    category: "Facility",
-    hasPhotos: true,
-  },
-  {
-    date: "July 9, 2021",
-    title: "2021 USATT National Championships",
-    content:
-      "The USATT held its US National Championships in Las Vegas, Nevada on July 4-9. This was the premier national tournament for table tennis in the United States.",
-    category: "Championship",
-    hasPhotos: true,
-    links: [
-      { text: "Photos", url: "https://1drv.ms/u/s!AvhT8JQccNisiLsUNPiI65PgMkHO8g?e=RND9xb" },
-      { text: "Results Summary", url: "https://omnipong.com/T-tourney.asp?t=103&r=1861" },
-      { text: "USATT Website", url: "http://www.teamusa.org/USA-Table-Tennis" },
-    ],
-  },
-  {
-    date: "May 26, 2021",
-    title: "2021 US National & Jr Pan Am Games Team Trials",
-    content:
-      "The US National & Jr Pan Am Games Team Trials was held (May 21-26) inside the Sid Richardson Gymnasium at Texas Wesleyan University in Fort Worth. This event determined team selections for international competition.",
-    category: "Competition",
-    hasPhotos: true,
-    links: [
-      { text: "US National Team Trials Photos", url: "https://1drv.ms/u/s!AvhT8JQccNisiJxQIxtrt62H8ufKGw?e=TbJ3rH" },
-      {
-        text: "Jr Pan Am Games Team Trials Photos",
-        url: "https://1drv.ms/u/s!AvhT8JQccNisiJ5k-QJNrfNW2e1Xbw?e=KyNxTA",
-      },
-      {
-        text: "USATT Tournament Info",
-        url: "https://www.teamusa.org/USA-Table-Tennis/Team-USA/2021-Adult-National-Team-and-Junior-Pan-Am-Trials",
-      },
-    ],
-  },
-]
-
-const categoryColors = {
-  Championship: "bg-yellow-100 text-yellow-800",
-  Tournament: "bg-blue-100 text-blue-800",
-  Competition: "bg-green-100 text-green-800",
-  League: "bg-indigo-100 text-indigo-800",
-  Facility: "bg-purple-100 text-purple-800",
+export const metadata: Metadata = {
+  title: "2021 News Archive - DFWTT",
+  description:
+    "Complete archive of DFWTT news and events from 2021, including tournaments, training programs, and community activities.",
 }
 
 export default function News2021Page() {
   return (
-    <div className="min-h-screen bg-gray-50 pt-16">
+    <div className="container mx-auto px-4 py-8">
       {/* Header */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/news/archive" className="inline-flex items-center gap-2 text-blue-100 hover:text-white mb-4">
-            <ArrowLeft className="h-4 w-4" />
-            Back to Archive
+      <div className="mb-8">
+        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+          <Link href="/news" className="hover:text-primary">
+            News
           </Link>
-          <h1 className="text-4xl font-bold mb-4">2021 News Archive</h1>
-          <div className="flex flex-wrap gap-6 text-blue-100">
-            <div className="flex items-center gap-2">
-              <Calendar className="h-4 w-4" />
-              <span>9 articles</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Trophy className="h-4 w-4" />
-              <span>Major Events: WTT Championships, US National Championships</span>
-            </div>
-          </div>
+          <span>/</span>
+          <Link href="/news/archive" className="hover:text-primary">
+            Archive
+          </Link>
+          <span>/</span>
+          <span>2021</span>
         </div>
-      </section>
+        <h1 className="text-4xl font-bold mb-4">2021 News Archive</h1>
 
-      {/* Year Summary */}
-      <section className="py-8 bg-white border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-blue-50 rounded-lg p-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-3">2021 Highlights</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        {/* Year Summary */}
+        <Card className="mb-6">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Trophy className="h-5 w-5" />
+              2021 Highlights
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-3 gap-4 text-sm">
               <div>
-                <div className="font-semibold text-blue-600">Major Championships</div>
-                <div className="text-gray-600">WTT Championships in Houston, USATT Nationals in Las Vegas</div>
+                <div className="font-semibold text-lg">9</div>
+                <div className="text-muted-foreground">Major Events</div>
               </div>
               <div>
-                <div className="font-semibold text-blue-600">New Facility</div>
-                <div className="text-gray-600">Heights Recreation Center opened in Richardson</div>
+                <div className="font-semibold text-lg">WTT Championships</div>
+                <div className="text-muted-foreground">Houston, Texas</div>
               </div>
               <div>
-                <div className="font-semibold text-blue-600">Regular Programs</div>
-                <div className="text-gray-600">League Singles program launched at Heights center</div>
+                <div className="font-semibold text-lg">Heights Center</div>
+                <div className="text-muted-foreground">New Location Opening</div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </CardContent>
+        </Card>
+      </div>
 
       {/* News Articles */}
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
-            {news2021.map((item, index) => (
-              <article key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-sm text-gray-500">{item.date}</span>
-                      <span
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${categoryColors[item.category] || "bg-gray-100 text-gray-800"}`}
-                      >
-                        {item.category}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                  </div>
-                  <div className="flex gap-2">
-                    {item.hasPhotos && (
-                      <span className="flex items-center gap-1 text-xs text-gray-500">
-                        <Camera className="h-3 w-3" />
-                        Photos
-                      </span>
-                    )}
-                    {item.hasResults && (
-                      <span className="flex items-center gap-1 text-xs text-gray-500">
-                        <Trophy className="h-3 w-3" />
-                        Results
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                <p className="text-gray-700 mb-4 leading-relaxed">{item.content}</p>
-
-                {item.links && (
-                  <div className="flex flex-wrap gap-3">
-                    {item.links.map((link, linkIndex) => (
-                      <a
-                        key={linkIndex}
-                        href={link.url}
-                        target={link.url.startsWith("http") ? "_blank" : "_self"}
-                        rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium"
-                      >
-                        {link.text}
-                        {link.url.startsWith("http") && <ExternalLink className="h-3 w-3" />}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </article>
-            ))}
+      <div className="space-y-6">
+        {/* November 2021 */}
+        <article className="border-l-4 border-l-red-500 pl-6 py-4">
+          <div className="flex items-start justify-between mb-2">
+            <div>
+              <Badge variant="outline" className="mb-2">
+                Championship
+              </Badge>
+              <h2 className="text-xl font-semibold">2021 WTT Championships</h2>
+            </div>
+            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+              <Calendar className="h-4 w-4" />
+              November 23-29, 2021
+            </div>
           </div>
-        </div>
-      </section>
+          <p className="text-muted-foreground mb-3">
+            The World Table Tennis Championships were held in Houston, Texas at the George R Brown Convention Center.
+            Results and summary can be found on the official website.
+          </p>
+          <div className="flex items-center gap-4 text-sm">
+            <a
+              href="https://worldtabletennis.com/results?selectedTab=COMPLETED"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-blue-600 hover:text-blue-800"
+            >
+              <ExternalLink className="h-3 w-3" />
+              Results
+            </a>
+            <a
+              href="https://1drv.ms/u/s!AvhT8JQccNisiNV7gEIboJry69njfw?e=2JSau7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-green-600 hover:text-green-800"
+            >
+              <Camera className="h-3 w-3" />
+              Photos by Grant Bergmann
+            </a>
+          </div>
+        </article>
+
+        <article className="border-l-4 border-l-blue-500 pl-6 py-4">
+          <div className="flex items-start justify-between mb-2">
+            <div>
+              <Badge variant="outline" className="mb-2">
+                Tournament
+              </Badge>
+              <h2 className="text-xl font-semibold">2021 DFWTT Fall Open</h2>
+            </div>
+            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+              <Calendar className="h-4 w-4" />
+              November 13, 2021
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-3">
+            DFWTT hosted its yearly Fall Open at the Bachman Recreation Center in Dallas.
+          </p>
+          <div className="flex items-center gap-4 text-sm">
+            <span className="flex items-center gap-1">
+              <MapPin className="h-3 w-3" />
+              Bachman Recreation Center, Dallas
+            </span>
+            <a
+              href="http://dfwtt.com/Results_2021.htm#2021FallOpen"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-blue-600 hover:text-blue-800"
+            >
+              <ExternalLink className="h-3 w-3" />
+              Results
+            </a>
+            <a
+              href="https://1drv.ms/u/s!AvhT8JQccNisiMsC-FGbYlSJ0pRSEQ?e=U6s32Y"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-green-600 hover:text-green-800"
+            >
+              <Camera className="h-3 w-3" />
+              Photos
+            </a>
+          </div>
+        </article>
+
+        <article className="border-l-4 border-l-purple-500 pl-6 py-4">
+          <div className="flex items-start justify-between mb-2">
+            <div>
+              <Badge variant="outline" className="mb-2">
+                Training
+              </Badge>
+              <h2 className="text-xl font-semibold">2021 DFWTT League Singles</h2>
+            </div>
+            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+              <Calendar className="h-4 w-4" />
+              Starting October 17, 2021
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-3">
+            Starting our League Singles at the Heights Recreation Center (Most Sundays 2:10 - 4:50 pm).
+          </p>
+          <div className="flex items-center gap-4 text-sm">
+            <span className="flex items-center gap-1">
+              <MapPin className="h-3 w-3" />
+              Heights Recreation Center
+            </span>
+            <span className="flex items-center gap-1">
+              <Users className="h-3 w-3" />
+              Sunday League
+            </span>
+          </div>
+        </article>
+
+        <article className="border-l-4 border-l-red-500 pl-6 py-4">
+          <div className="flex items-start justify-between mb-2">
+            <div>
+              <Badge variant="outline" className="mb-2">
+                Tournament
+              </Badge>
+              <h2 className="text-xl font-semibold">2021 Chinese Double Ten</h2>
+            </div>
+            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+              <Calendar className="h-4 w-4" />
+              October 9, 2021
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-3">
+            DFWTT hosted its yearly Chinese Double Ten Celebration tournament at the Cimarron Recreation Center in
+            Irving.
+          </p>
+          <div className="flex items-center gap-4 text-sm">
+            <span className="flex items-center gap-1">
+              <MapPin className="h-3 w-3" />
+              Cimarron Recreation Center, Irving
+            </span>
+            <a
+              href="http://dfwtt.com/Results_2021.htm#2021DoubleTen"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-blue-600 hover:text-blue-800"
+            >
+              <ExternalLink className="h-3 w-3" />
+              Results
+            </a>
+            <a
+              href="https://1drv.ms/u/s!AvhT8JQccNisiMdMffcXjgXp_8ik8Q?e=hdQdQf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-green-600 hover:text-green-800"
+            >
+              <Camera className="h-3 w-3" />
+              Photos
+            </a>
+          </div>
+        </article>
+
+        <article className="border-l-4 border-l-yellow-500 pl-6 py-4">
+          <div className="flex items-start justify-between mb-2">
+            <div>
+              <Badge variant="outline" className="mb-2">
+                Competition
+              </Badge>
+              <h2 className="text-xl font-semibold">2021 Dallas Golden Games</h2>
+            </div>
+            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+              <Calendar className="h-4 w-4" />
+              September 18, 2021
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-3">
+            DFWTT hosted the Dallas Golden Games Table Tennis Tournament at the Marcus Recreation Center. This event is
+            part of the Dallas Park and Recreation's Golden Games which includes 8 different competitive sports.
+          </p>
+          <div className="flex items-center gap-4 text-sm">
+            <span className="flex items-center gap-1">
+              <MapPin className="h-3 w-3" />
+              Marcus Recreation Center, Dallas
+            </span>
+            <a
+              href="http://dfwtt.com/Results_2021.htm#2021DallasGoldenGames"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-blue-600 hover:text-blue-800"
+            >
+              <ExternalLink className="h-3 w-3" />
+              Results
+            </a>
+            <a
+              href="https://1drv.ms/u/s!AvhT8JQccNisiMUlx2xwdg4uD6jN0A?e=hgxJ5f"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-green-600 hover:text-green-800"
+            >
+              <Camera className="h-3 w-3" />
+              Photos
+            </a>
+          </div>
+        </article>
+
+        <article className="border-l-4 border-l-green-500 pl-6 py-4">
+          <div className="flex items-start justify-between mb-2">
+            <div>
+              <Badge variant="outline" className="mb-2">
+                Facility
+              </Badge>
+              <h2 className="text-xl font-semibold">Heights Recreation Center Opening</h2>
+            </div>
+            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+              <Calendar className="h-4 w-4" />
+              July 25, August 1, 8, 2021
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-3">
+            Grand opening of the Heights Recreation Center location in Richardson, Sunday afternoons 2:00 to 5:00 pm.
+            Free play offered on July 25, August 1, and August 8.
+          </p>
+          <div className="flex items-center gap-4 text-sm">
+            <span className="flex items-center gap-1">
+              <MapPin className="h-3 w-3" />
+              Heights Recreation Center, Richardson
+            </span>
+            <span className="flex items-center gap-1">
+              <Users className="h-3 w-3" />
+              Sunday 2:00-5:00 PM
+            </span>
+          </div>
+        </article>
+
+        <article className="border-l-4 border-l-blue-500 pl-6 py-4">
+          <div className="flex items-start justify-between mb-2">
+            <div>
+              <Badge variant="outline" className="mb-2">
+                Championship
+              </Badge>
+              <h2 className="text-xl font-semibold">2021 USATT National Championships</h2>
+            </div>
+            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+              <Calendar className="h-4 w-4" />
+              July 4-9, 2021
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-3">
+            The USATT held its US National Championships in Las Vegas, Nevada.
+          </p>
+          <div className="flex items-center gap-4 text-sm">
+            <span className="flex items-center gap-1">
+              <MapPin className="h-3 w-3" />
+              Las Vegas, Nevada
+            </span>
+            <a
+              href="https://omnipong.com/T-tourney.asp?t=103&r=1861"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-blue-600 hover:text-blue-800"
+            >
+              <ExternalLink className="h-3 w-3" />
+              Results Summary
+            </a>
+            <a
+              href="https://1drv.ms/u/s!AvhT8JQccNisiLsUNPiI65PgMkHO8g?e=RND9xb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-green-600 hover:text-green-800"
+            >
+              <Camera className="h-3 w-3" />
+              Photos
+            </a>
+          </div>
+        </article>
+
+        <article className="border-l-4 border-l-purple-500 pl-6 py-4">
+          <div className="flex items-start justify-between mb-2">
+            <div>
+              <Badge variant="outline" className="mb-2">
+                Championship
+              </Badge>
+              <h2 className="text-xl font-semibold">2021 US National & Jr Pan Am Games Team Trials</h2>
+            </div>
+            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+              <Calendar className="h-4 w-4" />
+              May 21-26, 2021
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-3">
+            The US National & Jr Pan Am Games Team Trials was held inside the Sid Richardson Gymnasium at Texas Wesleyan
+            University in Fort Worth. Tournament information and video streams were available on the USATT website.
+          </p>
+          <div className="flex items-center gap-4 text-sm">
+            <span className="flex items-center gap-1">
+              <MapPin className="h-3 w-3" />
+              Texas Wesleyan University, Fort Worth
+            </span>
+            <a
+              href="https://www.teamusa.org/USA-Table-Tennis/Team-USA/2021-Adult-National-Team-and-Junior-Pan-Am-Trials"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-blue-600 hover:text-blue-800"
+            >
+              <ExternalLink className="h-3 w-3" />
+              USATT Info
+            </a>
+            <a
+              href="https://1drv.ms/u/s!AvhT8JQccNisiJxQIxtrt62H8ufKGw?e=TbJ3rH"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-green-600 hover:text-green-800"
+            >
+              <Camera className="h-3 w-3" />
+              US National Photos
+            </a>
+            <a
+              href="https://1drv.ms/u/s!AvhT8JQccNisiJ5k-QJNrfNW2e1Xbw?e=KyNxTA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-green-600 hover:text-green-800"
+            >
+              <Camera className="h-3 w-3" />
+              Jr Pan Am Photos
+            </a>
+          </div>
+        </article>
+      </div>
 
       {/* Navigation */}
-      <section className="py-8 bg-white border-t border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <Link href="/news/archive/2020" className="text-blue-600 hover:text-blue-700 font-medium">
-              ← 2020 Archive
-            </Link>
-            <Link href="/news/archive" className="text-gray-600 hover:text-gray-700">
-              All Years
-            </Link>
-            <Link href="/news/archive/2022" className="text-blue-600 hover:text-blue-700 font-medium">
-              2022 Archive →
-            </Link>
-          </div>
-        </div>
-      </section>
+      <div className="flex justify-between items-center mt-12 pt-8 border-t">
+        <Link href="/news/archive/2020" className="flex items-center gap-2 text-blue-600 hover:text-blue-800">
+          ← 2020 Archive
+        </Link>
+        <Link href="/news/archive" className="text-muted-foreground hover:text-primary">
+          All Archives
+        </Link>
+        <Link href="/news/archive/2022" className="flex items-center gap-2 text-blue-600 hover:text-blue-800">
+          2022 Archive →
+        </Link>
+      </div>
     </div>
   )
 }
