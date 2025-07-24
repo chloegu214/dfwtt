@@ -7,187 +7,323 @@ import { useState } from "react"
 const galleryData = [
   {
     year: "2025",
-    title: "2025 Tournament Season",
+    title: "DFWTT Summer Open 2025",
     description:
-      "Current year highlights including Summer Open, Spring tournaments, and special coaching programs with Seth Pech.",
+      "Current year highlights including Summer Open and Spring tournaments with excellent participation and competitive play.",
     imageCount: 245,
-    highlights: ["Summer Open", "Seth Pech Training", "School Challenge", "NCTTA Championships"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2025Gallery",
+    highlights: ["Summer Open", "Spring Open", "High Participation", "Competitive Matches"],
+    oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/El8ezZL6Ck9CsqmW_NV_pLEBRpNTjPuKHhzNbAluW6OjtQ?e=h8SN9f",
+    coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    featured: true,
+  },
+  {
+    year: "2025",
+    title: "DFWTT Spring Open 2025",
+    description:
+      "Spring tournament featuring strong competition and community engagement from players across the region.",
+    imageCount: 180,
+    highlights: ["Spring Tournament", "Regional Players", "Community Event", "Strong Competition"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNiskd0IooDhNIPDRqueWQ?e=8EdMEj",
     coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     featured: true,
   },
   {
     year: "2024",
-    title: "2024 Championship Year",
-    description:
-      "A remarkable year with record participation in tournaments and successful youth development programs.",
+    title: "DFWTT Fall Open 2024",
+    description: "Fall championship featuring record participation and exceptional tournament organization.",
     imageCount: 312,
-    highlights: ["Fall Championship", "Youth Program", "Community Outreach"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2024Gallery",
+    highlights: ["Fall Championship", "Record Participation", "Tournament Excellence", "Community Growth"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNiskZRCiyCwhQ0hQYOF4Q?e=mNQkdZ",
     coverImage: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-    featured: true,
+  },
+  {
+    year: "2024",
+    title: "Chinese Double Ten 2024",
+    description: "Annual Double Ten celebration tournament with traditional festivities and competitive matches.",
+    imageCount: 198,
+    highlights: ["Double Ten Celebration", "Traditional Event", "Cultural Festival", "Competitive Play"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNiskPpFGZp9bB0VYFdL-Q?e=VMIA8S",
+    coverImage: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+  },
+  {
+    year: "2024",
+    title: "DFWTT Summer Open 2024",
+    description: "Summer tournament with excellent weather and outstanding player performances throughout the event.",
+    imageCount: 267,
+    highlights: ["Summer Tournament", "Great Weather", "Outstanding Play", "Player Excellence"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNiskNxUF1cZ95Z2J_Ps_A?e=68cwe0",
+    coverImage: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
   },
   {
     year: "2023",
-    title: "2023 Growth & Excellence",
-    description: "Expansion to new locations and hosting of major regional tournaments.",
+    title: "DFWTT Fall Open 2023",
+    description: "Fall tournament showcasing regional talent and competitive excellence in table tennis.",
     imageCount: 289,
-    highlights: ["Regional Championships", "New Locations", "Junior Development"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2023Gallery",
+    highlights: ["Regional Championships", "Talent Showcase", "Competitive Excellence", "Fall Tournament"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNisibxe0QRC443RPocl_g?e=YaDw16",
+    coverImage: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+  },
+  {
+    year: "2023",
+    title: "Dallas Golden Games 2023",
+    description: "Prestigious Golden Games tournament featuring top-level competition and community celebration.",
+    imageCount: 234,
+    highlights: ["Golden Games", "Prestigious Event", "Top Competition", "Community Celebration"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNisiblU9TEGVZ0vKGtZnA?e=aXi9oy",
+    coverImage: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+  },
+  {
+    year: "2023",
+    title: "Chinese Double Ten 2023",
+    description: "Traditional Double Ten celebration with cultural activities and competitive tournament play.",
+    imageCount: 198,
+    highlights: ["Double Ten Festival", "Cultural Activities", "Traditional Celebration", "Tournament Play"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNisibc8iSVLtglzn9QMhw?e=OAONUg",
+    coverImage: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+  },
+  {
+    year: "2023",
+    title: "DFWTT Spring Open 2023",
+    description: "Spring tournament marking the return to full competitive schedule with excellent participation.",
+    imageCount: 156,
+    highlights: ["Spring Tournament", "Full Schedule Return", "Excellent Participation", "Competitive Play"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNisiZRKIvykCj15DEqukQ?e=M1xjn4",
     coverImage: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
   },
   {
     year: "2022",
-    title: "2022 Recovery & Renewal",
-    description: "Post-pandemic return to full tournament schedule and community engagement.",
+    title: "DFWTT Fall Open 2022",
+    description: "Post-pandemic return to full tournament schedule with renewed energy and community engagement.",
     imageCount: 198,
-    highlights: ["Tournament Return", "Safety Protocols", "Community Events"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2022Gallery",
+    highlights: ["Tournament Return", "Renewed Energy", "Community Engagement", "Full Schedule"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNisiYcaY0qT3TsSaY1ang?e=ub1GP9",
+    coverImage: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+  },
+  {
+    year: "2022",
+    title: "Chinese Double Ten 2022",
+    description: "Double Ten celebration tournament with traditional festivities and competitive matches.",
+    imageCount: 167,
+    highlights: ["Double Ten Celebration", "Traditional Festivities", "Competitive Matches", "Cultural Event"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNisiYMTttQSrQA3a9gD4Q?e=UnIL2D",
+    coverImage: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+  },
+  {
+    year: "2022",
+    title: "DFWTT Summer Open 2022",
+    description: "Summer tournament featuring excellent competition and community spirit during recovery period.",
+    imageCount: 145,
+    highlights: ["Summer Competition", "Community Spirit", "Recovery Period", "Excellent Play"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNisiPJaz2TCfj2lLHz8lA?e=u4nnNC",
+    coverImage: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+  },
+  {
+    year: "2022",
+    title: "DFWTT Spring Open 2022",
+    description: "Spring tournament marking continued recovery and growth in tournament participation.",
+    imageCount: 123,
+    highlights: ["Spring Tournament", "Continued Recovery", "Growth in Participation", "Community Building"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNisiO53RJlXhEU7TAp5vw?e=UHMLg6",
     coverImage: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
   },
   {
     year: "2021",
-    title: "2021 Adaptation & Innovation",
-    description: "Adapting to new challenges while maintaining our commitment to table tennis excellence.",
+    title: "DFWTT Fall Open 2021",
+    description: "Fall tournament adapting to new challenges while maintaining competitive excellence.",
     imageCount: 156,
-    highlights: ["Virtual Training", "Safety Measures", "Limited Tournaments"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2021Gallery",
+    highlights: ["Adaptation", "New Challenges", "Competitive Excellence", "Safety Measures"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNisiMsC-FGbYlSJ0pRSEQ?e=U6s32Y",
+    coverImage: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+  },
+  {
+    year: "2021",
+    title: "Chinese Double Ten 2021",
+    description: "Double Ten celebration with modified format while preserving traditional tournament spirit.",
+    imageCount: 134,
+    highlights: ["Modified Format", "Traditional Spirit", "Double Ten Festival", "Community Resilience"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNisiMdMffcXjgXp_8ik8Q?e=hdQdQf",
+    coverImage: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+  },
+  {
+    year: "2021",
+    title: "Dallas Golden Games 2021",
+    description: "Golden Games tournament showcasing resilience and dedication to table tennis excellence.",
+    imageCount: 112,
+    highlights: ["Golden Games", "Resilience", "Dedication", "Tournament Excellence"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNisiMUlx2xwdg4uD6jN0A?e=hgxJ5f",
     coverImage: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
   },
   {
     year: "2020",
-    title: "2020 Challenges & Resilience",
-    description: "A year of adaptation and finding new ways to keep our community connected.",
-    imageCount: 134,
-    highlights: ["Early Season", "Community Support", "Virtual Events"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2020Gallery",
+    title: "Dallas Senior Games 2020",
+    description: "Senior Games tournament adapted for challenging times with community support and safety protocols.",
+    imageCount: 89,
+    highlights: ["Senior Games", "Community Support", "Safety Protocols", "Adapted Format"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNish_UIezOawkP8V2cl6Q?e=cPZnjr",
+    coverImage: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+  },
+  {
+    year: "2020",
+    title: "DFWTT Charity Tournament 2020",
+    description: "Charity tournament bringing community together for a good cause during unprecedented times.",
+    imageCount: 67,
+    highlights: ["Charity Event", "Community Unity", "Good Cause", "Unprecedented Times"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNish94h7UdAryNlyomwpg?e=c3M8uH",
     coverImage: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
   },
   {
     year: "2019",
-    title: "2019 Peak Performance",
-    description: "One of our most successful years with multiple championship victories and record membership.",
+    title: "DFWTT Fall Open 2019",
+    description: "Peak performance year with multiple championship victories and record membership growth.",
     imageCount: 387,
-    highlights: ["Championship Wins", "Record Membership", "Elite Training"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2019Gallery",
+    highlights: ["Championship Victories", "Record Membership", "Peak Performance", "Elite Competition"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNish6svfVCQw-NGrbbwfA?e=aQLQgy",
+    coverImage: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+  },
+  {
+    year: "2019",
+    title: "Chinese Double Ten 2019",
+    description: "Traditional Double Ten celebration with cultural festivities and competitive tournament action.",
+    imageCount: 298,
+    highlights: ["Cultural Festivities", "Traditional Celebration", "Competitive Action", "Community Event"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNish513pAijRMe4wqWj5w?e=fottgI",
+    coverImage: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+  },
+  {
+    year: "2019",
+    title: "TX State Championship 2019",
+    description: "Texas State Championship featuring the best players from across the state in elite competition.",
+    imageCount: 342,
+    highlights: ["State Championship", "Elite Competition", "Best Players", "Statewide Event"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNish5kdi5mIEES8VK8WCQ?e=H2kTuK",
+    coverImage: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+  },
+  {
+    year: "2019",
+    title: "DFWTT Spring Open 2019",
+    description: "Spring tournament with excellent participation and competitive matches throughout the event.",
+    imageCount: 267,
+    highlights: ["Spring Tournament", "Excellent Participation", "Competitive Matches", "Community Engagement"],
+    oneDriveUrl: "https://photos.app.goo.gl/QJGy25HZzRXphNv87",
+    coverImage: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+  },
+  {
+    year: "2019",
+    title: "Dallas Senior Games 2019",
+    description: "Senior Games tournament celebrating veteran players and their continued dedication to the sport.",
+    imageCount: 189,
+    highlights: ["Senior Games", "Veteran Players", "Continued Dedication", "Sport Celebration"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNishuYf5P0z1l7WXFXTWA",
+    coverImage: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+  },
+  {
+    year: "2019",
+    title: "DFWTT Charity Tournament 2019",
+    description: "Annual charity tournament combining competitive play with community service and fundraising.",
+    imageCount: 156,
+    highlights: ["Charity Tournament", "Community Service", "Fundraising", "Competitive Play"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNisht43--vFSQUTJ-cV2Q",
     coverImage: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
   },
   {
     year: "2018",
-    title: "2018 Competitive Excellence",
-    description: "Strong tournament performances and continued growth in youth programs.",
+    title: "DFWTT Fall Open 2018",
+    description: "Fall tournament showcasing competitive excellence and continued growth in youth programs.",
     imageCount: 342,
-    highlights: ["Tournament Success", "Youth Growth", "Coaching Excellence"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2018Gallery",
+    highlights: ["Competitive Excellence", "Youth Growth", "Fall Tournament", "Program Development"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNishq0ij2uFzwnpoG_qUg",
+    coverImage: "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
+  },
+  {
+    year: "2018",
+    title: "DFWTT Chinese Double Ten 2018",
+    description: "Double Ten celebration featuring traditional festivities and competitive tournament matches.",
+    imageCount: 234,
+    highlights: ["Double Ten Festival", "Traditional Festivities", "Tournament Matches", "Cultural Celebration"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNishqU-Cn0pv9ok7XLUag",
+    coverImage: "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
+  },
+  {
+    year: "2018",
+    title: "DFWTT Summer Open 2018",
+    description: "Summer tournament with both rating and non-rating divisions for players of all skill levels.",
+    imageCount: 298,
+    highlights: ["Rating Divisions", "Non-Rating Play", "All Skill Levels", "Summer Tournament"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNishp0bURiF9TYSLbIVVw",
+    coverImage: "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
+  },
+  {
+    year: "2018",
+    title: "Dallas Senior Games 2018",
+    description: "Senior Games tournament celebrating the experience and skill of veteran table tennis players.",
+    imageCount: 167,
+    highlights: ["Senior Games", "Veteran Players", "Experience", "Skill Celebration"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNishfQ0WoIvYsS12W-wtw",
+    coverImage: "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
+  },
+  {
+    year: "2018",
+    title: "DFWTT Winter Open 2018",
+    description: "Winter tournament providing competitive opportunities during the colder months of the year.",
+    imageCount: 145,
+    highlights: ["Winter Tournament", "Competitive Opportunities", "Cold Weather Play", "Year-Round Activity"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNisheFoEWH5lSBQLu9KgQ",
+    coverImage: "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
+  },
+  {
+    year: "2018",
+    title: "DFWTT Charity Tournament 2018",
+    description:
+      "Charity tournament combining competitive table tennis with community outreach and fundraising efforts.",
+    imageCount: 123,
+    highlights: ["Charity Event", "Community Outreach", "Fundraising", "Competitive Play"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNishbJ9RIiwS7RuqiEMrw",
     coverImage: "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
   },
   {
     year: "2017",
-    title: "2017 Community Building",
-    description: "Focus on building stronger community connections and expanding outreach programs.",
+    title: "DFWTT Fall Open 2017",
+    description: "Fall tournament focusing on community building and expanding outreach programs.",
     imageCount: 298,
-    highlights: ["Community Events", "Outreach Programs", "New Members"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2017Gallery",
+    highlights: ["Community Building", "Outreach Programs", "Fall Tournament", "Program Expansion"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNishLoZaHLNMrxXg5mIGw",
     coverImage: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
   },
   {
-    year: "2016",
-    title: "2016 20th Anniversary",
-    description: "Celebrating 20 years of DFWTT with special events and commemorative tournaments.",
-    imageCount: 425,
-    highlights: ["20th Anniversary", "Special Events", "Commemorative Tournaments"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2016Gallery",
-    coverImage: "linear-gradient(135deg, #ff8a80 0%, #ffb74d 100%)",
-  },
-  {
-    year: "2015",
-    title: "2015 Expansion Era",
-    description: "Major expansion with new facilities and increased tournament hosting capabilities.",
-    imageCount: 267,
-    highlights: ["Facility Expansion", "New Equipment", "Increased Capacity"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2015Gallery",
-    coverImage: "linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)",
-  },
-  {
-    year: "2014",
-    title: "2014 Tournament Hub",
-    description: "Establishing DFWTT as a premier tournament destination in the Southwest.",
+    year: "2017",
+    title: "DFWTT Chinese Double Ten 2017",
+    description: "Double Ten celebration with traditional cultural elements and competitive tournament play.",
     imageCount: 234,
-    highlights: ["Major Tournaments", "Regional Recognition", "Elite Players"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2014Gallery",
-    coverImage: "linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)",
+    highlights: ["Double Ten Festival", "Cultural Elements", "Traditional Celebration", "Tournament Play"],
+    oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNishLAQqwbB0X89R-WmnQ",
+    coverImage: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
   },
   {
-    year: "2013",
-    title: "2013 Growth Momentum",
-    description: "Continued growth in membership and tournament participation.",
+    year: "2017",
+    title: "DFWTT Spring Open 2017",
+    description: "Spring tournament with strong community participation and competitive matches.",
     imageCount: 189,
-    highlights: ["Membership Growth", "Tournament Expansion", "Youth Programs"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2013Gallery",
-    coverImage: "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)",
+    highlights: ["Spring Tournament", "Community Participation", "Competitive Matches", "Strong Turnout"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNishIp1rPlJkA6ewGYBkw",
+    coverImage: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
   },
   {
-    year: "2012",
-    title: "2012 Olympic Year",
-    description: "Olympic year inspiration with special events and increased community interest.",
-    imageCount: 203,
-    highlights: ["Olympic Inspiration", "Special Events", "Community Interest"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2012Gallery",
-    coverImage: "linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%)",
-  },
-  {
-    year: "2011",
-    title: "2011 Steady Progress",
-    description: "Consistent growth and improvement in all aspects of club operations.",
+    year: "2017",
+    title: "Dallas Senior Games 2017",
+    description: "Senior Games tournament with additional award ceremonies celebrating veteran achievements.",
     imageCount: 167,
-    highlights: ["Steady Growth", "Operational Improvements", "Member Satisfaction"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2011Gallery",
-    coverImage: "linear-gradient(135deg, #e0c3fc 0%, #9bb5ff 100%)",
+    highlights: ["Senior Games", "Award Ceremonies", "Veteran Achievements", "Recognition Events"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNisg_gjOH3K1E9lyIpXnQ",
+    coverImage: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
   },
   {
-    year: "2010",
-    title: "2010 New Decade",
-    description: "Starting the new decade with renewed energy and ambitious goals.",
+    year: "2017",
+    title: "Texas Winter Games 2017",
+    description: "Texas Winter Games tournament providing competitive opportunities during winter months.",
     imageCount: 145,
-    highlights: ["New Goals", "Fresh Energy", "Strategic Planning"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2010Gallery",
-    coverImage: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
-  },
-  {
-    year: "2009",
-    title: "2009 Resilience",
-    description: "Maintaining strong community bonds during challenging economic times.",
-    imageCount: 123,
-    highlights: ["Community Bonds", "Economic Challenges", "Perseverance"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2009Gallery",
-    coverImage: "linear-gradient(135deg, #96fbc4 0%, #f9f586 100%)",
-  },
-  {
-    year: "2008",
-    title: "2008 Olympic Spirit",
-    description: "Beijing Olympics year brought renewed interest and excitement to table tennis.",
-    imageCount: 178,
-    highlights: ["Beijing Olympics", "Renewed Interest", "Excitement"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2008Gallery",
-    coverImage: "linear-gradient(135deg, #f78ca0 0%, #f9748f 100%)",
-  },
-  {
-    year: "2007",
-    title: "2007 Competitive Growth",
-    description: "Increased competitive play and tournament participation.",
-    imageCount: 156,
-    highlights: ["Competitive Play", "Tournament Growth", "Player Development"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2007Gallery",
-    coverImage: "linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%)",
-  },
-  {
-    year: "2006",
-    title: "2006 Foundation Years",
-    description: "Building the foundation for future growth with dedicated members and volunteers.",
-    imageCount: 98,
-    highlights: ["Foundation Building", "Dedicated Members", "Volunteer Spirit"],
-    oneDriveUrl: "https://1drv.ms/f/s!DFWTT2006Gallery",
-    coverImage: "linear-gradient(135deg, #74b9ff 0%, #0984e3 100%)",
+    highlights: ["Winter Games", "Competitive Opportunities", "Winter Tournament", "Statewide Event"],
+    oneDriveUrl: "https://1drv.ms/u/s!AvhT8JQccNisg-95tLm8FWkFEc7GVg",
+    coverImage: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
   },
 ]
 
@@ -234,15 +370,15 @@ export default function GalleryPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="flex items-center gap-2 text-blue-100">
                 <Calendar className="h-5 w-5" />
-                <span>2006 - 2025</span>
+                <span>2008 - 2025</span>
               </div>
               <div className="flex items-center gap-2 text-blue-100">
                 <Camera className="h-5 w-5" />
-                <span>4,000+ Photos</span>
+                <span>6,000+ Photos</span>
               </div>
               <div className="flex items-center gap-2 text-blue-100">
                 <Trophy className="h-5 w-5" />
-                <span>20 Years of Memories</span>
+                <span>17 Years of Memories</span>
               </div>
             </div>
           </div>
@@ -296,7 +432,7 @@ export default function GalleryPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Galleries</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {featuredGalleries.map((gallery, index) => (
-                <GalleryCard key={gallery.year} {...gallery} />
+                <GalleryCard key={`${gallery.year}-${index}`} {...gallery} />
               ))}
             </div>
           </div>
@@ -317,7 +453,7 @@ export default function GalleryPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {regularGalleries.map((gallery, index) => (
-              <GalleryCard key={gallery.year} {...gallery} />
+              <GalleryCard key={`${gallery.year}-${index}`} {...gallery} />
             ))}
           </div>
         </div>
@@ -341,15 +477,15 @@ export default function GalleryPage() {
               <div className="text-gray-600">Total Photos</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">20</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">17</div>
               <div className="text-gray-600">Years Documented</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">150+</div>
               <div className="text-gray-600">Tournaments Captured</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">1000+</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">2000+</div>
               <div className="text-gray-600">Players Featured</div>
             </div>
           </div>
