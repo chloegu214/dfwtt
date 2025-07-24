@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { ExternalLink, Camera } from "lucide-react"
 
 interface GalleryCardProps {
@@ -35,14 +34,8 @@ export default function GalleryCard({
       }`}
       onClick={handleViewGallery}
     >
-      {/* Background Image */}
-      <div className="relative h-64 md:h-80 overflow-hidden">
-        <Image
-          src={coverImage || "/placeholder.svg?height=320&width=480"}
-          alt={`${year} DFWTT Gallery`}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
-        />
+      {/* Background Gradient */}
+      <div className="relative h-64 md:h-80 overflow-hidden" style={{ background: coverImage }}>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
         {/* Year Badge */}

@@ -13,7 +13,7 @@ const galleryData = [
     imageCount: 245,
     highlights: ["Summer Open", "Seth Pech Training", "School Challenge", "NCTTA Championships"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2025Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     featured: true,
   },
   {
@@ -24,7 +24,7 @@ const galleryData = [
     imageCount: 312,
     highlights: ["Fall Championship", "Youth Program", "Community Outreach"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2024Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
     featured: true,
   },
   {
@@ -34,7 +34,7 @@ const galleryData = [
     imageCount: 289,
     highlights: ["Regional Championships", "New Locations", "Junior Development"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2023Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
   },
   {
     year: "2022",
@@ -43,7 +43,7 @@ const galleryData = [
     imageCount: 198,
     highlights: ["Tournament Return", "Safety Protocols", "Community Events"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2022Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
   },
   {
     year: "2021",
@@ -52,7 +52,7 @@ const galleryData = [
     imageCount: 156,
     highlights: ["Virtual Training", "Safety Measures", "Limited Tournaments"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2021Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
   },
   {
     year: "2020",
@@ -61,7 +61,7 @@ const galleryData = [
     imageCount: 134,
     highlights: ["Early Season", "Community Support", "Virtual Events"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2020Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
   },
   {
     year: "2019",
@@ -70,7 +70,7 @@ const galleryData = [
     imageCount: 387,
     highlights: ["Championship Wins", "Record Membership", "Elite Training"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2019Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
   },
   {
     year: "2018",
@@ -79,7 +79,7 @@ const galleryData = [
     imageCount: 342,
     highlights: ["Tournament Success", "Youth Growth", "Coaching Excellence"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2018Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
   },
   {
     year: "2017",
@@ -88,7 +88,7 @@ const galleryData = [
     imageCount: 298,
     highlights: ["Community Events", "Outreach Programs", "New Members"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2017Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
   },
   {
     year: "2016",
@@ -97,7 +97,7 @@ const galleryData = [
     imageCount: 425,
     highlights: ["20th Anniversary", "Special Events", "Commemorative Tournaments"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2016Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #ff8a80 0%, #ffb74d 100%)",
   },
   {
     year: "2015",
@@ -106,7 +106,7 @@ const galleryData = [
     imageCount: 267,
     highlights: ["Facility Expansion", "New Equipment", "Increased Capacity"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2015Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)",
   },
   {
     year: "2014",
@@ -115,7 +115,7 @@ const galleryData = [
     imageCount: 234,
     highlights: ["Major Tournaments", "Regional Recognition", "Elite Players"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2014Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)",
   },
   {
     year: "2013",
@@ -124,7 +124,7 @@ const galleryData = [
     imageCount: 189,
     highlights: ["Membership Growth", "Tournament Expansion", "Youth Programs"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2013Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)",
   },
   {
     year: "2012",
@@ -133,7 +133,7 @@ const galleryData = [
     imageCount: 203,
     highlights: ["Olympic Inspiration", "Special Events", "Community Interest"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2012Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%)",
   },
   {
     year: "2011",
@@ -142,7 +142,7 @@ const galleryData = [
     imageCount: 167,
     highlights: ["Steady Growth", "Operational Improvements", "Member Satisfaction"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2011Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #e0c3fc 0%, #9bb5ff 100%)",
   },
   {
     year: "2010",
@@ -151,7 +151,7 @@ const galleryData = [
     imageCount: 145,
     highlights: ["New Goals", "Fresh Energy", "Strategic Planning"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2010Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
   },
   {
     year: "2009",
@@ -160,7 +160,7 @@ const galleryData = [
     imageCount: 123,
     highlights: ["Community Bonds", "Economic Challenges", "Perseverance"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2009Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #96fbc4 0%, #f9f586 100%)",
   },
   {
     year: "2008",
@@ -169,7 +169,7 @@ const galleryData = [
     imageCount: 178,
     highlights: ["Beijing Olympics", "Renewed Interest", "Excitement"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2008Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #f78ca0 0%, #f9748f 100%)",
   },
   {
     year: "2007",
@@ -178,7 +178,7 @@ const galleryData = [
     imageCount: 156,
     highlights: ["Competitive Play", "Tournament Growth", "Player Development"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2007Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%)",
   },
   {
     year: "2006",
@@ -187,7 +187,7 @@ const galleryData = [
     imageCount: 98,
     highlights: ["Foundation Building", "Dedicated Members", "Volunteer Spirit"],
     oneDriveUrl: "https://1drv.ms/f/s!DFWTT2006Gallery",
-    coverImage: "/placeholder.svg?height=320&width=480",
+    coverImage: "linear-gradient(135deg, #74b9ff 0%, #0984e3 100%)",
   },
 ]
 
