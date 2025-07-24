@@ -16,7 +16,7 @@ const memories: Memory[] = [
   {
     name: "Harry McKeever",
     years: "1928-2016",
-    imageUrl: "/placeholder.svg?height=200&width=200&text=Harry+McKeever",
+    imageUrl: "/images/memories/Harry-Mckeever-1478348611.png",
     content: (
       <>
         <p className="mb-4">
@@ -68,7 +68,7 @@ const memories: Memory[] = [
   {
     name: "Dorothea Taschner",
     years: "1928-2012",
-    imageUrl: "/placeholder.svg?height=200&width=200&text=Dorothea+Taschner",
+    imageUrl: "/images/memories/dorothea.png",
     content: (
       <>
         <p className="mb-4">
@@ -87,7 +87,7 @@ const memories: Memory[] = [
   },
   {
     name: "Hollis Hall",
-    imageUrl: "/placeholder.svg?height=200&width=200&text=Hollis+Hall",
+    imageUrl: "/images/memories/Hollis and Vic.jpg",
     content: (
       <>
         <p className="mb-4">
@@ -104,7 +104,7 @@ const memories: Memory[] = [
   {
     name: "Frank Opp",
     years: "1931-2006",
-    imageUrl: "/placeholder.svg?height=200&width=200&text=Frank+Opp",
+    imageUrl: "/images/memories/Frank.JPG",
     content: (
       <>
         <p className="mb-4">
