@@ -1,119 +1,107 @@
-import NewsCard from "@/components/news-card"
 import Link from "next/link"
-import { Calendar, Archive, Search } from "lucide-react"
+import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react"
 
-const featuredNews = {
-  title: "Special Training Program with Coach Seth Pech",
-  excerpt:
-    "DFWTT is privileged to have Seth Pech, a professional table tennis athlete and coach (USATT 2500+) known from his YouTube Channel PechPong. Seth will be coaching at DFW clubs for four months (April-August), bringing professional experience from Germany and Sweden.",
-  date: "June 15, 2025",
-  category: "Training",
-  image: "/placeholder.svg?height=300&width=600",
-  slug: "seth-pech-special-training",
-  featured: true,
-  readTime: "4 min read",
-}
-
-const newsArticles = [
+const currentNews = [
   {
-    title: "2025 DFWTT Summer Open Results",
-    excerpt:
-      "DFWTT hosted its Summer Open on June 14th at the Cimarron Recreation Center in Irving. The tournament raised $170 for the American Red Cross Disaster Relief Fund.",
+    date: "June 15, 2025",
+    title: "Special Training Program with Coach Seth Pech",
+    content:
+      "DFWTT is privileged to have Seth Pech, a professional table tennis athlete and coach (USATT 2500+) known from his YouTube Channel PechPong. Seth will be coaching at DFW clubs for four months (April-August), bringing professional experience from Germany and Sweden.",
+    category: "Training",
+    hasPhotos: true,
+  },
+  {
     date: "June 14, 2025",
+    title: "2025 DFWTT Summer Open Results",
+    content:
+      "DFWTT hosted its Summer Open on June 14th at the Cimarron Recreation Center in Irving. The tournament raised $170 for the American Red Cross Disaster Relief Fund.",
     category: "Tournament",
-    image: "/2025-dfwtt-summer-open.jpg",
-    slug: "2025-summer-open-results",
     hasPhotos: true,
     hasResults: true,
+    links: [
+      {
+        text: "Photos",
+        url: "https://1drv.ms/f/c/acd8701c94f053f8/El8ezZL6Ck9CsqmW_NV_pLEBRpNTjPuKHhzNbAluW6OjtQ?e=h8SN9f",
+      },
+      { text: "Results", url: "/results/2025#2025SummerOpen" },
+    ],
   },
   {
-    title: "2025 World University Games Trials",
-    excerpt:
-      "Collegiate National Team trials were held in Rockford, Illinois on April 3rd, determining five WUG team positions for the upcoming event in Rhine-Ruhr, Germany.",
-    date: "April 3, 2025",
-    category: "Competition",
-    image: "/placeholder.svg?height=200&width=400",
-    slug: "2025-wug-trials",
-    hasPhotos: true,
-  },
-  {
-    title: "2025 NCTTA Championships",
-    excerpt:
-      "The 2025 NCTTA Championships were held in Rockford, Illinois on April 3-6th. Complete information and results available on the NCTTA website.",
     date: "April 6, 2025",
+    title: "2025 NCTTA Championships",
+    content:
+      "The 2025 NCTTA Championships were held in Rockford, Illinois on April 3-6th. Information and results available on the NCTTA website.",
     category: "Championship",
-    image: "/placeholder.svg?height=200&width=400",
-    slug: "2025-nctta-championships",
     hasPhotos: true,
-    hasResults: true,
+    links: [
+      { text: "Photos", url: "https://1drv.ms/f/s!AvhT8JQccNiskfUeauh7wJT7STPibQ?e=UyMaYG" },
+      { text: "NCTTA Website", url: "http://www.nctta.org" },
+    ],
   },
   {
-    title: "2025 DFWTT School Challenge",
-    excerpt:
-      "The DFWTT School Challenge was held on March 29th at the Marcus Recreation Center, serving as a qualifying event for the AYTTO 2025 Scholastic National Championship.",
+    date: "April 3, 2025",
+    title: "2025 World University Games Trials",
+    content:
+      "Collegiate National Team trials were held in Rockford, Illinois on April 3rd, determining five WUG team positions for the upcoming event in Rhine-Ruhr, Germany.",
+    category: "Competition",
+    hasPhotos: true,
+    links: [
+      { text: "Photos", url: "https://1drv.ms/f/s!AvhT8JQccNiskfUdY5PbUXFKiiBjQw?e=wSHZDr" },
+      {
+        text: "NCTTA Article",
+        url: "http://www.nctta.org/content/opening-world-university-games-trials-kick-nctta-championships-explosive-style",
+      },
+    ],
+  },
+  {
     date: "March 29, 2025",
+    title: "2025 DFWTT School Challenge",
+    content:
+      "The DFWTT School Challenge was held on March 29th at the Marcus Recreation Center. This served as a qualifying event for the AYTTO 2025 Scholastic National Championship.",
     category: "Youth",
-    image: "/placeholder.svg?height=200&width=400",
-    slug: "2025-school-challenge",
     hasPhotos: true,
     hasResults: true,
+    links: [
+      { text: "Results", url: "/results/2025#2025SchoolChallenge" },
+      { text: "Photos", url: "https://photos.app.goo.gl/i5Vs2tdH1ECHCytg8" },
+    ],
   },
   {
-    title: "2025 DFWTT Spring Open Success",
-    excerpt:
-      "DFWTT hosted its Spring Open on March 22nd at the Cimarron Recreation Center, raising $180 for the American Red Cross Disaster Relief Fund.",
     date: "March 22, 2025",
+    title: "2025 DFWTT Spring Open Success",
+    content:
+      "DFWTT hosted its Spring Open on March 22nd at the Cimarron Recreation Center, raising $180 for the American Red Cross Disaster Relief Fund.",
     category: "Tournament",
-    image: "/placeholder.svg?height=200&width=400",
-    slug: "2025-spring-open-results",
     hasPhotos: true,
     hasResults: true,
-  },
-  {
-    title: "2025 NCTTA South Regional Championships",
-    excerpt:
-      "Texas Wesleyan University hosted the NCTTA South Regional Championships on February 22nd at the Sid Richardson Center in Fort Worth.",
-    date: "February 22, 2025",
-    category: "Regional",
-    image: "/placeholder.svg?height=200&width=400",
-    slug: "2025-nctta-south-regional",
-    hasPhotos: true,
-    hasResults: true,
-  },
-  {
-    title: "Winter 2025 George Braithwaite Major League",
-    excerpt:
-      "DFWTT and GPPCTX are hosting the Winter 2025 George Braithwaite Major League tournaments on January 26 and March 23, 2025 in the Dallas area.",
-    date: "January 26, 2025",
-    category: "League",
-    image: "/placeholder.svg?height=200&width=400",
-    slug: "2025-gbml-winter",
-    hasPhotos: true,
-  },
-  {
-    title: "2024 DFWTT Fall Open Results",
-    excerpt:
-      "DFWTT hosted its yearly Fall Open on November 2nd at the Cimarron Recreation Center in Irving. The tournament raised $176 for the American Red Cross.",
-    date: "November 2, 2024",
-    category: "Tournament",
-    image: "/placeholder.svg?height=200&width=400",
-    slug: "2024-fall-open-results",
-    hasPhotos: true,
-    hasResults: true,
+    links: [
+      { text: "Photos", url: "https://1drv.ms/f/s!AvhT8JQccNiskd0IooDhNIPDRqueWQ?e=8EdMEj" },
+      { text: "Results", url: "/results/2025#2025SpringOpen" },
+    ],
   },
 ]
 
 const archiveYears = [
-  { year: "2024", slug: "2024", count: 12 },
-  { year: "2023", slug: "2023", count: 15 },
-  { year: "2022", slug: "2022", count: 8 },
-  { year: "2021", slug: "2021", count: 7 },
-  { year: "2020", slug: "2020", count: 4 },
-  { year: "2019", slug: "2019", count: 11 },
-  { year: "2018", slug: "2018", count: 9 },
-  { year: "2017", slug: "2017", count: 14 },
-  { year: "2016", slug: "2016", count: 8 },
+  { year: "2024", count: 12 },
+  { year: "2023", count: 15 },
+  { year: "2022", count: 8 },
+  { year: "2021", count: 7 },
+  { year: "2020", count: 4 },
+  { year: "2019", count: 11 },
+  { year: "2018", count: 9 },
+  { year: "2017", count: 14 },
+  { year: "2016", count: 8 },
 ]
+
+const categoryColors = {
+  Training: "bg-purple-100 text-purple-800",
+  Tournament: "bg-blue-100 text-blue-800",
+  Championship: "bg-yellow-100 text-yellow-800",
+  Competition: "bg-green-100 text-green-800",
+  Youth: "bg-pink-100 text-pink-800",
+  League: "bg-indigo-100 text-indigo-800",
+  Charity: "bg-red-100 text-red-800",
+}
 
 export default function NewsPage() {
   return (
@@ -131,12 +119,12 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* Search and Filter */}
-      <section className="py-8 bg-white border-b border-gray-200">
+      {/* Navigation */}
+      <section className="py-6 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <div className="flex items-center gap-4">
-              <h2 className="text-2xl font-bold text-gray-900">Latest News</h2>
+          <div className="flex flex-wrap gap-4 items-center justify-between">
+            <h2 className="text-2xl font-bold text-gray-900">Latest News</h2>
+            <div className="flex gap-4">
               <Link
                 href="/news/archive"
                 className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
@@ -152,33 +140,63 @@ export default function NewsPage() {
                 Memories
               </Link>
             </div>
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search news..."
-                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Featured News */}
+      {/* Current News */}
       <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8">
-            <NewsCard {...featuredNews} />
-          </div>
-        </div>
-      </section>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-8">
+            {currentNews.map((item, index) => (
+              <article key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-sm text-gray-500">{item.date}</span>
+                      <span
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${categoryColors[item.category] || "bg-gray-100 text-gray-800"}`}
+                      >
+                        {item.category}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                  </div>
+                  <div className="flex gap-2">
+                    {item.hasPhotos && (
+                      <span className="flex items-center gap-1 text-xs text-gray-500">
+                        <Camera className="h-3 w-3" />
+                        Photos
+                      </span>
+                    )}
+                    {item.hasResults && (
+                      <span className="flex items-center gap-1 text-xs text-gray-500">
+                        <Trophy className="h-3 w-3" />
+                        Results
+                      </span>
+                    )}
+                  </div>
+                </div>
 
-      {/* News Grid */}
-      <section className="pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {newsArticles.map((article, index) => (
-              <NewsCard key={index} {...article} />
+                <p className="text-gray-700 mb-4 leading-relaxed">{item.content}</p>
+
+                {item.links && (
+                  <div className="flex flex-wrap gap-3">
+                    {item.links.map((link, linkIndex) => (
+                      <a
+                        key={linkIndex}
+                        href={link.url}
+                        target={link.url.startsWith("http") ? "_blank" : "_self"}
+                        rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium"
+                      >
+                        {link.text}
+                        {link.url.startsWith("http") && <ExternalLink className="h-3 w-3" />}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </article>
             ))}
           </div>
         </div>
@@ -190,21 +208,19 @@ export default function NewsPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">News Archive</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Browse through our complete news archive to see DFWTT's history of tournaments, achievements, and
-              community events spanning over a decade.
+              Browse through our complete news archive spanning over a decade of DFWTT history.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
             {archiveYears.map((archive) => (
               <Link
                 key={archive.year}
-                href={`/news/archive/${archive.slug}`}
-                className="bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg p-6 text-center transition-colors"
+                href={`/news/archive/${archive.year}`}
+                className="bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg p-4 text-center transition-colors group"
               >
-                <Calendar className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                <h3 className="text-xl font-bold text-gray-900">{archive.year}</h3>
-                <p className="text-sm text-gray-600">{archive.count} articles</p>
+                <div className="text-lg font-bold text-gray-900 group-hover:text-blue-600">{archive.year}</div>
+                <div className="text-xs text-gray-500">{archive.count} articles</div>
               </Link>
             ))}
           </div>
