@@ -21,7 +21,7 @@ const newsArticles = [
       "DFWTT hosted its Summer Open on June 14th at the Cimarron Recreation Center in Irving. The tournament raised $170 for the American Red Cross Disaster Relief Fund.",
     date: "June 14, 2025",
     category: "Tournament",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/2025-dfwtt-summer-open.jpg",
     slug: "2025-summer-open-results",
     hasPhotos: true,
     hasResults: true,
@@ -80,14 +80,39 @@ const newsArticles = [
     hasPhotos: true,
     hasResults: true,
   },
+  {
+    title: "Winter 2025 George Braithwaite Major League",
+    excerpt:
+      "DFWTT and GPPCTX are hosting the Winter 2025 George Braithwaite Major League tournaments on January 26 and March 23, 2025 in the Dallas area.",
+    date: "January 26, 2025",
+    category: "League",
+    image: "/placeholder.svg?height=200&width=400",
+    slug: "2025-gbml-winter",
+    hasPhotos: true,
+  },
+  {
+    title: "2024 DFWTT Fall Open Results",
+    excerpt:
+      "DFWTT hosted its yearly Fall Open on November 2nd at the Cimarron Recreation Center in Irving. The tournament raised $176 for the American Red Cross.",
+    date: "November 2, 2024",
+    category: "Tournament",
+    image: "/placeholder.svg?height=200&width=400",
+    slug: "2024-fall-open-results",
+    hasPhotos: true,
+    hasResults: true,
+  },
 ]
 
 const archiveYears = [
-  { year: "2024", slug: "2024" },
-  { year: "2023", slug: "2023" },
-  { year: "2022", slug: "2022" },
-  { year: "2021", slug: "2021" },
-  { year: "2020", slug: "2020" },
+  { year: "2024", slug: "2024", count: 12 },
+  { year: "2023", slug: "2023", count: 15 },
+  { year: "2022", slug: "2022", count: 8 },
+  { year: "2021", slug: "2021", count: 7 },
+  { year: "2020", slug: "2020", count: 4 },
+  { year: "2019", slug: "2019", count: 11 },
+  { year: "2018", slug: "2018", count: 9 },
+  { year: "2017", slug: "2017", count: 14 },
+  { year: "2016", slug: "2016", count: 8 },
 ]
 
 export default function NewsPage() {
@@ -118,6 +143,13 @@ export default function NewsPage() {
               >
                 <Archive className="h-4 w-4" />
                 View Archive
+              </Link>
+              <Link
+                href="/news/memories"
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
+              >
+                <Calendar className="h-4 w-4" />
+                Memories
               </Link>
             </div>
             <div className="relative">
@@ -159,7 +191,7 @@ export default function NewsPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">News Archive</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Browse through our complete news archive to see DFWTT's history of tournaments, achievements, and
-              community events.
+              community events spanning over a decade.
             </p>
           </div>
 
@@ -172,7 +204,7 @@ export default function NewsPage() {
               >
                 <Calendar className="h-8 w-8 text-blue-600 mx-auto mb-2" />
                 <h3 className="text-xl font-bold text-gray-900">{archive.year}</h3>
-                <p className="text-sm text-gray-600">View {archive.year} news</p>
+                <p className="text-sm text-gray-600">{archive.count} articles</p>
               </Link>
             ))}
           </div>
