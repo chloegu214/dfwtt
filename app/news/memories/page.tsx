@@ -9,6 +9,7 @@ type Memory = {
   years?: string
   content: React.ReactNode
   imageUrl?: string
+  additionalImages?: string[]
   links?: { label: string; url: string }[]
 }
 
@@ -69,12 +70,22 @@ const memories: Memory[] = [
     name: "Dorothea Taschner",
     years: "1928-2012",
     imageUrl: "/images/memories/dorothea.png",
+    additionalImages: [
+      "/placeholder.svg?height=400&width=600&text=Dorothea+Playing+Table+Tennis",
+      "/placeholder.svg?height=400&width=600&text=Dorothea+Tournament+Photo",
+      "/placeholder.svg?height=400&width=600&text=Dorothea+with+Friends",
+    ],
     content: (
       <>
         <p className="mb-4">
           Dorothea Taschner, a longtime DFWTT tournament player, passed away on August 20, 2012. Her table tennis
           playing spanned many decades after she first started playing at the age of 16. In the January 2011 edition of
           Plano Profile, a very interesting article was written about her life and her passion for table tennis.
+        </p>
+        <p className="mb-4">
+          Dorothea was known for her competitive spirit and dedication to the sport. She participated in numerous
+          tournaments throughout her career and was a beloved member of the DFWTT community. Her passion for table
+          tennis inspired many players and her legacy continues to live on in the hearts of those who knew her.
         </p>
       </>
     ),
@@ -88,6 +99,11 @@ const memories: Memory[] = [
   {
     name: "Hollis Hall",
     imageUrl: "/images/memories/Hollis and Vic.jpg",
+    additionalImages: [
+      "/placeholder.svg?height=400&width=600&text=Hollis+Hall+Tournament+Action",
+      "/placeholder.svg?height=400&width=600&text=Hollis+Hall+with+DFWTT+Members",
+      "/placeholder.svg?height=400&width=600&text=Hollis+Hall+Memorial+Photo",
+    ],
     content: (
       <>
         <p className="mb-4">
@@ -96,6 +112,11 @@ const memories: Memory[] = [
           playing table tennis. Hollis played many tournaments with Vic Maryoung as his doubles partner. Even during his
           battle with cancer he thought about making a come back to play. Unfortunately, Hollis passed away July 8th
           2003 after battling cancer. His legacy and passion for table tennis lives on in all of us.
+        </p>
+        <p className="mb-4">
+          Hollis was known for his positive attitude and sportsmanship. He brought joy to every match he played and was
+          always encouraging to newer players. His partnership with Vic Maryoung was legendary in DFWTT circles, and
+          their friendship extended far beyond the table tennis table.
         </p>
         <p className="text-sm text-gray-600 italic">Hollis and Vic (left to right)</p>
       </>
@@ -151,6 +172,33 @@ const memories: Memory[] = [
   },
 ]
 
+function ImageGallery({ images, name }: { images: string[]; name: string }) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+      {images.map((imageUrl, index) => (
+        <div key={index} className="relative aspect-[3/2] group">
+          {imageUrl.includes("placeholder.svg") ? (
+            <div className="w-full h-full bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
+              <div className="text-center text-gray-500">
+                <ImageIcon className="h-8 w-8 mx-auto mb-2" />
+                <p className="text-sm font-medium">Photo placeholder</p>
+                <p className="text-xs">for {name}</p>
+              </div>
+            </div>
+          ) : (
+            <Image
+              src={imageUrl || "/placeholder.svg"}
+              alt={`Additional photo of ${name}`}
+              fill
+              className="rounded-lg object-cover border-2 border-gray-200 shadow-md group-hover:shadow-lg transition-shadow"
+            />
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
+
 function MemoryCard({ memory }: { memory: Memory }) {
   return (
     <Card className="mb-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-l-blue-600">
@@ -170,7 +218,7 @@ function MemoryCard({ memory }: { memory: Memory }) {
       </CardHeader>
       <CardContent className="pt-6">
         <div className="flex flex-col md:flex-row gap-6">
-          {/* Image Section */}
+          {/* Main Image Section */}
           <div className="flex-shrink-0">
             <div className="relative w-48 h-48 mx-auto md:mx-0">
               {memory.imageUrl ? (
@@ -217,6 +265,17 @@ function MemoryCard({ memory }: { memory: Memory }) {
             )}
           </div>
         </div>
+
+        {/* Additional Images Gallery */}
+        {memory.additionalImages && memory.additionalImages.length > 0 && (
+          <div className="mt-8 pt-6 border-t border-gray-200">
+            <h4 className="font-semibold text-blue-900 mb-4 flex items-center gap-2">
+              <ImageIcon className="h-5 w-5" />
+              Photo Gallery
+            </h4>
+            <ImageGallery images={memory.additionalImages} name={memory.name} />
+          </div>
+        )}
       </CardContent>
     </Card>
   )
