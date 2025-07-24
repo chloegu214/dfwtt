@@ -35,7 +35,7 @@ const navigationItems: NavItem[] = [
   },
   {
     label: "Gallery",
-    children: [{ label: "2025", href: "/gallery" }],
+    href: "/gallery",
   },
   {
     label: "Support Us",
