@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react"
+import Link from "next/link";
+import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
   {
@@ -34,7 +34,10 @@ const currentNews = [
     category: "Championship",
     hasPhotos: true,
     links: [
-      { text: "Photos", url: "https://1drv.ms/f/s!AvhT8JQccNiskfUeauh7wJT7STPibQ?e=UyMaYG" },
+      {
+        text: "Photos",
+        url: "https://1drv.ms/f/s!AvhT8JQccNiskfUeauh7wJT7STPibQ?e=UyMaYG",
+      },
       { text: "NCTTA Website", url: "http://www.nctta.org" },
     ],
   },
@@ -46,7 +49,10 @@ const currentNews = [
     category: "Competition",
     hasPhotos: true,
     links: [
-      { text: "Photos", url: "https://1drv.ms/f/s!AvhT8JQccNiskfUdY5PbUXFKiiBjQw?e=wSHZDr" },
+      {
+        text: "Photos",
+        url: "https://1drv.ms/f/s!AvhT8JQccNiskfUdY5PbUXFKiiBjQw?e=wSHZDr",
+      },
       {
         text: "NCTTA Article",
         url: "http://www.nctta.org/content/opening-world-university-games-trials-kick-nctta-championships-explosive-style",
@@ -75,11 +81,14 @@ const currentNews = [
     hasPhotos: true,
     hasResults: true,
     links: [
-      { text: "Photos", url: "https://1drv.ms/f/s!AvhT8JQccNiskd0IooDhNIPDRqueWQ?e=8EdMEj" },
+      {
+        text: "Photos",
+        url: "https://1drv.ms/f/s!AvhT8JQccNiskd0IooDhNIPDRqueWQ?e=8EdMEj",
+      },
       { text: "Results", url: "/results/2025#2025SpringOpen" },
     ],
   },
-]
+];
 
 const archiveYears = [
   { year: "2024", count: 12 },
@@ -91,7 +100,18 @@ const archiveYears = [
   { year: "2018", count: 9 },
   { year: "2017", count: 14 },
   { year: "2016", count: 8 },
-]
+  { year: "2015", count: 10 },
+  { year: "2014", count: 16 },
+  { year: "2013", count: 15 },
+  { year: "2012", count: 13 },
+  { year: "2011", count: 12 },
+  { year: "2010", count: 11 },
+  { year: "2009", count: 15 },
+  { year: "2008", count: 12 },
+  { year: "2007", count: 11 },
+  { year: "2006", count: 13 },
+  { year: "2005", count: 12 },
+];
 
 const categoryColors = {
   Training: "bg-purple-100 text-purple-800",
@@ -101,7 +121,7 @@ const categoryColors = {
   Youth: "bg-pink-100 text-pink-800",
   League: "bg-indigo-100 text-indigo-800",
   Charity: "bg-red-100 text-red-800",
-}
+};
 
 export default function NewsPage() {
   return (
@@ -110,10 +130,12 @@ export default function NewsPage() {
       <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">DFWTT News & Updates</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              DFWTT News & Updates
+            </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-              Stay up to date with the latest tournaments, training programs, and community events from Dallas Fort
-              Worth Table Tennis.
+              Stay up to date with the latest tournaments, training programs,
+              and community events from Dallas Fort Worth Table Tennis.
             </p>
           </div>
         </div>
@@ -149,18 +171,26 @@ export default function NewsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
             {currentNews.map((item, index) => (
-              <article key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <article
+                key={index}
+                className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
+              >
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-sm text-gray-500">{item.date}</span>
                       <span
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${categoryColors[item.category] || "bg-gray-100 text-gray-800"}`}
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${
+                          categoryColors[item.category] ||
+                          "bg-gray-100 text-gray-800"
+                        }`}
                       >
                         {item.category}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {item.title}
+                    </h3>
                   </div>
                   <div className="flex gap-2">
                     {item.hasPhotos && (
@@ -178,7 +208,9 @@ export default function NewsPage() {
                   </div>
                 </div>
 
-                <p className="text-gray-700 mb-4 leading-relaxed">{item.content}</p>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  {item.content}
+                </p>
 
                 {item.links && (
                   <div className="flex flex-wrap gap-3">
@@ -186,12 +218,20 @@ export default function NewsPage() {
                       <a
                         key={linkIndex}
                         href={link.url}
-                        target={link.url.startsWith("http") ? "_blank" : "_self"}
-                        rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                        target={
+                          link.url.startsWith("http") ? "_blank" : "_self"
+                        }
+                        rel={
+                          link.url.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
                         className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium"
                       >
                         {link.text}
-                        {link.url.startsWith("http") && <ExternalLink className="h-3 w-3" />}
+                        {link.url.startsWith("http") && (
+                          <ExternalLink className="h-3 w-3" />
+                        )}
                       </a>
                     ))}
                   </div>
@@ -206,9 +246,12 @@ export default function NewsPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">News Archive</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              News Archive
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Browse through our complete news archive spanning over a decade of DFWTT history.
+              Browse through our complete news archive spanning over a decade of
+              DFWTT history.
             </p>
           </div>
 
@@ -219,13 +262,17 @@ export default function NewsPage() {
                 href={`/news/archive/${archive.year}`}
                 className="bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg p-4 text-center transition-colors group"
               >
-                <div className="text-lg font-bold text-gray-900 group-hover:text-blue-600">{archive.year}</div>
-                <div className="text-xs text-gray-500">{archive.count} articles</div>
+                <div className="text-lg font-bold text-gray-900 group-hover:text-blue-600">
+                  {archive.year}
+                </div>
+                <div className="text-xs text-gray-500">
+                  {archive.count} articles
+                </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
