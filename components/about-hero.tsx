@@ -1,148 +1,107 @@
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import DFWTTSummerOpen from "../public/2025-dfwtt-summer-open.jpg";
 import Image from "next/image";
-import { Star, Phone, Mail } from "lucide-react";
-import openPlay2025 from "./../public/2025 DFWTT Summer Open.jpg";
-
-const locations = [
-  {
-    name: "Cimarron Recreation Center",
-    city: "Irving, TX",
-    schedules: [
-      { day: "Monday", time: "7:00 PM - 9:00 PM" },
-      { day: "Saturday", time: "9:00 AM - 12:00 PM" },
-    ],
-    phone: "214-240-5975",
-    email: "dfwtt1@gmail.com",
-    manager: {
-      name: "Donna Chen",
-      title: "Location Coordinator",
-      image: "/placeholder.svg?height=40&width=40",
-    },
-  },
-  {
-    name: "Heights Recreation Center",
-    city: "Richardson, TX",
-    schedules: [
-      { day: "Friday", time: "6:00 PM - 9:00 PM" },
-      { day: "Sunday", time: "2:00 PM - 5:00 PM" },
-    ],
-    phone: "214-240-5975",
-    email: "dfwtt1@gmail.com",
-    manager: {
-      name: "Donna Chen",
-      title: "Location Coordinator",
-      image: "/placeholder.svg?height=40&width=40",
-    },
-  },
-  {
-    name: "Marcus Recreation Center",
-    city: "Flower Mound, TX",
-    schedules: [{ day: "Thursday", time: "5:30 PM - 8:00 PM" }],
-    phone: "214-240-5975",
-    email: "dfwtt1@gmail.com",
-    manager: {
-      name: "Donna Chen",
-      title: "Location Coordinator",
-      image: "/placeholder.svg?height=40&width=40",
-    },
-  },
-  {
-    name: "Timberglen Recreation Center",
-    city: "Dallas, TX",
-    schedules: [
-      { day: "Monday", time: "5:30 PM - 8:00 PM" },
-      { day: "Wednesday", time: "5:30 PM - 8:00 PM" },
-    ],
-    phone: "214-240-5975",
-    email: "dfwtt1@gmail.com",
-    manager: {
-      name: "Donna Chen",
-      title: "Location Coordinator",
-      image: "/placeholder.svg?height=40&width=40",
-    },
-  },
-];
 
 export default function AboutHero() {
   return (
-    <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className='absolute inset-0 bg-[url(&apos;data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&apos;)]'></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+          {/* Content */}
           <div className="space-y-8">
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Welcome to{" "}
-                <span className="text-blue-600">DFW Table Tennis</span>
+            <div className="space-y-4">
+              <Badge
+                variant="secondary"
+                className="bg-yellow-400 text-yellow-900 hover:bg-yellow-300"
+              >
+                Established 1996
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                About <span className="text-yellow-400">DFWTT</span>
               </h1>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                We are one of the leading table tennis membership organizations
-                in the nation, affiliated with USA Table Tennis (USATT). DFWTT
-                promotes, develops and implements programs for table tennis
-                players of all experience levels through family values,
-                excellence and quality sportsmanship in the Dallas & Fort Worth
-                area.
+              <p className="text-xl md:text-2xl text-blue-100 leading-relaxed">
+                Building a stronger table tennis community in the Dallas & Fort
+                Worth area through family values, excellence, and quality
+                sportsmanship.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              {/* <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl">
-                Join DFWTT Today
-              </button> */}
-              <div className="flex items-center gap-2 text-gray-600">
-                <div className="flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
+            <div className="space-y-4">
+              <p className="text-lg text-blue-100 leading-relaxed">
+                DFWTT is an organization that promotes, develops and implements
+                programs for the sport of table tennis regardless of the
+                player's experience. We're open to all ages, ethnicities,
+                genders and playing levels.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-400">100+</div>
+                  <div className="text-sm text-blue-200">Active Members</div>
                 </div>
-                <span className="font-medium">Established 1996</span>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-400">4</div>
+                  <div className="text-sm text-blue-200">Locations</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-400">29</div>
+                  <div className="text-sm text-blue-200">Years Strong</div>
+                </div>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 pt-4">
-              <div className="flex items-center gap-2 text-gray-600">
-                <Phone className="h-5 w-5 text-blue-600" />
-                <span>214-240-5975</span>
-              </div>
-              <div className="flex items-center gap-2 text-gray-600">
-                <Mail className="h-5 w-5 text-blue-600" />
-                <span>dfwtt1@gmail.com</span>
-              </div>
-              <div className="flex items-center gap-2 text-gray-600">
-                <div>
-                  <div className="font-semibold text-gray-600">Donna Chen</div>
-                </div>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                className="bg-yellow-500 hover:bg-yellow-600 text-yellow-900 font-semibold"
+              >
+                Join Our Community
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-blue-900 bg-transparent"
+              >
+                Find Locations
+              </Button>
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Image */}
           <div className="relative">
-            <div className="bg-gray-100 rounded-2xl p-8 shadow-xl">
+            <div className="relative z-10">
               <Image
-                src={openPlay2025}
-                alt="Table tennis players in action"
-                width={500}
-                height={400}
-                className="rounded-lg object-cover w-full"
+                src={DFWTTSummerOpen}
+                alt="2025 DFWTT Summer Open Tournament Poster"
+                className="rounded-lg shadow-2xl w-full"
               />
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-full p-4 shadow-lg">
-                <div className="flex items-center gap-2">
-                  <div className="flex -space-x-2">
-                    <div className="w-8 h-8 bg-blue-500 rounded-full border-2 border-white"></div>
-                    <div className="w-8 h-8 bg-green-500 rounded-full border-2 border-white"></div>
-                    <div className="w-8 h-8 bg-purple-500 rounded-full border-2 border-white"></div>
-                  </div>
-                  <span className="text-sm font-medium text-gray-700">
-                    100+ Members
-                  </span>
-                </div>
-              </div>
             </div>
+
+            {/* Decorative Elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full opacity-20 blur-xl"></div>
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-400 rounded-full opacity-20 blur-xl"></div>
           </div>
         </div>
+      </div>
+
+      {/* Bottom Wave */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-full h-16"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            className="fill-white"
+          ></path>
+        </svg>
       </div>
     </section>
   );
