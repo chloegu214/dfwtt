@@ -33,6 +33,47 @@ const roundRobinResults = [
     ],
   },
   {
+    date: "2025-07-13",
+    classA: [
+      { rank: 1, name: "Seth Pech" },
+      { rank: 2, name: "Yu-Te Huang" },
+      { rank: 3, name: "Ranjit Rayamajhi" },
+      { rank: 4, name: "Maxwell Dillow" },
+      { rank: 5, name: "Philip Wang" },
+      { rank: 6, name: "Amir Dan" },
+      { rank: 7, name: "Sofija Scepanovic" },
+    ],
+    classB: [
+      { rank: 1, name: "Erik Zhang" },
+      { rank: 2, name: "Norman Lehr" },
+      { rank: 3, name: "David Williams" },
+      { rank: 4, name: "Jeshua Juane" },
+    ],
+  },
+  {
+    date: "2025-07-06",
+    classA: [
+      { rank: 1, name: "Seth Pech" },
+      { rank: 2, name: "Dhruv Dusad" },
+      { rank: 3, name: "Ranjit Rayamajhi" },
+      { rank: 4, name: "Ivan Tsai" },
+      { rank: 5, name: "Vihaan Desaraju" },
+      { rank: 6, name: "Nicholas Senturia" },
+      { rank: 7, name: "Maxwell Dillow" },
+      { rank: 8, name: "Arjun Dharangaoker" },
+      { rank: 9, name: "Yizhou Zhao" },
+      { rank: 10, name: "Amir Dan" },
+    ],
+    classB: [
+      { rank: 1, name: "Philip Wang" },
+      { rank: 2, name: "Chetan Kokil" },
+      { rank: 3, name: "Kanika Dusad" },
+      { rank: 4, name: "Norman Lehr" },
+      { rank: 5, name: "Kuntal Pal" },
+      { rank: 6, name: "David Williams" },
+    ],
+  },
+  {
     date: "2025-06-29",
     classA: [
       { rank: 1, name: "Seth Pech" },
