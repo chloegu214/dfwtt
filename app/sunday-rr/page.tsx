@@ -1,15 +1,37 @@
-"use client"
+"use client";
 
-import { useState, useMemo } from "react"
-import { Input } from "@/components/ui/input"
-import { Card, CardContent } from "@/components/ui/card"
-import { Search, Calendar, Users, Trophy } from "lucide-react"
-import { RRResultCard } from "@/components/rr-result-card"
-import { YearSelector } from "@/components/year-selector"
+import { useState, useMemo } from "react";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent } from "@/components/ui/card";
+import { Search, Calendar, Users, Trophy } from "lucide-react";
+import { RRResultCard } from "@/components/rr-result-card";
+import { YearSelector } from "@/components/year-selector";
 
 // Complete tournament results data
 const roundRobinResults = [
   // 2025 Results
+  {
+    date: "2025-07-20",
+    classA: [
+      { rank: 1, name: "Zhongxu An" },
+      { rank: 2, name: "Ranjit Rayamajhi" },
+      { rank: 3, name: "Yizhou Zhao" },
+      { rank: 3, name: "Masood Hyder" },
+      { rank: 5, name: "Maxwell Dillow" },
+      { rank: 5, name: "Ivan Tsai" },
+      { rank: 7, name: "Amir Dan" },
+    ],
+    classB: [
+      { rank: 1, name: "Philip Wang" },
+      { rank: 2, name: "Saahaj Gade" },
+      { rank: 3, name: "Norman Lehr" },
+      { rank: 4, name: "Chetan Kokil" },
+      { rank: 5, name: "Maxwell Pham" },
+      { rank: 6, name: "David Williams" },
+      { rank: 7, name: "Kuntal Pal" },
+      { rank: 8, name: "Annie Xiang" },
+    ],
+  },
   {
     date: "2025-06-29",
     classA: [
@@ -588,40 +610,44 @@ const roundRobinResults = [
       { rank: 10, name: "Bill Cashin" },
     ],
   },
-]
+];
 
 export default function SundayRRPage() {
-  const [selectedYear, setSelectedYear] = useState<number | null>(null)
-  const [searchTerm, setSearchTerm] = useState("")
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Extract unique years and sort them in descending order
   const years = useMemo(() => {
-    const yearSet = new Set(roundRobinResults.map((result) => new Date(result.date).getFullYear()))
-    return Array.from(yearSet).sort((a, b) => b - a)
-  }, [])
+    const yearSet = new Set(
+      roundRobinResults.map((result) => new Date(result.date).getFullYear())
+    );
+    return Array.from(yearSet).sort((a, b) => b - a);
+  }, []);
 
   // Count results per year
   const resultCounts = useMemo(() => {
-    const counts: Record<number, number> = {}
+    const counts: Record<number, number> = {};
     roundRobinResults.forEach((result) => {
-      const year = new Date(result.date).getFullYear()
-      counts[year] = (counts[year] || 0) + 1
-    })
-    return counts
-  }, [])
+      const year = new Date(result.date).getFullYear();
+      counts[year] = (counts[year] || 0) + 1;
+    });
+    return counts;
+  }, []);
 
   // Filter results based on selected year and search term
   const filteredResults = useMemo(() => {
-    let filtered = roundRobinResults
+    let filtered = roundRobinResults;
 
     // Filter by year
     if (selectedYear) {
-      filtered = filtered.filter((result) => new Date(result.date).getFullYear() === selectedYear)
+      filtered = filtered.filter(
+        (result) => new Date(result.date).getFullYear() === selectedYear
+      );
     }
 
     // Filter by search term
     if (searchTerm) {
-      const searchLower = searchTerm.toLowerCase()
+      const searchLower = searchTerm.toLowerCase();
       filtered = filtered.filter((result) => {
         // Search in player names
         const allPlayers = [
@@ -629,48 +655,60 @@ export default function SundayRRPage() {
           ...(result.classB || []),
           ...(result.classC || []),
           ...(result.open || []),
-        ]
+        ];
 
-        const playerMatch = allPlayers.some((player) => player.name.toLowerCase().includes(searchLower))
+        const playerMatch = allPlayers.some((player) =>
+          player.name.toLowerCase().includes(searchLower)
+        );
 
         // Search in team events
         const teamMatch =
           result.teamEvent?.results.some((teamResult) =>
-            teamResult.team.some((member) => member.toLowerCase().includes(searchLower)),
-          ) || false
+            teamResult.team.some((member) =>
+              member.toLowerCase().includes(searchLower)
+            )
+          ) || false;
 
         // Search in date
-        const dateMatch = result.date.includes(searchTerm)
+        const dateMatch = result.date.includes(searchTerm);
 
-        return playerMatch || teamMatch || dateMatch
-      })
+        return playerMatch || teamMatch || dateMatch;
+      });
     }
 
-    return filtered.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  }, [selectedYear, searchTerm])
+    return filtered.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+  }, [selectedYear, searchTerm]);
 
-  const totalResults = filteredResults.length
+  const totalResults = filteredResults.length;
   const totalPlayers = useMemo(() => {
-    const playerSet = new Set<string>()
+    const playerSet = new Set<string>();
     filteredResults.forEach((result) => {
-      ;[...(result.classA || []), ...(result.classB || []), ...(result.classC || []), ...(result.open || [])].forEach(
-        (player) => playerSet.add(player.name),
-      )
-    })
-    return playerSet.size
-  }, [filteredResults])
+      [
+        ...(result.classA || []),
+        ...(result.classB || []),
+        ...(result.classC || []),
+        ...(result.open || []),
+      ].forEach((player) => playerSet.add(player.name));
+    });
+    return playerSet.size;
+  }, [filteredResults]);
 
-  const latestResult = filteredResults[0]
+  const latestResult = filteredResults[0];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
       <div className="container mx-auto px-4 py-24">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-blue-900 mb-4">Sunday Singles Round Robin</h1>
+          <h1 className="text-4xl font-bold text-blue-900 mb-4">
+            Sunday Singles Round Robin
+          </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Weekly round robin tournament results featuring competitive play across multiple skill divisions. Track
-            player progress and see how the competition has evolved over the years.
+            Weekly round robin tournament results featuring competitive play
+            across multiple skill divisions. Track player progress and see how
+            the competition has evolved over the years.
           </p>
         </div>
 
@@ -680,7 +718,9 @@ export default function SundayRRPage() {
             <CardContent className="flex items-center p-6">
               <Calendar className="h-8 w-8 text-blue-600 mr-4" />
               <div>
-                <p className="text-2xl font-bold text-blue-900">{totalResults}</p>
+                <p className="text-2xl font-bold text-blue-900">
+                  {totalResults}
+                </p>
                 <p className="text-gray-600">Total Events</p>
               </div>
             </CardContent>
@@ -689,7 +729,9 @@ export default function SundayRRPage() {
             <CardContent className="flex items-center p-6">
               <Users className="h-8 w-8 text-blue-600 mr-4" />
               <div>
-                <p className="text-2xl font-bold text-blue-900">{totalPlayers}</p>
+                <p className="text-2xl font-bold text-blue-900">
+                  {totalPlayers}
+                </p>
                 <p className="text-gray-600">Active Players</p>
               </div>
             </CardContent>
@@ -699,7 +741,9 @@ export default function SundayRRPage() {
               <Trophy className="h-8 w-8 text-blue-600 mr-4" />
               <div>
                 <p className="text-2xl font-bold text-blue-900">
-                  {latestResult ? new Date(latestResult.date).toLocaleDateString() : "N/A"}
+                  {latestResult
+                    ? new Date(latestResult.date).toLocaleDateString()
+                    : "N/A"}
                 </p>
                 <p className="text-gray-600">Latest Event</p>
               </div>
@@ -738,12 +782,17 @@ export default function SundayRRPage() {
           <Card className="text-center py-12">
             <CardContent>
               <Trophy className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-600 mb-2">No Results Found</h3>
-              <p className="text-gray-500">Try adjusting your search criteria or selecting a different year.</p>
+              <h3 className="text-lg font-semibold text-gray-600 mb-2">
+                No Results Found
+              </h3>
+              <p className="text-gray-500">
+                Try adjusting your search criteria or selecting a different
+                year.
+              </p>
             </CardContent>
           </Card>
         )}
       </div>
     </div>
-  )
+  );
 }
