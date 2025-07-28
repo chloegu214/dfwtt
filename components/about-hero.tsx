@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import DFWTTSummerOpen from "../public/2025-dfwtt-summer-open.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutHero() {
   return (
@@ -57,18 +58,18 @@ export default function AboutHero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
+              {/* <Button
                 size="lg"
                 className="bg-yellow-500 hover:bg-yellow-600 text-yellow-900 font-semibold"
               >
                 Join Our Community
-              </Button>
+              </Button> */}
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-900 bg-transparent"
               >
-                Find Locations
+                <Link href="/places-to-play">Find Locations</Link>
               </Button>
             </div>
           </div>
