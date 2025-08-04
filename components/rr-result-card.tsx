@@ -46,11 +46,14 @@ const getRankBadgeColor = (rank: number) => {
 
 export function RRResultCard({ result }: RRResultCardProps) {
   const formatDate = (dateStr: string) => {
-    const date = new Date(dateStr)
+    // Parse as UTC to avoid timezone offset issues
+    const [year, month, day] = dateStr.split("-").map(Number)
+    const date = new Date(Date.UTC(year, month - 1, day))
     return date.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
       year: "numeric",
+      timeZone: "UTC",
     })
   }
 
