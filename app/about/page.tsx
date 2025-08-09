@@ -82,12 +82,49 @@ export default function AboutPage() {
     <main>
       <AboutHero />
 
-      {/* School Players Alert Section */}
+     {/* Begin Notification area */}
       <section className="py-12 bg-yellow-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Alert className="border-yellow-200 bg-yellow-50">
-            <GraduationCap className="h-5 w-5 text-yellow-600" />
-            <AlertDescription className="text-yellow-800">
+
+      {/* Location Closings Section */}         
+          <Alert className="border-black-200 bg-red-50">
+             <AlertDescription className="text-red-800">
+              <div className="space-y-2">
+                <p className="font-semibold text-lg">
+                  Location Closings:
+                </p>
+                <p>
+                   Cimarron and Timberglen locations will be closed on Monday, September 1, 2025.
+                </p>
+              </div>
+            </AlertDescription>
+          </Alert>
+
+          <p>&nbsp;</p>
+
+      {/* Upcoming Tournaments Section */}
+          <Alert className="border-black-200 bg-yellow-50">
+              <AlertDescription className="text-black-800">  
+              <div className="space-y-2">
+                <p className="font-semibold text-lg">
+                  Upcoming Tournaments:
+                </p>
+                <p>
+                   Chinese Double Ten Tournament, Saturday, September 27, 2025.&nbsp;
+                   <a href= "/documents/2025DblTen.pdf"
+                      className="font-medium text-blue-600 hover:text-blue-800 underline"                  
+                      target="_blank">Entry Form
+                   </a>
+                 </p>
+              </div>
+             </AlertDescription>  
+          </Alert>  
+
+          <p>&nbsp;</p>
+		  
+      {/* School Players Section */}                 
+          <Alert className="border-black-200 bg-yellow-50">
+             <AlertDescription className="text-yellow-800">
               <div className="space-y-2">
                 <p className="font-semibold text-lg">
                   Attention Elementary, Middle, and High School Table Tennis
