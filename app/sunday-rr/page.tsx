@@ -11,8 +11,27 @@ import { YearSelector } from "@/components/year-selector"
 const roundRobinResults = [
   // 2025 Results
   {
-    date: "2025-08-03",
+    date: "2025-08-10",
     classA: [
+      { rank: 1, name: "Seth Pech" },
+      { rank: 2, name: "Ranjit Rayamajhi" },
+      { rank: 3, name: "Pratyush Mohanty" },
+      { rank: 4, name: "Yizhou Zhao" },
+      { rank: 5, name: "Amir Dan" },
+      { rank: 6, name: "Saahaj Gade" },
+    ],
+    classB: [
+      { rank: 1, name: "Erik Zhang" },
+      { rank: 2, name: "Philip Wang" },
+      { rank: 3, name: "Qihao Lin" },
+      { rank: 4, name: "Norman Lehr" },
+      { rank: 5, name: "Michael Nguyen" },
+      { rank: 6, name: "David Williams" },
+    ],
+  },
+  {
+    date: "2025-08-03",
+    open: [
       { rank: 1, name: "Seth Pech" },
       { rank: 2, name: "Ranjit Rayamajhi" },
       { rank: 3, name: "Nilanjan Debnath" },
