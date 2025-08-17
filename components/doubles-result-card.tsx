@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Trophy, Medal, Award, Users } from "lucide-react"
+import { parseISO, format } from "date-fns"
 
 interface DoublesTeam {
   rank: number
@@ -48,12 +49,8 @@ const getRankBadgeColor = (rank: number) => {
 
 export function DoublesResultCard({ result }: DoublesResultCardProps) {
   const formatDate = (dateStr: string) => {
-    const date = new Date(dateStr)
-    return date.toLocaleDateString("en-US", {
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-    })
+    if (!dateStr) return "N/A"
+    return format(parseISO(dateStr), "MM/dd/yyyy")
   }
 
   const renderTeamList = (teams: DoublesTeam[], title: string) => (

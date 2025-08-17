@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useMemo } from "react"
+import { parseISO } from "date-fns"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -428,7 +429,7 @@ export default function MonthlyDoublesPage() {
   const years = useMemo(() => {
     const yearSet = new Set<number>()
     doublesResults.forEach((result) => {
-      const year = new Date(result.date).getFullYear()
+      const year = parseISO(result.date).getFullYear()
       yearSet.add(year)
     })
     return Array.from(yearSet).sort((a, b) => b - a)
@@ -437,7 +438,7 @@ export default function MonthlyDoublesPage() {
   const resultCounts = useMemo(() => {
     const counts: Record<number, number> = {}
     doublesResults.forEach((result) => {
-      const year = new Date(result.date).getFullYear()
+      const year = parseISO(result.date).getFullYear()
       counts[year] = (counts[year] || 0) + 1
     })
     return counts
@@ -445,7 +446,7 @@ export default function MonthlyDoublesPage() {
 
   const filteredResults = useMemo(() => {
     return doublesResults.filter((result) => {
-      const matchesYear = selectedYear === null || new Date(result.date).getFullYear() === selectedYear
+      const matchesYear = selectedYear === null || parseISO(result.date).getFullYear() === selectedYear
 
       if (!searchTerm) return matchesYear
 

@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Search, Calendar, Users, Trophy } from "lucide-react"
 import { RRResultCard } from "@/components/rr-result-card"
 import { YearSelector } from "@/components/year-selector"
+import { parseISO, format } from "date-fns";
 
 // Complete tournament results data from DFWTT website
 const roundRobinResults = [
@@ -734,7 +735,7 @@ export default function SundayRRPage() {
 
   // Extract unique years and sort them in descending order
   const years = useMemo(() => {
-    const yearSet = new Set(roundRobinResults.map((result) => new Date(result.date).getFullYear()))
+    const yearSet = new Set(roundRobinResults.map((result) => parseISO(result.date).getFullYear()))
     return Array.from(yearSet).sort((a, b) => b - a)
   }, [])
 
@@ -742,7 +743,7 @@ export default function SundayRRPage() {
   const resultCounts = useMemo(() => {
     const counts: Record<number, number> = {}
     roundRobinResults.forEach((result) => {
-      const year = new Date(result.date).getFullYear()
+      const year = parseISO(result.date).getFullYear()
       counts[year] = (counts[year] || 0) + 1
     })
     return counts
@@ -754,7 +755,7 @@ export default function SundayRRPage() {
 
     // Filter by year
     if (selectedYear) {
-      filtered = filtered.filter((result) => new Date(result.date).getFullYear() === selectedYear)
+      filtered = filtered.filter((result) => parseISO(result.date).getFullYear() === selectedYear)
     }
 
     // Filter by search term
@@ -784,7 +785,7 @@ export default function SundayRRPage() {
       })
     }
 
-    return filtered.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    return filtered.sort((a, b) => parseISO(b.date).getTime() - parseISO(a.date).getTime())
   }, [selectedYear, searchTerm])
 
   const totalResults = filteredResults.length
@@ -837,7 +838,7 @@ export default function SundayRRPage() {
               <Trophy className="h-8 w-8 text-blue-600 mr-4" />
               <div>
                 <p className="text-2xl font-bold text-blue-900">
-                  {latestResult ? new Date(latestResult.date).toLocaleDateString() : "N/A"}
+                  {latestResult ? format(parseISO(latestResult.date), "MM/dd/yyyy") : "N/A"}
                 </p>
                 <p className="text-gray-600">Latest Event</p>
               </div>

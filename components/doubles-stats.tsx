@@ -1,3 +1,4 @@
+import { parseISO, format } from "date-fns"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Trophy, Users, Calendar, TrendingUp } from "lucide-react"
 
@@ -17,12 +18,8 @@ export function DoublesStats({
   topPerformers,
 }: DoublesStatsProps) {
   const formatDate = (dateStr: string) => {
-    const date = new Date(dateStr)
-    return date.toLocaleDateString("en-US", {
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-    })
+    if (!dateStr) return "N/A"
+    return format(parseISO(dateStr), "MM/dd/yyyy")
   }
 
   return (
