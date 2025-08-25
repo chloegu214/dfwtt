@@ -116,6 +116,18 @@ export default function AboutPage() {
                       target="_blank">Entry Form
                    </a>
                  </p>
+                 <p>
+                   Dallas Golden Games (Table Tennis), Saturday, September 6, 2025.&nbsp;
+                   <a href= "/images/BACK of Golden Games.jpg"
+                      className="font-medium text-blue-600 hover:text-blue-800 underline"                  
+                      target="_blank">Event Flier
+                   </a>
+                   <a>&nbsp;&nbsp;</a>
+                    <a href= "/documents/Golden Games Information Packet (1).pdf"
+                      className="font-medium text-blue-600 hover:text-blue-800 underline"                  
+                      target="_blank">Information Packet
+                   </a>                  
+                 </p>                
               </div>
              </AlertDescription>  
           </Alert>  
