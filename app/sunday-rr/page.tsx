@@ -11,7 +11,27 @@ import { parseISO, format } from "date-fns";
 // Complete tournament results data from DFWTT website
 const roundRobinResults = [
   // 2025 Results
-    {
+  {
+    date: "2025-08-31",
+    classA: [
+      { rank: 1, name: "Seth Pech" },
+      { rank: 2, name: "Keith Pech" },
+      { rank: 3, name: "Dhruv Dusad" },     
+      { rank: 4, name: "Ranjit Rayamajhi" },
+      { rank: "5-8", name: "Kim Iwasaki, Maxwell Dillow, Pratyush Mohanty," },
+      { rank: "5-8", name: "Nicholas Senturia" },     
+      { rank: "9-12", name: "Amir Dan, Michael Chen, Sergio Pulido, Qihao Lin" },      
+    ],
+    classB: [
+      { rank: 1, name: "Norman Lehr" },
+      { rank: 2, name: "Chetan Kokil" },
+      { rank: 3, name: "Arief B Khan" },
+      { rank: 4, name: "David Williams" },
+      { rank: 5, name: "Akash Krishnamurthy" },     
+      { rank: 6, name: "Mia Li" },
+    ],
+  },    
+  {
     date: "2025-08-24",
     classA: [
       { rank: 1, name: "Ranjit Rayamajhi" },
