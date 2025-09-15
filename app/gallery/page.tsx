@@ -10,7 +10,7 @@ const galleryData = [
     title: "Dallas Golden Games 2025",
     description:
       "Dallas Park and Recreation's Golden Games.",
-    imageCount: 245,
+    imageCount: 27,
     highlights: ["Golden Games"],
     oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/EhEummqAirZDuLaKZS1NQlgBcmecO2mhAPFyy8K0Mu4DNQ?e=t6ty3K",
     coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
