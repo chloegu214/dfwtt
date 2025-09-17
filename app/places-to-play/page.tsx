@@ -35,7 +35,7 @@ const locations = [
   },
   {
     name: "Marcus Recreation Center",
-    city: "Flower Mound, TX",
+    city: "Dallas, TX",
     schedules: [{ day: "Thursday", time: "5:30 PM - 8:00 PM" }],
     phone: "214-240-5975",
     email: "dfwtt1@gmail.com",
@@ -126,8 +126,8 @@ export default function PlacesToPlayPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="Membership Options"
-            subtitle="Choose the membership option that works best for you. All memberships include access to our quality facilities and welcoming community."
+            title="Entrance Fee"
+            subtitle=""
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {membershipOptions.map((option, index) => (

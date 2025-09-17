@@ -4,7 +4,7 @@ export default function AboutStory() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            DFWTT has grown from one to multiple locations and currently has over 100 active members. Our facilities
+            DFWTT has grown from one to multiple locations and currently has over 100 active players. Our facilities
             offer excellent playing conditions with great lighting, flooring, and brand new tournament tables. With
             USATT certified coaches, we provide quality training from beginners to advanced players, specializing in
             junior development.

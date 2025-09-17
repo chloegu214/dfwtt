@@ -36,7 +36,7 @@ const sponsorshipValues = [
     icon: <Users className="h-8 w-8 text-blue-600" />,
     title: "Community Impact",
     description:
-      "Support a diverse community of 100+ active members from over 20 countries",
+      "Support a diverse community of 100+ active players from over 20 countries",
   },
   {
     icon: <Trophy className="h-8 w-8 text-blue-600" />,

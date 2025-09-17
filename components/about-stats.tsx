@@ -2,7 +2,7 @@ export default function AboutStats() {
   const stats = [
     {
       number: "100+",
-      label: "Active Members",
+      label: "Active Players",
       description: "Players from all skill levels",
     },
     {

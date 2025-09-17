@@ -50,7 +50,7 @@ const locations = [
   },
   {
     name: "Marcus Recreation Center",
-    city: "Flower Mound, TX",
+    city: "Dallas, TX",
     schedules: [{ day: "Thursday", time: "5:30 PM - 8:00 PM" }],
     phone: "214-240-5975",
     email: "dfwtt1@gmail.com",
@@ -243,10 +243,10 @@ export default function AboutPage() {
                   <Users className="h-6 w-6 text-purple-600 mt-1" />
                   <div>
                     <h3 className="font-semibold text-lg">
-                      100+ Active Members
+                      100+ Active Players
                     </h3>
                     <p className="text-gray-600">
-                      Our community has grown to over 100 active members,
+                      Our community has grown to over 100 active players,
                       ranging from beginners to elite players with 2000+
                       ratings.
                     </p>
