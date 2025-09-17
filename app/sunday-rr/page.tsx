@@ -12,6 +12,102 @@ import { parseISO, format } from "date-fns";
 const roundRobinResults = [
   // 2025 Results
   {
+    date: "2025-09-14",
+    classA: [
+      { rank: 1, name: "Keith Pech" },
+      { rank: 2, name: "Dhruv Dusad" },
+      { rank: "3-4", name: "Ranjit Rayamajhi, Pratyush Mohanty" },     
+      { rank: "5-6", name: "Vihaan Desaraju, Masood Hyder" },
+      { rank: "7-8", name: "Yizhou Zhao, Maxwell Dillow" },
+      { rank: "9-10", name: "Arjun Dharangaonkar, Kanika Dusad" }, 
+      { rank: "11-13", name: "Amir Dan, Saahaj Gade, Vendanth Aswin" },          
+    ],
+    classB: [
+      { rank: 1, name: "Norman Lehr" },
+      { rank: 2, name: "Arif Khan" },
+      { rank: 3, name: "Chetan Kokil" },
+      { rank: 4, name: "David Williams" },
+      { rank: 5, name: "Mia Li" },     
+    ],
+  },   
+  {
+    date: "2025-09-07",
+    classA: [
+      { rank: 1, name: "Seth Pech" },
+      { rank: 2, name: "Keith Pech" },
+      { rank: 3, name: "Ranjit Rayamajhi" },     
+      { rank: 4, name: "Amir Dan" },
+      { rank: 5, name: "Maxwell Dillow" },
+      { rank: 6, name: "Doug Zhuang" },     
+    ],
+    classB: [
+      { rank: 1, name: "Saahaj Gade" },
+      { rank: 2, name: "Dennis Fang" },
+      { rank: 3, name: "Norman Lehr" },
+      { rank: 4, name: "Kuntal Pal" },
+      { rank: 5, name: "Akash Krishnamurthy" },     
+      { rank: 6, name: "Viraaj Vemula" },
+      { rank: 7, name: "Mia Li" },      
+    ],
+  }, 
+  {       
+    date: "2025-08-31",
+    classA: [
+      { rank: 1, name: "Seth Pech" },
+      { rank: 2, name: "Keith Pech" },
+      { rank: 3, name: "Dhruv Dusad" },     
+      { rank: 4, name: "Ranjit Rayamajhi" },
+      { rank: "5-8", name: "Kim Iwasaki, Maxwell Dillow, Pratyush Mohanty," },
+      { rank: "5-8", name: "Nicholas Senturia" },     
+      { rank: "9-12", name: "Amir Dan, Michael Chen, Sergio Pulido, Qihao Lin" },      
+    ],
+    classB: [
+      { rank: 1, name: "Norman Lehr" },
+      { rank: 2, name: "Chetan Kokil" },
+      { rank: 3, name: "Arief B Khan" },
+      { rank: 4, name: "David Williams" },
+      { rank: 5, name: "Akash Krishnamurthy" },     
+      { rank: 6, name: "Mia Li" },
+    ],
+  },    
+  {
+    date: "2025-08-24",
+    classA: [
+      { rank: 1, name: "Ranjit Rayamajhi" },
+      { rank: 2, name: "Mosood Hyder" },
+      { rank: 3, name: "Amir Dan" },     
+      { rank: 4, name: "Ivan Tsai" },
+      { rank: 5, name: "Maxwell Dillow" },
+    ],
+    classB: [
+      { rank: 1, name: "Norman Lehr" },
+      { rank: 2, name: "Saahaj Gade" },
+      { rank: 3, name: "Sarika Kannan" },
+      { rank: 4, name: "Siddanth Kodem" },
+      { rank: 5, name: "Mia Li" },
+    ],
+  },    
+  {
+    date: "2025-08-17",
+    classA: [
+      { rank: "1-4", name: "Seth Pech, Keith Pech, Michael Chang, Dhruv Dusad" },
+      { rank: "5-8", name: "Pratyush Mohanty, Vihaan Desaraju, Maxwell Dillow," },
+      { rank: "5-8", name: "Yizhou Zhao" },     
+      { rank: "9-12", name: "Amir Dan, Arjun Dharangaonkar, Kanika Dhruv, Saahaj Gade" },
+      { rank: "13", name: "Aswin Muthukmar" },
+    ],
+    classB: [
+      { rank: 1, name: "Qihao Lin" },
+      { rank: 2, name: "Vedanth Aswin" },
+      { rank: 3, name: "Sarika Kannan" },
+      { rank: 4, name: "Norman Lehr" },
+      { rank: 5, name: "Chetan Kokil" },
+      { rank: 6, name: "Juan Saavedra" },
+      { rank: 7, name: "Kuntal Pal" },
+      { rank: "8-9", name: "David Williams, Viraaj Vemula" },
+    ],
+  },    
+  {
     date: "2025-08-10",
     classA: [
       { rank: 1, name: "Seth Pech" },

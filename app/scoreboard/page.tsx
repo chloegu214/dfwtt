@@ -11,6 +11,67 @@ import { Search, Trophy, Calendar, Users } from "lucide-react"
 const tournamentData = {
   "2025": [
     {
+      title: "Dallas Golden Games",
+      date: "September 6, 2025",
+      events: [
+        {
+          category: "Women Singles 80-84",
+          first: "Dolores Zimmerman"
+        },
+        {
+          category: "Men Singles 90 & Over",
+          first: "William Zhang",
+        },
+        {
+          category: "Men Singles 80-84",
+          first: "Grant Bergmann",
+          second: "William Garrard",
+        },
+        {
+          category: "Men Singles 75-79",
+          first: "Che Nguyen",
+          second: "Yee-Chaung See",
+        },
+        {
+          category: "Men Singles 65-69",
+          first: "Kyle Drake",
+        },
+        {
+          category: "Men Singles 60-64",
+          first: "Dennis Ochei",
+          second: "Hai Tran",
+        },
+        {
+          category: "Men Singles 55-59",
+          first: "Takotoshi Mii",
+          second: "Allen Chuang",
+          third: "Joseph Ho",
+        },
+        {
+          category: "Men Singles 50-54",
+          first: "Jay Liu",
+        },
+         {
+          category: "Doubles 85-90",
+          first: "Grant Bergmann / William Zhang",
+        },
+        {
+          category: "Doubles 80-84",
+          first: "Dolores Zimmerman / Sheriff Osmi",
+        },
+        {
+          category: "Doubles 70-79",
+          first: "Yee-Chaung See / Hai Tran",
+          second: "Che Nguyen / Jay Liu",
+        },
+        {
+          category: "Doubles 50-69",
+          first: "Kyle Drake / Joseph Ho",
+          second: "Takatoshi Mii / Allen Chuang",
+        },                                                      
+      ],
+    },    
+    {
       title: "DFWTT Summer Open",
       date: "June 14, 2025",
       events: [

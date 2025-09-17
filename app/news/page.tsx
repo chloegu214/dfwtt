@@ -3,6 +3,17 @@ import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
   {
+    date: "September 6, 2025",
+    title: "2025 Dallas Golden Games",
+    content:
+      "DFWTT hosted the Dallas Golden Games Table Tennis Tournament on September 6th at the Marcus Recreation Center in Dallas. This event is part of the Dallas Park and Recreation's Golden Games which includes various competitive sports and games for adults ages 50 and up.",
+    category: "Tournament",
+    hasPhotos: true,
+    links: [
+      { text: "Photos", url: "https://1drv.ms/f/c/acd8701c94f053f8/EhEummqAirZDuLaKZS1NQlgBcmecO2mhAPFyy8K0Mu4DNQ?e=t6ty3K" },
+    ],
+  },  
+  {
     date: "June 15, 2025",
     title: "Special Training Program with Coach Seth Pech",
     content:
@@ -12,18 +23,16 @@ const currentNews = [
   },
   {
     date: "June 14, 2025",
-    title: "2025 DFWTT Summer Open Results",
+    title: "2025 DFWTT Summer Open",
     content:
       "DFWTT hosted its Summer Open on June 14th at the Cimarron Recreation Center in Irving. The tournament raised $170 for the American Red Cross Disaster Relief Fund.",
     category: "Tournament",
     hasPhotos: true,
-    hasResults: true,
     links: [
       {
         text: "Photos",
         url: "https://1drv.ms/f/c/acd8701c94f053f8/El8ezZL6Ck9CsqmW_NV_pLEBRpNTjPuKHhzNbAluW6OjtQ?e=h8SN9f",
       },
-      { text: "Results", url: "/results/2025#2025SummerOpen" },
     ],
   },
   {
@@ -66,9 +75,7 @@ const currentNews = [
       "The DFWTT School Challenge was held on March 29th at the Marcus Recreation Center. This served as a qualifying event for the AYTTO 2025 Scholastic National Championship.",
     category: "Youth",
     hasPhotos: true,
-    hasResults: true,
     links: [
-      { text: "Results", url: "/results/2025#2025SchoolChallenge" },
       { text: "Photos", url: "https://photos.app.goo.gl/i5Vs2tdH1ECHCytg8" },
     ],
   },
@@ -79,13 +86,11 @@ const currentNews = [
       "DFWTT hosted its Spring Open on March 22nd at the Cimarron Recreation Center, raising $180 for the American Red Cross Disaster Relief Fund.",
     category: "Tournament",
     hasPhotos: true,
-    hasResults: true,
     links: [
       {
         text: "Photos",
         url: "https://1drv.ms/f/s!AvhT8JQccNiskd0IooDhNIPDRqueWQ?e=8EdMEj",
       },
-      { text: "Results", url: "/results/2025#2025SpringOpen" },
     ],
   },
 ];

@@ -7,11 +7,22 @@ import { useState } from "react"
 const galleryData = [
   {
     year: "2025",
+    title: "Dallas Golden Games 2025",
+    description:
+      "Dallas Park and Recreation's Golden Games.",
+    imageCount: 27,
+    highlights: ["Golden Games"],
+    oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/EhEummqAirZDuLaKZS1NQlgBcmecO2mhAPFyy8K0Mu4DNQ?e=t6ty3K",
+    coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    featured: true,
+  },  
+  {
+    year: "2025",
     title: "DFWTT Summer Open 2025",
     description:
       "Current year highlights including Summer Open and Spring tournaments with excellent participation and competitive play.",
     imageCount: 245,
-    highlights: ["Summer Open", "Spring Open", "High Participation", "Competitive Matches"],
+    highlights: ["Summer Open", "High Participation", "Competitive Matches"],
     oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/El8ezZL6Ck9CsqmW_NV_pLEBRpNTjPuKHhzNbAluW6OjtQ?e=h8SN9f",
     coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     featured: true,
