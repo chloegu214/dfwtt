@@ -110,6 +110,13 @@ export default function AboutPage() {
                 <p className="font-semibold text-lg">
                   Upcoming Tournaments:
                 </p>
+                 <p>
+                   DFWTT Fall Open, Saturday, November 15, 2025.&nbsp;
+                   <a href= "/documents/DFWTT25FallOpnR2.pdf"
+                      className="font-medium text-blue-600 hover:text-blue-800 underline"                  
+                      target="_blank">Entry Form
+                   </a>
+                 </p>               
                 <p>
                    Chinese Double Ten Tournament, Saturday, September 27, 2025.&nbsp;
                    <a href= "/documents/2025DblTen.pdf"
