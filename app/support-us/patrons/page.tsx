@@ -13,6 +13,7 @@ const donationHistory = [
   {
     year: "2025",
     donations: [
+      { amount: "140", organization: "Dallas Chinese Community Center" },      
       {
         amount: "170",
         organization: "American Red Cross",
@@ -24,7 +25,7 @@ const donationHistory = [
         cause: "Disaster Relief Fund",
       },
     ],
-    totalAmount: 350,
+    totalAmount: 490,
   },
   {
     year: "2024",
@@ -374,7 +375,7 @@ export default function PatronsPage() {
             <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">
               Every tournament participant contributes to charity through our $2
               donation program. Together, we've donated{" "}
-              <span className="font-bold text-yellow-300">$14,891.57</span> to
+              <span className="font-bold text-yellow-300">$15,031.57</span> to
               support communities in need.
             </p>
 
