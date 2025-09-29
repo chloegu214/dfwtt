@@ -11,6 +11,130 @@ import { Search, Trophy, Calendar, Users } from "lucide-react"
 const tournamentData = {
   "2025": [
     {
+      title: "Chinese Double Ten",
+      date: "September 27, 2025",
+      events: [
+        {
+          category: "80 & Over Singles",
+          first: "Grant Bergmann",
+          second: "William T Garrard",
+        },
+        {
+          category: "70-79 Singles",
+          first: "Hong Wang",
+          second: "Yee-Chaung See",
+          third: "Chon Phan",          
+        },
+        {
+          category: "65-69 Singles",
+          first: "Mark Chen",
+          second: "Dennis Ochei",
+          third: "Girish Karalatti",
+        },
+        {
+          category: "60-64 Singles",
+          first: "Shoaping Jiang",
+          second: "Sherieff Osmi",
+          third: "David Williams",
+        },
+        {
+          category: "50-59 Singles",
+          first: "Allen Chuang",
+          second: "Devang Desai",
+          third: "Hemant Kshirsagar",         
+        },
+        {
+          category: "40-49 Singles",
+          first: "Arjun Namundappa",
+          second: "Ravi Rao",
+          third: "Amir Dan",
+        },
+        {
+          category: "20-39 Singles",
+          first: "Travis Qualls",
+          second: "Xianju Bi",
+        },
+        {
+          category: "Women Singles",
+          first: "Linda Sterm",
+          second: "Red Jones",
+          third: "Annie Xiang",          
+        },
+        {
+          category: "14-19 Singles",
+          first: "Ryan Kattady",
+          second: "Shalini Biswas",
+          third: "Rithvica Menderkar",          
+        },
+        {
+          category: "12-13 Singles",
+          first: "Leia Desai",
+          second: "Vivaan Ubale",
+          third: "Shrreshth Shah",
+        },
+        {
+          category: "10-11 Singles",
+          first: "Amudhan Elango",
+          second: "Tri Maxwell Minh Pham",
+          third: "Viraaj Vemula",
+        },
+        {
+          category: "8-9 Singles",
+          first: "Mia Li",
+          second: "Rudransh Sinha",
+          third: "Gabriel Zhu",         
+        },
+        {
+          category: "Under 8 Singles",
+          first: "Agastya Arjun",
+          second: "Pavani Vishnubhotia",
+          third: "Jaxon Chan",
+        },
+        {
+          category: "Open Singles Class A",
+          first: "Jack Liau",
+          second: "Masood Hyder",
+          third: "Jason Luo",         
+        },
+        {
+          category: "Open Singles Class B",
+          first: "Takatoshi Mii",
+          second: "Allen Chuang",
+          third: "Satvika Upperla",          
+        },
+        {
+          category: "Open Singles Class C",
+          first: "Devang Desai",
+          second: "Grady Thompson",
+          third: "Amudhan Elango",
+        }, 
+        {
+          category: "Open Singles Class D",
+          first: "Xianju Bi",
+          second: "Viraaj Vemula",
+          third: "Tri Maxwell Minh Pham",
+        },                                     
+        {
+          category: "Open Doubles Class B",
+          first: "Mark Sebedra / Travis Qualls",
+          second: "Takatoshi Mii / Allen Chuang",
+          third: "Hai Tran / Vincent Pham",         
+        },
+        {
+          category: "Open Doubles Class C",
+          first: "Amudhan Elango / Kathiravan Elango",
+          second: "Hong Wang / Mark Chen",
+          third: "Dhananjay Ubale / Niraj Kumar",          
+        },
+        {
+          category: "Open Doubles Class D",
+          first: "Red Jones / James Rautis",
+          second: "Viaaj Vemula / Tri Maxwell Minh Pham",
+          third: "Sherrief Osmi / Franklin Du",
+        },
+      ],
+    },        
+    {
       title: "Dallas Golden Games",
       date: "September 6, 2025",
       events: [
