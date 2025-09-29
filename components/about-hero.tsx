@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import DFWTTSummerOpen from "../public/2025-dfwtt-summer-open.jpg";
+import DFWTTDoubleTen from "../public/images/2025 DFWTT Double Ten.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -78,8 +78,8 @@ export default function AboutHero() {
           <div className="relative">
             <div className="relative z-10">
               <Image
-                src={DFWTTSummerOpen}
-                alt="2025 DFWTT Summer Open Tournament Poster"
+                src={DFWTTDoubleTen}
+                alt="2025 DFWTT Double Ten"
                 className="rounded-lg shadow-2xl w-full"
               />
             </div>
