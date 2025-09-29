@@ -5,6 +5,17 @@ import { Calendar, Camera, Users, Trophy, Search, Filter } from "lucide-react"
 import { useState } from "react"
 
 const galleryData = [
+   {
+    year: "2025",
+    title: "Chinese Double Ten 2025",
+    description:
+      "Annual Double Ten celebration tournament.",
+    imageCount: 137,
+    highlights: ["Chinese Double Ten"],
+    oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/Ej6Whiv3_v5GukUr2Xppfv8BgHxA6U8tk3x7GN-bief9tA?e=vQTeTL",
+    coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    featured: true,
+  },  
   {
     year: "2025",
     title: "Dallas Golden Games 2025",
