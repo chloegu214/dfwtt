@@ -117,13 +117,6 @@ export default function AboutPage() {
                       target="_blank">Entry Form
                    </a>
                  </p>               
-                <p>
-                   Chinese Double Ten Tournament, Saturday, September 27, 2025.&nbsp;
-                   <a href= "/documents/2025DblTen.pdf"
-                      className="font-medium text-blue-600 hover:text-blue-800 underline"                  
-                      target="_blank">Entry Form
-                   </a>
-                 </p>
               </div>
              </AlertDescription>  
           </Alert>  
