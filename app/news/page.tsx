@@ -2,6 +2,17 @@ import Link from "next/link";
 import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
+   {
+    date: "September 27, 2024",
+    title: "2025 Chinese Double Ten",
+    content:
+      "DFWTT hosted its yearly Chinese Double Ten Celebration tournament on September 27th at the Irving Cimarron Recreation Center.",
+    category: "Tournament",
+    hasPhotos: true,
+    links: [
+      { text: "Photos", url: "https://1drv.ms/f/c/acd8701c94f053f8/Ej6Whiv3_v5GukUr2Xppfv8BgHxA6U8tk3x7GN-bief9tA?e=vQTeTL" },
+    ],
+  }, 
   {
     date: "September 6, 2025",
     title: "2025 Dallas Golden Games",
