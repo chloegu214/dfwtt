@@ -11,6 +11,20 @@ import { parseISO, format } from "date-fns";
 // Complete tournament results data from DFWTT website
 const roundRobinResults = [
   // 2025 Results
+   {
+    date: "2025-10-12",
+    open: [
+      { rank: 1, name: "Maxwell Dillow" },
+      { rank: 2, name: "Allen Chuang" },
+      { rank: 3, name: "Travis Qualls" },
+      { rank: 4, name: "Takatoshi Mii" },
+      { rank: 5, name: "Doug Zhuang" },
+      { rank: 6, name: "Srikanth Bejjenky" },
+      { rank: 7, name: "Maxwell Pham" },
+      { rank: 8, name: "Sheriff Osmi" },
+      { rank: 9, name: "David Tsen" },
+    ],
+  }, 
   {
     date: "2025-09-28",
     classA: [
