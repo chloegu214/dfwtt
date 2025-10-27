@@ -12,6 +12,26 @@ import { parseISO, format } from "date-fns";
 const roundRobinResults = [
   // 2025 Results
   {
+    date: "2025-10-26",
+    classA: [
+      { rank: 1, name: "Keith Pech" },
+      { rank: 2, name: "Ranjit Rayamajhi" },
+      { rank: 3, name: "Yu Lai" },     
+      { rank: 4, name: "Genaro Natali" },
+      { rank: 5, name: "Travis Qualls" },     
+      { rank: 6, name: "Maxwell Dillow" },      
+      { rank: 7, name: "Doug Zhuang" },
+    ],
+    classB: [
+      { rank: 1, name: "Allen Chuang" },
+      { rank: "2-3", name: "Takatoshi Mii, Raymond Sacco" },
+      { rank: 4, name: "Norman Lehr" },
+      { rank: 5, name: "Ademayowa Owobamirin" },
+      { rank: 6, name: "David Williams" }, 
+      { rank: 7, name: "Mia Li" },           
+    ],
+  },     
+  {
     date: "2025-10-19",
     classA: [
       { rank: 1, name: "Seth Pech" },
@@ -215,11 +235,9 @@ const roundRobinResults = [
     classA: [
       { rank: 1, name: "Zhongxu An" },
       { rank: 2, name: "Ranjit Rayamajhi" },
-      { rank: 3, name: "Yizhou Zhao" },
-      { rank: 3, name: "Masood Hyder" },
-      { rank: 5, name: "Maxwell Dillow" },
-      { rank: 5, name: "Ivan Tsai" },
-      { rank: 7, name: "Amir Dan" },
+      { rank: "3-4", name: "Yizhou Zhao, Masood Hyder" },
+      { rank: "5-6", name: "Maxwell Dillow, Ivan Tsai" },
+       { rank: 7, name: "Amir Dan" },
     ],
     classB: [
       { rank: 1, name: "Philip Wang" },
