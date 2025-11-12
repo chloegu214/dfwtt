@@ -111,18 +111,6 @@ export default function AboutPage() {
                   Upcoming Tournaments:
                 </p>
                  <p>
-                   Peakapong Tournament, Sunday, November 9, 2025.&nbsp;
-                   <a href= "/images/Peakapong rules.PNG"
-                      className="font-medium text-blue-600 hover:text-blue-800 underline"                  
-                      target="_blank">Peakapong rules
-                   </a>
-                   <a>&nbsp;&nbsp;</a>
-                    <a href= "/documents/peakapong flyer.pdf"
-                      className="font-medium text-blue-600 hover:text-blue-800 underline"                  
-                      target="_blank">Peakapong flyer
-                   </a>                  
-                 </p>
-                 <p>
                    DFWTT Fall Open, Saturday, November 15, 2025.&nbsp;
                    <a href= "/documents/DFWTT25FallOpnR2.pdf"
                       className="font-medium text-blue-600 hover:text-blue-800 underline"                  
