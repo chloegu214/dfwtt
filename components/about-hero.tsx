@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import DFWTTDoubleTen from "../public/images/2025 DFWTT Double Ten.jpg";
+import DFWTTDoubleTen from "../public/images/2025 DFWTT Fall Open.jpg";
 import Image from "next/image";
 import Link from "next/link";
 

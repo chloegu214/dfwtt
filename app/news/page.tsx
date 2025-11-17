@@ -3,7 +3,18 @@ import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
    {
-    date: "September 27, 2024",
+    date: "November 15, 2025",
+    title: "2025 DFWTT Fall Open",
+    content:
+      "DFWTT hosted its yearly Fall Open on November 15th. The tournament was held in Irving at the Cimarron Recreation Center.",
+    category: "Tournament",
+    hasPhotos: true,
+    links: [
+      { text: "Photos", url: "https://1drv.ms/f/c/acd8701c94f053f8/EopOseb5FqJIobSw_P5X_0wBFwKY-U8BoKbWMXo0LxOU2w?e=fxK3rv" },
+    ],
+  }, 
+  {
+    date: "September 27, 2025",
     title: "2025 Chinese Double Ten",
     content:
       "DFWTT hosted its yearly Chinese Double Ten Celebration tournament on September 27th at the Irving Cimarron Recreation Center.",

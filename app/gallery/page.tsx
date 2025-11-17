@@ -7,6 +7,17 @@ import { useState } from "react"
 const galleryData = [
    {
     year: "2025",
+    title: "DFWTT Fall Open 2025",
+    description:
+      "Pictures DFWTT Fall Open",
+    imageCount: 127,
+    highlights: ["DFWTT Fall Open"],
+    oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/EopOseb5FqJIobSw_P5X_0wBFwKY-U8BoKbWMXo0LxOU2w?e=fxK3rv",
+    coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    featured: true,
+   },    
+   {
+    year: "2025",
     title: "Chinese Double Ten 2025",
     description:
       "Annual Double Ten celebration tournament.",

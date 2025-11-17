@@ -11,6 +11,61 @@ import { Search, Trophy, Calendar, Users } from "lucide-react"
 const tournamentData = {
   "2025": [
     {
+      title: "DFWTT Fall Open",
+      date: "November 15, 2025",
+      events: [
+        {
+          category: "U-2250",
+          first: "Iago Bittencourt",
+          second: "Winfred Addy",
+          third: "Masood Hyder",
+          fourth: "Yizhou Zhao",
+        },
+        {
+          category: "U-1850",
+          first: "George Banu",
+          second: "Dennis Yonghong Fang",
+          third: "Kanika Dusad",
+          fourth: "Tesilimi O. Iioh",
+        },
+        {
+          category: "O-1700",
+          first: "Pablo Frias",
+          second: "Aravind Parthasarathy",
+          third: "Hemant Kshirsagar",
+          fourth: "Mark Sabedra",
+        },
+        {
+          category: "U-1350",
+          first: "Dennis Ochei",
+          second: "Viraaj Gupa",
+          third: "Xianju Bi",
+          fourth: "Viraaj Vemula",
+        },
+        {
+          category: "U-1200",
+          first: "Abdul Bello",
+          second: "NK Krishnamoorthy",
+          third: "Satvik Vitta",
+          fourth: "Franklin Du",
+        },
+        {
+          category: "Open Singles",
+          first: "Iago Bittencourt",
+          second: "Nicholas Yuji Hato Yamane",
+          third: "Winfred Addy",
+          fourth: "Yizhou Zhao",
+        },
+        {
+          category: "U-4000 Doubles",
+          first: "Masood Hyder / Zain Shakir",
+          second: "Sudhanva Bharadwaj / Mourya Peram",
+          third: "Travis Qualls / Mark Sabedra",
+          fourth: "Amir Dan / Arjun Nanjundappa",
+        },
+      ],
+    },    
+    {
       title: "Chinese Double Ten",
       date: "September 27, 2025",
       events: [
