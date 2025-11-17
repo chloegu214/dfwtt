@@ -103,7 +103,8 @@ export default function AboutPage() {
           <p>&nbsp;</p>
       */ }       
      
-      {/* Upcoming Tournaments Section */}
+      {/* Upcoming Tournaments Section 
+ 
           <Alert className="border-black-200 bg-yellow-50">
               <AlertDescription className="text-black-800">  
               <div className="space-y-2">
@@ -122,7 +123,8 @@ export default function AboutPage() {
           </Alert>  
 
           <p>&nbsp;</p>
-		  
+      */}
+
       {/* School Players Section */}                 
           <Alert className="border-black-200 bg-yellow-50">
              <AlertDescription className="text-yellow-800">
