@@ -97,7 +97,7 @@ export default function AboutPage() {
                    Cimarron TT club will be OPEN on all Saturdays (December 20, 27) and Mondays (December 22, 29)
                 </p>
                <p>
-                   Heights TT club will be OPEN on Sundays (December 21, 28) and will be CLOSED on Fridays (December 26, and January 2)
+                   Heights TT club will be OPEN on Sundays (December 21, 28) and will be CLOSED on Friday (December 26)
                 </p> 
                 <p>
                    Timberglen TT club will be OPEN on Mondays (December 22, 29) and will be CLOSED on Wednesdays (December 24, 31)
