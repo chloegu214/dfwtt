@@ -6,7 +6,7 @@ const currentNews = [
     date: "November 15, 2025",
     title: "2025 DFWTT Fall Open",
     content:
-      "DFWTT hosted its yearly Fall Open on November 15th. The tournament was held in Irving at the Cimarron Recreation Center.",
+      "DFWTT hosted its yearly Fall Open on November 15th. The tournament was held in Irving at the Cimarron Recreation Center and raised $150 for the American Red Cross - Where It Is Needed Most Fund.",
     category: "Tournament",
     hasPhotos: true,
     links: [
@@ -17,7 +17,7 @@ const currentNews = [
     date: "September 27, 2025",
     title: "2025 Chinese Double Ten",
     content:
-      "DFWTT hosted its yearly Chinese Double Ten Celebration tournament on September 27th at the Irving Cimarron Recreation Center.",
+      "DFWTT hosted its yearly Chinese Double Ten Celebration tournament on September 27th at the Irving Cimarron Recreation Center. The tournament raised $140 to the Dallas Chinese Community Center.",
     category: "Tournament",
     hasPhotos: true,
     links: [

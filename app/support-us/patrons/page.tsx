@@ -13,6 +13,11 @@ const donationHistory = [
   {
     year: "2025",
     donations: [
+       {
+        amount: "150",
+        organization: "American Red Cross",
+        cause: "Where It Is Needed Most",
+      },     
       { amount: "140", organization: "Dallas Chinese Community Center" },      
       {
         amount: "170",
@@ -25,7 +30,7 @@ const donationHistory = [
         cause: "Disaster Relief Fund",
       },
     ],
-    totalAmount: 490,
+    totalAmount: 640,
   },
   {
     year: "2024",
