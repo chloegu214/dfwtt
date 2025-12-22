@@ -12,6 +12,24 @@ import { parseISO, format } from "date-fns";
 const roundRobinResults = [
   // 2025 Results
   {
+    date: "2025-12-21",  
+    classA: [
+      { rank: 1, name: "Seth Pech" },
+      { rank: 2, name: "Keith Pech" },
+      { rank: "3-4", name: "Ranjit Rayamajhi, Pratyush Mohanty" },     
+      { rank: "5-6", name: "Toreston Pawlowski, Masood Hyder" },
+      { rank: "7,8", name: "Kanika Dusad, Yiyang Wang" },     
+    ],
+    classB: [
+      { rank: 1, name: "Doug Zhuang" },
+      { rank: 2, name: "Takotoshi Mii" },
+      { rank: "3-4", name: "Travis Qualls, Norman Lehr" },
+      { rank: "5-6", name: "Chetan Kokil, Yosef Lender" },
+      { rank: 7, name: "Wilson Bryan" }, 
+      { rank: 8, name: "Kuntal Pal" },
+    ],
+  },  
+  {
     date: "2025-12-14",
     open: [
       { rank: 1, name: "Ranjit Rayamajhi" },
