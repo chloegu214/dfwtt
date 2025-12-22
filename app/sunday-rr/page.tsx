@@ -18,7 +18,7 @@ const roundRobinResults = [
       { rank: 2, name: "Keith Pech" },
       { rank: "3-4", name: "Ranjit Rayamajhi, Pratyush Mohanty" },     
       { rank: "5-6", name: "Toreston Pawlowski, Masood Hyder" },
-      { rank: "7,8", name: "Kanika Dusad, Yiyang Wang" },     
+      { rank: "7-8", name: "Kanika Dusad, Yiyang Wang" },     
     ],
     classB: [
       { rank: 1, name: "Doug Zhuang" },
