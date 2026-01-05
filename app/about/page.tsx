@@ -86,7 +86,7 @@ export default function AboutPage() {
       <section className="py-12 bg-yellow-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      { /*Location Closings Section */ }       
+      { /*Location Closings Section        
           <Alert className="border-black-200 bg-red-50">
              <AlertDescription className="text-red-800">
               <div className="space-y-2">
@@ -94,23 +94,14 @@ export default function AboutPage() {
                   Location Closings:
                 </p>
                 <p>
-                   Cimarron TT club will be OPEN on all Saturdays (December 20, 27) and Mondays (December 22, 29)
+                   None
                 </p>
-               <p>
-                   Heights TT club will be OPEN on Sundays (December 21, 28) and will be CLOSED on Friday (December 26)
-                </p> 
-                <p>
-                   Timberglen TT club will be OPEN on Mondays (December 22, 29) and will be CLOSED on Wednesdays (December 24, 31)
-                </p>
-                 <p>
-                   Marcus TT club will be CLOSED on Thursdays (December 25, and January 1)
-                </p>                                                   
               </div>
             </AlertDescription>
           </Alert>
 
           <p>&nbsp;</p>
-            
+      */ }      
      
       {/* Upcoming Tournaments Section 
  
