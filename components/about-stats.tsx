@@ -6,7 +6,7 @@ export default function AboutStats() {
       description: "Players from all skill levels",
     },
     {
-      number: "28",
+      number: "30",
       label: "Years Established",
       description: "Since 1996",
     },

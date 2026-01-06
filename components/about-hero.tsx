@@ -51,7 +51,7 @@ export default function AboutHero() {
                   <div className="text-sm text-blue-200">Locations</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400">29</div>
+                  <div className="text-3xl font-bold text-yellow-400">30</div>
                   <div className="text-sm text-blue-200">Years Strong</div>
                 </div>
               </div>
