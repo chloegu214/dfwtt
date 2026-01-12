@@ -95,7 +95,7 @@ export default function AboutPage() {
                 </p>
                   Cimarron will be closed January 12 (Monday) and January 17 (Saturday) for basketball gym's repairing.
                 <p>
-                  Cimarrron and Timberglen will be closed on January 19 (Monday) for Martin Luther King, Jr holiday.
+                  Cimarron and Timberglen will be closed on January 19 (Monday) for Martin Luther King, Jr holiday.
                 </p>
               </div>
             </AlertDescription>
