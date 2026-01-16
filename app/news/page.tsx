@@ -3,121 +3,21 @@ import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
    {
-    date: "November 15, 2025",
-    title: "2025 DFWTT Fall Open",
+    date: "January 14, 2026",
+    title: "George Braithwaite Major Team League Season 4",
     content:
-      "DFWTT hosted its yearly Fall Open on November 15th. The tournament was held in Irving at the Cimarron Recreation Center and raised $150 for the American Red Cross - Where It Is Needed Most Fund.",
+      "DFWTT is hosting the George Braithwaite Major Team League season 4 tournament on March 15th 2026 at 10:00am in Richardson Heights Rec Center.",
     category: "Tournament",
-    hasPhotos: true,
+    hasPhotos: false,
     links: [
-      { text: "Photos", url: "https://1drv.ms/f/c/acd8701c94f053f8/EopOseb5FqJIobSw_P5X_0wBFwKY-U8BoKbWMXo0LxOU2w?e=fxK3rv" },
+      { text: "Info", url: "https://www.dfwtt.com/images/texas regional.png" },           
+      { text: "Register", url: "https://event.aytto.org/#/signup/gbmls4tx" },
     ],
   }, 
-  {
-    date: "September 27, 2025",
-    title: "2025 Chinese Double Ten",
-    content:
-      "DFWTT hosted its yearly Chinese Double Ten Celebration tournament on September 27th at the Irving Cimarron Recreation Center. The tournament raised $140 to the Dallas Chinese Community Center.",
-    category: "Tournament",
-    hasPhotos: true,
-    links: [
-      { text: "Photos", url: "https://1drv.ms/f/c/acd8701c94f053f8/Ej6Whiv3_v5GukUr2Xppfv8BgHxA6U8tk3x7GN-bief9tA?e=vQTeTL" },
-    ],
-  }, 
-  {
-    date: "September 6, 2025",
-    title: "2025 Dallas Golden Games",
-    content:
-      "DFWTT hosted the Dallas Golden Games Table Tennis Tournament on September 6th at the Marcus Recreation Center in Dallas. This event is part of the Dallas Park and Recreation's Golden Games which includes various competitive sports and games for adults ages 50 and up.",
-    category: "Tournament",
-    hasPhotos: true,
-    links: [
-      { text: "Photos", url: "https://1drv.ms/f/c/acd8701c94f053f8/EhEummqAirZDuLaKZS1NQlgBcmecO2mhAPFyy8K0Mu4DNQ?e=t6ty3K" },
-    ],
-  },  
-  {
-    date: "June 15, 2025",
-    title: "Special Training Program with Coach Seth Pech",
-    content:
-      "DFWTT is privileged to have Seth Pech, a professional table tennis athlete and coach (USATT 2500+) known from his YouTube Channel PechPong. Seth will be coaching at DFW clubs for four months (April-August), bringing professional experience from Germany and Sweden.",
-    category: "Training",
-    hasPhotos: true,
-  },
-  {
-    date: "June 14, 2025",
-    title: "2025 DFWTT Summer Open",
-    content:
-      "DFWTT hosted its Summer Open on June 14th at the Cimarron Recreation Center in Irving. The tournament raised $170 for the American Red Cross Disaster Relief Fund.",
-    category: "Tournament",
-    hasPhotos: true,
-    links: [
-      {
-        text: "Photos",
-        url: "https://1drv.ms/f/c/acd8701c94f053f8/El8ezZL6Ck9CsqmW_NV_pLEBRpNTjPuKHhzNbAluW6OjtQ?e=h8SN9f",
-      },
-    ],
-  },
-  {
-    date: "April 6, 2025",
-    title: "2025 NCTTA Championships",
-    content:
-      "The 2025 NCTTA Championships were held in Rockford, Illinois on April 3-6th. Information and results available on the NCTTA website.",
-    category: "Championship",
-    hasPhotos: true,
-    links: [
-      {
-        text: "Photos",
-        url: "https://1drv.ms/f/s!AvhT8JQccNiskfUeauh7wJT7STPibQ?e=UyMaYG",
-      },
-      { text: "NCTTA Website", url: "http://www.nctta.org" },
-    ],
-  },
-  {
-    date: "April 3, 2025",
-    title: "2025 World University Games Trials",
-    content:
-      "Collegiate National Team trials were held in Rockford, Illinois on April 3rd, determining five WUG team positions for the upcoming event in Rhine-Ruhr, Germany.",
-    category: "Competition",
-    hasPhotos: true,
-    links: [
-      {
-        text: "Photos",
-        url: "https://1drv.ms/f/s!AvhT8JQccNiskfUdY5PbUXFKiiBjQw?e=wSHZDr",
-      },
-      {
-        text: "NCTTA Article",
-        url: "http://www.nctta.org/content/opening-world-university-games-trials-kick-nctta-championships-explosive-style",
-      },
-    ],
-  },
-  {
-    date: "March 29, 2025",
-    title: "2025 DFWTT School Challenge",
-    content:
-      "The DFWTT School Challenge was held on March 29th at the Marcus Recreation Center. This served as a qualifying event for the AYTTO 2025 Scholastic National Championship.",
-    category: "Youth",
-    hasPhotos: true,
-    links: [
-      { text: "Photos", url: "https://photos.app.goo.gl/i5Vs2tdH1ECHCytg8" },
-    ],
-  },
-  {
-    date: "March 22, 2025",
-    title: "2025 DFWTT Spring Open Success",
-    content:
-      "DFWTT hosted its Spring Open on March 22nd at the Cimarron Recreation Center, raising $180 for the American Red Cross Disaster Relief Fund.",
-    category: "Tournament",
-    hasPhotos: true,
-    links: [
-      {
-        text: "Photos",
-        url: "https://1drv.ms/f/s!AvhT8JQccNiskd0IooDhNIPDRqueWQ?e=8EdMEj",
-      },
-    ],
-  },
 ];
 
 const archiveYears = [
+  { year: "2025", count: 8 },
   { year: "2024", count: 12 },
   { year: "2023", count: 15 },
   { year: "2022", count: 8 },

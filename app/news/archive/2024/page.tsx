@@ -194,7 +194,7 @@ export default function News2024Page() {
               <span className="font-semibold">35</span> Events
             </div>
             <div>
-              <span className="font-semibold">$516</span> Charity Raised
+              <span className="font-semibold">$486</span> Charity Raised
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@ const donationHistory = [
     year: "2024",
     donations: [
       {
-        amount: "170",
+        amount: "176",
         organization: "American Red Cross",
         cause: "Service to the Armed Forces",
       },
@@ -47,7 +47,7 @@ const donationHistory = [
         cause: "Supporting those seeking refuge in the U.S.",
       },
     ],
-    totalAmount: 480,
+    totalAmount: 486,
   },
   {
     year: "2023",
@@ -380,7 +380,7 @@ export default function PatronsPage() {
             <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">
               Every tournament participant contributes to charity through our $2
               donation program. Together, we've donated{" "}
-              <span className="font-bold text-yellow-300">$15,031.57</span> to
+              <span className="font-bold text-yellow-300">$15,187.57</span> to
               support communities in need.
             </p>
 

@@ -103,7 +103,7 @@ export default function AboutPage() {
 
           <p>&nbsp;</p>
            
-      {/* Upcoming Tournaments Section 
+      {/* Upcoming Tournaments Section */ }
  
           <Alert className="border-black-200 bg-yellow-50">
               <AlertDescription className="text-black-800">  
@@ -112,10 +112,10 @@ export default function AboutPage() {
                   Upcoming Tournaments:
                 </p>
                  <p>
-                   DFWTT Fall Open, Saturday, November 15, 2025.&nbsp;
-                   <a href= "/documents/DFWTT25FallOpnR2.pdf"
+                   George Braithwaite Major Team League season 4 tournament on March 15th 2026 at 10:00am in Richardson Heights Rec Center.&nbsp;
+                   <a href= "/images/texas regional.png"
                       className="font-medium text-blue-600 hover:text-blue-800 underline"                  
-                      target="_blank">Entry Form
+                      target="_blank">Info
                    </a>
                  </p>               
               </div>
@@ -123,7 +123,6 @@ export default function AboutPage() {
           </Alert>  
 
           <p>&nbsp;</p>
-      */}
 
       {/* School Players Section */}                 
           <Alert className="border-black-200 bg-yellow-50">

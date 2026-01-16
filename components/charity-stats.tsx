@@ -3,7 +3,7 @@ import { TrendingUp, Users, Heart, Award } from "lucide-react"
 const stats = [
   {
     icon: <Heart className="h-8 w-8 text-red-500" />,
-    value: "$15,181.57",
+    value: "$15,187.57",
     label: "Total Donated",
     description: "Since program inception",
   },

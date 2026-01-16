@@ -4,11 +4,11 @@ import { ArrowRight } from "lucide-react"
 const archiveData = [
   {
     year: "2025",
-    description: "Current year featuring Seth Pech coaching program and major tournaments",
+    description: "Seth Pech coaching program and major tournaments",
     articleCount: 8,
     highlights: ["Seth Pech Special Training", "Summer Open", "NCTTA Championships", "World University Games Trials"],
     totalEvents: 25,
-    charityRaised: "$350+",
+    charityRaised: "$640",
   },
   {
     year: "2024",
@@ -16,7 +16,7 @@ const archiveData = [
     articleCount: 12,
     highlights: ["GBML Season 3", "Seth Pech Summer Coaching", "Fall Open", "Scholastic Nationals"],
     totalEvents: 35,
-    charityRaised: "$516",
+    charityRaised: "$486",
   },
   {
     year: "2023",
@@ -24,7 +24,7 @@ const archiveData = [
     articleCount: 15,
     highlights: ["Dallas Golden Games", "US Nationals in Fort Worth", "Team League", "Fall Open"],
     totalEvents: 42,
-    charityRaised: "$400+",
+    charityRaised: "$376",
   },
   {
     year: "2022",
@@ -32,7 +32,7 @@ const archiveData = [
     articleCount: 8,
     highlights: ["US National Team Trials", "Grant Bergmann Award", "Summer Open", "Double Ten"],
     totalEvents: 28,
-    charityRaised: "$300+",
+    charityRaised: "$602",
   },
   {
     year: "2021",
@@ -40,7 +40,7 @@ const archiveData = [
     articleCount: 7,
     highlights: ["WTT Championships Houston", "Heights Center Opening", "Dallas Golden Games", "Fall Open"],
     totalEvents: 22,
-    charityRaised: "$250+",
+    charityRaised: "$300",
   },
   {
     year: "2020",
@@ -56,7 +56,7 @@ const archiveData = [
     articleCount: 11,
     highlights: ["US Open Fort Worth", "TX State Championship", "Charity Programs", "Double Ten"],
     totalEvents: 38,
-    charityRaised: "$514+",
+    charityRaised: "$1,749.08",
   },
   {
     year: "2018",
@@ -64,7 +64,7 @@ const archiveData = [
     articleCount: 9,
     highlights: ["Fall Open", "Summer Open", "Chinese Double Ten", "Dallas Senior Games"],
     totalEvents: 32,
-    charityRaised: "$465+",
+    charityRaised: "$1,663.49",
   },
   {
     year: "2017",
@@ -72,7 +72,7 @@ const archiveData = [
     articleCount: 14,
     highlights: ["Raymond Sacco Para TT", "T Bar M Grand Opening", "Spring Open", "US Open"],
     totalEvents: 45,
-    charityRaised: "$1824",
+    charityRaised: "$724",
   },
   {
     year: "2016",
