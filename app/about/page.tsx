@@ -87,7 +87,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       { /*Location Closings Section */} 
- {/*           
+           
           <Alert className="border-black-200 bg-red-50">
              <AlertDescription className="text-red-800">
               <div className="space-y-2">
@@ -95,14 +95,19 @@ export default function AboutPage() {
                   Location Closings:
                 </p>
                 <p>
-                  None
+                  Due to the severe Winter Storm weather:
+                </p>
+                <p>
+                  Heights TT club will be closed on both Friday (January 23) and Sunday (January 25)
+                </p>
+                <p>
+                  Cimarron TT club will be closed on Saturday (January 24)
                 </p>
               </div>
             </AlertDescription>
           </Alert>
 
           <p>&nbsp;</p>
-*/}
            
       {/* Upcoming Tournaments Section */ }
  
