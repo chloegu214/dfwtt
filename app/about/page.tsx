@@ -95,15 +95,9 @@ export default function AboutPage() {
                   Location Closings:
                 </p>
                 <p>
-                  Due to the severe Winter Storm weather:
+                  Both Cimarron and Timberglen TT clubs will be closed Monday (January 26)
                 </p>
-                <p>
-                  Heights TT club will be closed on both Friday (January 23) and Sunday (January 25)
-                </p>
-                <p>
-                  Cimarron TT club will be closed on Saturday (January 24)
-                </p>
-              </div>
+               </div>
             </AlertDescription>
           </Alert>
 
