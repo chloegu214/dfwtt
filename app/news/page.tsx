@@ -2,6 +2,19 @@ import Link from "next/link";
 import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
+  {
+    date: "February 7, 2026",
+    title: "2026 NCTTA Texas Division",
+    content:
+      "Texas Wesleyan University hosted the NCTTA Texas Division on February 7th at the Sid Richardson Center in Fort Worth. Results of the tournament can be found at the NCTTA website.",
+    category: "Regional",
+    hasPhotos: true,
+    hasResults: true,
+    links: [
+      { text: "Photos", url: "https://1drv.ms/f/c/acd8701c94f053f8/IgBV_5U50UowSYsh4lEtL4OoAXG_SN-DlTlhx0yuFGA2I4w?e=U8LyYr" },
+      { text: "NCTTA Results", url: "http://www.nctta.org/results" },
+    ],
+   },  
    {
     date: "January 14, 2026",
     title: "George Braithwaite Major Team League Season 4",
