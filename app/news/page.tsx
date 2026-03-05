@@ -3,6 +3,19 @@ import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
   {
+    date: "February 28, 2026",
+    title: "2026 NCTTA South Regional",
+    content:
+      "Texas Wesleyan University hosted the NCTTA South Regional Championships on February 28th at the Sid Richardson Center in Fort Worth. Results of the tournament can be found at the NCTTA website.",
+    category: "Regional",
+    hasPhotos: true,
+    hasResults: true,
+    links: [
+      { text: "Photos", url: "https://1drv.ms/f/c/acd8701c94f053f8/IgBUQZOmOXwPSobPfzrJbNhKAdwnfqtXQCl42owYcFsEd1I?e=I4KB95" },
+      { text: "NCTTA Results", url: "http://www.nctta.org/results" },
+    ],
+  },
+  {
     date: "February 7, 2026",
     title: "2026 NCTTA Texas Division",
     content:
