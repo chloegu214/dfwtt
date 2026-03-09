@@ -28,7 +28,7 @@ const roundRobinResults = [
       { rank: 1, name: "Travis Qualls" },
       { rank: 2, name: "Kanika Dusad" },
       { rank: "3-4", name: "Takatoshi Mii, Rohan Yellapragada" },
-      { rank: 5, name: "Doug Zhuang, Takatoshi Mii, Aravind Parthasarathy" },
+      { rank: 5, name: "Doug Zhuang" },
       { rank: 6, name: "Norman Lehr" },
       { rank: 7, name: "Riya Yellapradada" },
       { rank: 8, name: "David Williams" }, 
