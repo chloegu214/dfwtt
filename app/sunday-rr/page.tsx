@@ -11,7 +11,30 @@ import { parseISO, format } from "date-fns";
 // Complete tournament results data from DFWTT website
 const roundRobinResults = [
  // 2026 Results
-  {
+ {
+    date: "2026-03-08",  
+    classA: [
+      { rank: 1, name: "Joshua Mak" },
+      { rank: 2, name: "Keith Pech" },
+      { rank: "3-4", name: "Vihaan Desaraju, Pratyush Mohanty" },     
+      { rank: "5-6", name: "Ranjit Rayamajhi, Maxwell Dillow" },
+      { rank: 7, name: "Dylan Joshua Ley" },
+      { rank: 8, name: "Nicholas Senturia" },
+      { rank: 9, name: "Vedanth Aswin" },
+      { rank: 10, name: "Saahaj Gade" },
+      { rank: 11, name: "Amir Dan" },
+    ],
+    classB: [
+      { rank: 1, name: "Travis Qualls" },
+      { rank: 2, name: "Kanika Dusad" },
+      { rank: "3-4", name: "Takatoshi Mii, Rohan Yellapragada" },
+      { rank: 5, name: "Doug Zhuang, Takatoshi Mii, Aravind Parthasarathy" },
+      { rank: 6, name: "Norman Lehr" },
+      { rank: 7, name: "Riya Yellapradada" },
+      { rank: 8, name: "David Williams" }, 
+    ],
+ },   
+ {
     date: "2026-03-01",  
     classA: [
       { rank: 1, name: "Keith Pech" },
@@ -653,7 +676,7 @@ const roundRobinResults = [
     classB: [
       { rank: 1, name: "Amir Dan" },
       { rank: 2, name: "Kanika Dusad" },
-      { rank: 3, name: "Sahaaji Gade" },
+      { rank: 3, name: "Sahaaj Gade" },
       { rank: 4, name: "Qihao Lin" },
       { rank: 5, name: "Norman Lehr" },
     ],
@@ -723,7 +746,7 @@ const roundRobinResults = [
       { rank: 4, name: "Ranjit Rayamajhi" },
       { rank: 5, name: "Pratyush Mohanty" },
       { rank: 6, name: "Arjun Dharangaoker" },
-      { rank: 7, name: "Sahaaji Gade" },
+      { rank: 7, name: "Sahaaj Gade" },
       { rank: 8, name: "Douglas Zhang" },
     ],
     classB: [
@@ -753,7 +776,7 @@ const roundRobinResults = [
     ],
     classB: [
       { rank: 1, name: "Yosef Lender" },
-      { rank: 2, name: "Sahaaji Gade" },
+      { rank: 2, name: "Sahaaj Gade" },
       { rank: 3, name: "Aswin Muthukumar" },
       { rank: 4, name: "Vedanth Aswin" },
       { rank: 5, name: "Norman Lehr" },
