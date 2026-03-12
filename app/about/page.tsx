@@ -111,8 +111,15 @@ export default function AboutPage() {
               <div className="space-y-2">
                 <p className="font-semibold text-lg">
                   Upcoming Tournaments:
-                </p>
+                  </p>
                   <p>
+                   2026 DFWTT School Challenge March 29 (Sunday) at the Heights Recreation Center.&nbsp;
+                   <a href= "/documents/DFWTT 26 School Challenge R2.pdf"
+                      className="font-medium text-blue-600 hover:text-blue-800 underline"                  
+                      target="_blank">Entry Form
+                   </a>
+                 </p>                                        
+                 <p>
                    2026 DFWTT Spring Open on March 14 (Saturday) at the Cimarron Recreation Center in Irving.&nbsp;
                    <a href= "/documents/DFWTT26SprOpn R1.pdf"
                       className="font-medium text-blue-600 hover:text-blue-800 underline"                  
@@ -125,7 +132,7 @@ export default function AboutPage() {
                       className="font-medium text-blue-600 hover:text-blue-800 underline"                  
                       target="_blank">Info
                    </a>
-                 </p>               
+                 </p> 
               </div>
              </AlertDescription>  
           </Alert>  

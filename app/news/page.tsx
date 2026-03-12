@@ -2,6 +2,18 @@ import Link from "next/link";
 import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
+   {
+    date: "March 12, 2026",
+    title: "2026 DFWTT School Challenge",
+    content:
+      "DFWTT would like to invite your school’s table tennis players to join our School Challenge tournament on March 29 (Sunday) at the Heights Recreation Center (711 W. Arapaho, Richardson) from 12:30 pm—2:30 pm. This is also a qualifying event before the “AYTTO 2026 Scholastic National Championship” tournament.",
+    category: "Tournament",
+    hasPhotos: false,
+    links: [
+      { text: "Register", url: "https://www.dfwtt.com/documents/DFWTT 26 School Challenge R2.pdf" },           
+      { text: "AYTTO National Championships", url: "https://www.dfwtt.com/documents/2026AYTTONationals.pdf" },
+    ],
+  }, 
   {
     date: "February 28, 2026",
     title: "2026 NCTTA South Regional",
