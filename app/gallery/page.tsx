@@ -6,6 +6,17 @@ import { useState } from "react"
 
 const galleryData = [
    {
+    year: "2026",
+    title: "DFWTT Spring Open 2026",
+    description:
+      "Pictures DFWTT Spring Open",
+    imageCount: 198,
+    highlights: ["DFWTT Spring Open"],
+    oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/IgCSyZsKGKaoSoQ9wkSZCsKZAWVGNIFXZeknh-U9nyUj73g?e=qjzr0D",
+    coverImage: "linear-gradient(135deg, #2A7B9B 0%, #EDDD53 100%)",
+    featured: true,
+  },    
+  {
     year: "2025",
     title: "DFWTT Fall Open 2025",
     description:
@@ -14,7 +25,6 @@ const galleryData = [
     highlights: ["DFWTT Fall Open"],
     oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/EopOseb5FqJIobSw_P5X_0wBFwKY-U8BoKbWMXo0LxOU2w?e=fxK3rv",
     coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    featured: true,
    },    
    {
     year: "2025",
@@ -25,7 +35,6 @@ const galleryData = [
     highlights: ["Chinese Double Ten"],
     oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/Ej6Whiv3_v5GukUr2Xppfv8BgHxA6U8tk3x7GN-bief9tA?e=vQTeTL",
     coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    featured: true,
   },  
   {
     year: "2025",
@@ -36,7 +45,6 @@ const galleryData = [
     highlights: ["Golden Games"],
     oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/EhEummqAirZDuLaKZS1NQlgBcmecO2mhAPFyy8K0Mu4DNQ?e=t6ty3K",
     coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    featured: true,
   },  
   {
     year: "2025",
@@ -47,7 +55,6 @@ const galleryData = [
     highlights: ["Summer Open", "High Participation", "Competitive Matches"],
     oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/El8ezZL6Ck9CsqmW_NV_pLEBRpNTjPuKHhzNbAluW6OjtQ?e=h8SN9f",
     coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    featured: true,
   },
   {
     year: "2025",
@@ -58,7 +65,6 @@ const galleryData = [
     highlights: ["Spring Tournament", "Regional Players", "Community Event", "Strong Competition"],
     oneDriveUrl: "https://1drv.ms/f/s!AvhT8JQccNiskd0IooDhNIPDRqueWQ?e=8EdMEj",
     coverImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    featured: true,
   },
   {
     year: "2024",
@@ -362,7 +368,7 @@ const galleryData = [
 
 const categories = [
   { id: "all", label: "All Years", icon: <Calendar className="h-4 w-4" /> },
-  { id: "recent", label: "Recent (2020-2025)", icon: <Camera className="h-4 w-4" /> },
+  { id: "recent", label: "Recent (2020-2026)", icon: <Camera className="h-4 w-4" /> },
   { id: "2010s", label: "2010s", icon: <Users className="h-4 w-4" /> },
   { id: "2000s", label: "2000s", icon: <Trophy className="h-4 w-4" /> },
 ]
@@ -403,7 +409,7 @@ export default function GalleryPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="flex items-center gap-2 text-blue-100">
                 <Calendar className="h-5 w-5" />
-                <span>2008 - 2025</span>
+                <span>2008 - 2026</span>
               </div>
               <div className="flex items-center gap-2 text-blue-100">
                 <Camera className="h-5 w-5" />

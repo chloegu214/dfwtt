@@ -9,6 +9,63 @@ import { Search, Trophy, Calendar, Users } from "lucide-react"
 
 // Tournament data - organized by year
 const tournamentData = {
+   "2026": [
+    {
+      title: "DFWTT Spring Open",
+      date: "March 14, 2026",
+      events: [
+        {
+          category: "U-2250",
+          first: "Winfred Addy",
+          second: "Pratyush Mohanty",
+          third: "David Wang",
+          fourth: "Jeff Nguyen",
+        },
+        {
+          category: "U-1850",
+          first: "Efosa Osayimwen",
+          second: "Mark Sabedra",
+          third: "Venkata Jalasutram",
+          fourth: "Stefanie Wang",
+        },
+        {
+          category: "U-1750",
+          first: "Bilguun Gantumur",
+          second: "Vijay Suriya",
+          third: "Ademayowa Owobamirin",
+          fourth: "Hemant Kshirsagar",
+        },
+        {
+          category: "U-1350",
+          first: "Kapil Tewari",
+          second: "Xianju Bi",
+          third: "Samar Shah",
+          fourth: "Maxwell Pham",
+        },
+        {
+          category: "U-1250",
+          first: "Samar Shah",
+          second: "Shrreshth Shah",
+          third: "Srisaran Vasanthavada",
+          fourth: "Mia Li",
+        },
+        {
+          category: "Open Singles",
+          first: "Kim Iwasaki",
+          second: "Viren Patel",
+          third: "Winfred Addy",
+          fourth: "Jeff Nguyen",
+        },
+        {
+          category: "U-4000 Doubles",
+          first: "Masood Hyder / Zain Shakir",
+          second: "Saahaj Gade / Kanika Dusad",
+          third: "Jack Liau / Christopher Marianthuvan",
+          fourth: "Rita Chao / Rajesh Alayil",
+        },
+      ],
+    },    
+  ], 
   "2025": [
     {
       title: "DFWTT Fall Open",
@@ -734,8 +791,8 @@ export default function ScoreboardPage() {
               <Calendar className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">2025</div>
-              <p className="text-xs text-muted-foreground">Summer Open - June 14</p>
+              <div className="text-2xl font-bold">2026</div>
+              <p className="text-xs text-muted-foreground">Spring Open - March 14</p>
             </CardContent>
           </Card>
         </div>
@@ -785,7 +842,7 @@ export default function ScoreboardPage() {
             <CardContent className="py-6">
               <h3 className="text-lg font-semibold text-blue-900 mb-2">Complete Tournament Archive</h3>
               <p className="text-blue-700">
-                This scoreboard contains results from 2002-2025, documenting over two decades of competitive table
+                This scoreboard contains results from 2002-2026, documenting over two decades of competitive table
                 tennis in the Dallas-Fort Worth area. Historical results help track player development and celebrate our
                 community's achievements.
               </p>

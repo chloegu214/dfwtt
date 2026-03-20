@@ -2,7 +2,21 @@ import Link from "next/link";
 import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
-   {
+  {
+    date: "March 14, 2026",
+    title: "2026 DFWTT Spring Open",
+    content:
+      "DFWTT hosted its Spring Open on March 14th at the Cimarron Recreation Center.",
+    category: "Tournament",
+    hasPhotos: true,
+    links: [
+      {
+        text: "Photos",
+        url: "https://1drv.ms/f/c/acd8701c94f053f8/IgCSyZsKGKaoSoQ9wkSZCsKZAWVGNIFXZeknh-U9nyUj73g?e=qjzr0D",
+      },
+    ],
+  }, 
+  {
     date: "March 12, 2026",
     title: "2026 DFWTT School Challenge",
     content:

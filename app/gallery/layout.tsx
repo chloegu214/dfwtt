@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Photo Gallery - DFWTT",
   description:
-    "Browse through 20 years of DFWTT memories, tournaments, and community events. Over 4,000 photos documenting our table tennis journey from 2006 to 2025.",
+    "Browse through 20 years of DFWTT memories, tournaments, and community events. Over 4,000 photos documenting our table tennis journey from 2006 to 2026.",
 }
 
 export default function GalleryLayout({

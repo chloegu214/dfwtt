@@ -119,20 +119,6 @@ export default function AboutPage() {
                       target="_blank">Entry Form
                    </a>
                  </p>                                        
-                 <p>
-                   2026 DFWTT Spring Open on March 14 (Saturday) at the Cimarron Recreation Center in Irving.&nbsp;
-                   <a href= "/documents/DFWTT26SprOpn R1.pdf"
-                      className="font-medium text-blue-600 hover:text-blue-800 underline"                  
-                      target="_blank">Entry Form
-                   </a>
-                 </p>                            
-                 <p>
-                   George Braithwaite Major Team League season 4 tournament on March 15th 2026 at 10:00am in Richardson Heights Rec Center.&nbsp;
-                   <a href= "/images/texas regional.png"
-                      className="font-medium text-blue-600 hover:text-blue-800 underline"                  
-                      target="_blank">Info
-                   </a>
-                 </p> 
               </div>
              </AlertDescription>  
           </Alert>  
