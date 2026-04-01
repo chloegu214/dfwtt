@@ -11,6 +11,68 @@ import { Search, Trophy, Calendar, Users } from "lucide-react"
 const tournamentData = {
    "2026": [
     {
+      title: "DFWTT School Challenge",
+      date: "March 29, 2026",
+      events: [
+        {
+          category: "High School Singles - Class A",
+          first: "Dhruv Dusad (Coppell High School)",
+          second: "Pratyush Mohanty (Coppell High School)",
+          third: "Saheb Bhatia (Coppell High School)",
+        },
+        {
+          category: "High School Singles - Class B",
+          first: "Om Joshi (Texas Academy of Math and Science)",
+          second: "Ryan Kattady (Cistercian Preparatory in Irving)",
+          third: "Vikranth Chappidi (Texas Academy of Math and Science)",
+        },
+        {
+          category: "Middle School Singles - Class A",
+          first: "Yizhou Zao",
+          second: "Kanika Dusad (Coppell Middle School East)",
+          third: "Arjun Dharangaonkar (Coppell Middle School East)",
+        },
+        {
+          category: "Middle School Singles - Class B",
+          first: "Viraaj Gupta (Fowler Middle School)",
+          second: "Shrreshth Shah (Coppell Middle West)",
+          third: "Vivaan Ubale (Coppell Middle West)",
+        },  
+        {
+          category: "Middle School Singles - Class C",
+          first: "Franklin Du (Don T Durham Intermediate School)",
+          second: "Arnav Agashe (Coppell Middle West)",
+          third: "Nikhil Unnam (Great Hearts Irving Upper School)",
+        },                      
+        {
+          category: "Elementary School Singles - Class A",
+          first: "Saahaj Gade (Riddle Elementary School)",
+          second: "",
+          third: "",
+        },
+        {
+          category: "Elementary School Singles - Class B",
+          first: "Mia Li (Jim and Betty Hughes Elementary School)",
+          second: "Pavani Aditya (Denton Creek Elementary)",
+          third: "Hong An (Ambrose) Lai (Portia Ross Taylor Elementary School)",
+          fourth: "Jaxson Chan (IL Texas Mansfield Heritage)",
+          fifth: "Neel Gopalan (Wilson Elementary School",
+        },        
+        {
+          category: "Doubles - Class A",
+          first: "Dhruv Dusad / Kanika Dusad",
+          second: "Pratyush Mohanty / Arjun Dharangaonkar",
+          third: "Yizhou Zao / Saheb Bhatia",
+        },
+        {
+         category: "Doubles - Class B",
+          first: "Viraaj Gupta / Ryan Kattady",
+          second: "Om Joshi / Vikranth Chappidi",
+          third: "Shrreshth Shah / Vivaan Ubale",          
+        },        
+      ],
+    },
+    {
       title: "DFWTT Spring Open",
       date: "March 14, 2026",
       events: [
@@ -747,6 +809,7 @@ export default function ScoreboardPage() {
           event.second,
           ...(event.third ? [event.third] : []),
           ...(event.fourth ? [event.fourth] : []),
+          ...(event.fifth ? [event.fifth] : []),          
         ]),
       ),
   ).size

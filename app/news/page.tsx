@@ -3,6 +3,17 @@ import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
   {
+    date: "March 29, 2026",
+    title: "2026 DFWTT School Challenge",
+    content:
+      "The DFWTT School Challenge was held on March 29th at the Heights Recreation Center. This served as a qualifying event for the AYTTO 2026 Scholastic National Championship.",
+    category: "Youth",
+    hasPhotos: true,
+    links: [
+      { text: "Photos", url: "https://1drv.ms/f/c/acd8701c94f053f8/IgDLELeU9M24Q7k0IF9uX-rOAXW20wy0cq5n3Vxx-l-EPk4?e=2JfKv2" },
+    ],
+  },
+  {
     date: "March 14, 2026",
     title: "2026 DFWTT Spring Open",
     content:
