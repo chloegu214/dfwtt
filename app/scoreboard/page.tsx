@@ -855,7 +855,7 @@ export default function ScoreboardPage() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">2026</div>
-              <p className="text-xs text-muted-foreground">Spring Open - March 14</p>
+              <p className="text-xs text-muted-foreground">School Challenge - March 29</p>
             </CardContent>
           </Card>
         </div>
