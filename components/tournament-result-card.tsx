@@ -11,6 +11,7 @@ interface TournamentResultCardProps {
     second: string
     third?: string
     fourth?: string
+    fifth?: string   
   }>
   year: string
 }
@@ -69,6 +70,13 @@ export function TournamentResultCard({ title, date, events, year }: TournamentRe
                     <span>{event.fourth}</span>
                   </div>
                 )}
+                 {event.fifth && (
+                  <div className="flex items-center gap-2">
+                    {getPositionIcon(5)}
+                    <span className="font-medium">5th:</span>
+                    <span>{event.fifth}</span>
+                  </div>
+                )}               
               </div>
             </div>
           ))}
