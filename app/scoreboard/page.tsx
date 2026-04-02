@@ -35,8 +35,8 @@ const tournamentData = {
         {
           category: "Middle School Singles - Class B",
           first: "Viraaj Gupta (Fowler Middle School)",
-          second: "Shrreshth Shah (Coppell Middle West)",
-          third: "Vivaan Ubale (Coppell Middle West)",
+          second: "Vivaan Ubale (Coppell Middle West)",
+          third: "Shrreshth Shah (Coppell Middle West)",
         },  
         {
           category: "Middle School Singles - Class C",
