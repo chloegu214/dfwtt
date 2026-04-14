@@ -2,6 +2,14 @@ import Link from "next/link";
 import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
+    {
+    date: "April 13, 2026",
+    title: "Coach Seth is back",
+    content:
+      "Our Coach Seth Pech is back from his European trip!!! He will be coaching at the DFW clubs for three months (April 22-July). Please reach out to Donna (214)240-5975 to schedule a lesson.",
+    category: "Training",
+    hasPhotos: false,
+  },
   {
     date: "March 29, 2026",
     title: "2026 DFWTT School Challenge",
