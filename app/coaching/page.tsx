@@ -5,56 +5,88 @@ import { Phone, Mail, Award, Users, Trophy } from "lucide-react"
 const coaches = [
   {
     name: "Donna Chen",
-    title: "City of Irving Contract Instructor",
-    image: "/placeholder.svg?height=120&width=120",
+    title: "City of Irving Contract Instructor for Table Tennis | Dallas Table Tennis Tournament Organizer",
+    image: "/images/coaches/Donna_Chen.png",
     specialties: ["Tournament Organization", "Women's Training", "Adult Programs", "Competition Coaching"],
     experience: "25+ years",
+    education: [
+      "Master's Degree in Public Administration",
+      "Major: Public Administration, Management",
+      "Minor: Psychology, Human Relations",
+      "Graduate Studies: Computer Sciences",
+    ],
     certifications: [
-      "USATT Certified Assistant Regional Coach",
-      "USATT Certified Club Umpire",
-      "USATT Certified Assistant Club Coach",
-      "ITTF Certified International Assistant Coach",
+      "1997 ITTF Certified International Assistant Coach",
+      "1998 USATT Certified Assistant Regional Coach",
+      "1998 USATT Certified Club Umpire",
+      "1995 USATT Certified Assistant Club Coach",
     ],
     description:
-      "Professional table tennis instructor and tournament organizer with extensive competitive background and coaching certifications.",
+      "Professional table tennis instructor and tournament organizer with extensive competitive background, international coaching certifications, and a Master's degree in Public Administration.",
     achievements: [
       { year: "2000", title: "US Closed Women O-40 National Runner Up", event: "US Closed Championship" },
       { year: "2000", title: "US Open Women O-40 National 3rd", event: "US Open" },
       { year: "1998", title: "Best Western Region Coach", event: "Regional Championship" },
-      { year: "1998", title: "US Open Women O-40 International Champion", event: "US Open" },
+      { year: "1998", title: "TX Open International Disabled Team Coordinator", event: "TX Open" },
+      { year: "1998", title: "US Open Women O-40 All-Star National Champion", event: "US Open" },
       { year: "1997", title: "US Open Women O-40 International Champion", event: "US Open" },
     ],
   },
   {
     name: "Ranjit Singh Rayamajhi",
-    title: "ITTF Level 2 Certified Coach",
-    image: "/placeholder.svg?height=120&width=120",
+    title: "ITTF+PTT Level 2 Certified Coach",
+    image: "/images/coaches/Ranjit_Singh.png",
     specialties: ["High-Level Competition", "Technical Skills", "International Experience", "Elite Training"],
     experience: "20+ years playing, 11+ years coaching",
     certifications: ["ITTF+PTT Level 2 Certified Coach"],
     description:
-      "Professionally qualified Nepali Table Tennis Player/Coach with 2 decades of experience and top 3 ranking in Nepal.",
+      "A professionally qualified and experienced Nepali Table Tennis Player/Coach who has spent 2 decades reaching the top 3 players in Nepal.",
+    bio: [
+      "A Professionally qualified and experienced Nepali Table Tennis Player/Coach.",
+      "I have spent my valuable 2 decades of time and raised myself to the level of top 3 players in Nepal. And with my 20 years of experience as a TT Player and 11 years of experience as a coach, I am confident that I can intensify the quality in State/National Level Games.",
+      "Development Objective: My long term goal is to develop table tennis players with high quality talent in order to challenge the World's players and bring Medals to the USA.",
+      "Immediate Objectives: Bring a change by introducing improved technical skills and knowledge, increased income-generating capacities, and greater public awareness at the community, national, regional or international levels about Table Tennis.",
+    ],
     achievements: [
-      { year: "2017", title: "2nd Place Big Ball 2 Man Team", event: "DFWTT Spring Open" },
-      { year: "2017", title: "1st Place U2450 Rated Event", event: "Texas Winter Games" },
-      { year: "2016", title: "2nd Place Open Doubles", event: "DFWTT Fall Open" },
+      { year: "2017", title: "2nd Place - Big Ball 2 Man Team", event: "DFWTT Spring Open" },
+      { year: "2017", title: "1st Place - U2450 Rated Event", event: "Texas Winter Games" },
+      { year: "2016", title: "US Open", event: "" },
+      { year: "2016", title: "2nd Place - Open Doubles", event: "DFWTT Fall Open" },
       { year: "2016", title: "1st Place", event: "NST Championship" },
-      { year: "2015", title: "2nd Place U2400 Rated Event", event: "Texas Winter Games" },
+      { year: "2016", title: "2nd Place", event: "DFWTT Invitational" },
+      { year: "2015", title: "2nd Place - U2400 Rated Event", event: "Texas Winter Games" },
+      { year: "2015", title: "2nd Place - U2450 Rated Event", event: "DFWTT Fall Open" },
       { year: "2014", title: "1st Place", event: "World Peace Tournament" },
-      { year: "2013", title: "Participated", event: "21st Asian Table Tennis Championship - South Korea" },
-      { year: "2012", title: "Participated", event: "World Team Table Tennis Championship - Germany" },
+      { year: "2014", title: "1st Place - U2450 Rated Event", event: "DFWTT Fall Open" },
+      { year: "2014", title: "2nd Place - Class A Open Singles & Doubles", event: "Chinese Double Ten" },
+      { year: "2014", title: "US Open", event: "" },
+      { year: "2013", title: "21st Asian Table Tennis Championship - South Korea", event: "" },
+      { year: "2012", title: "World Team Table Tennis Championship - Dortmund, Germany", event: "" },
+      { year: "2010", title: "16th Asian Games - Guangzhou, China", event: "" },
+      { year: "2007", title: "18th Asian TT Championship - China", event: "" },
+      { year: "2007", title: "ITTF Pro Tour India - India", event: "" },
+      { year: "2002", title: "World University TT Championship - China", event: "" },
+      { year: "1995", title: "13th Asian TT Championship - Singapore", event: "" },
+      { year: "1994", title: "Nepal Bhutan Friendship Match - Bhutan", event: "" },
+      { year: "1991", title: "Times of India TT Championship - India", event: "" },
+      { year: "1990", title: "Electra Gold Cup TT Championship - Delhi, India", event: "" },
+      { year: "1990", title: "Pyongyang Open TT Championship - North Korea", event: "" },
+      { year: "1989", title: "Junior Asian TT Championship - Delhi, India", event: "" },
     ],
   },
   {
     name: "Keith Pech",
     title: "USATT Regional Coach",
-    image: "/placeholder.svg?height=120&width=120",
+    image: "/images/coaches/Keith_Pech.png",
     specialties: ["Competition Coaching", "Advanced Techniques", "Tournament Preparation", "International Experience"],
     experience: "15+ years coaching and competing",
-    rating: "2275",
+    rating: "Highest USATT Rating: 2361",
     certifications: ["ITTF Level 2 Certified Coach", "USATT Certified Regional Coach", "USATT Certified Umpire"],
     description:
       "Experienced coach and competitor with international experience in the United States, Latin America, and France.",
+    bio: [
+      "Over 15 years of experience coaching and competing in the United States, Latin America and France.",
+    ],
     achievements: [
       { year: "2017-2018", title: "French Individual National 2 League", event: "France" },
       { year: "2017-2018", title: "French Team Regional 1 League", event: "France" },
@@ -65,7 +97,7 @@ const coaches = [
   {
   name: "Seth Pech",
   title: "Professional Table Tennis Player & Coach",
-  image: "/placeholder.svg?height=120&width=120",
+  image: "/images/coaches/Seith_Pech.png",
   specialties: [
     "Technical & Tactical Coaching",
     "Serve and Short Game Strategy",
@@ -164,7 +196,7 @@ export default function CoachingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8">
             {coaches.map((coach, index) => (
               <CoachCard key={index} {...coach} />
             ))}
