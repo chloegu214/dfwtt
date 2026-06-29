@@ -11,7 +11,29 @@ import { parseISO, format } from "date-fns";
 // Complete tournament results data from DFWTT website
 const roundRobinResults = [
  // 2026 Results
-  {
+ {
+    date: "2026-06-28",  
+    classA: [
+      { rank: 1, name: "Seth Pech" },
+      { rank: 2, name: "Dhruv Dusad" },
+      { rank: 3, name: "Pratyush Mohanty" },
+      { rank: "4-5", name: "Ranjit Rayamajhi, Keith Pech" },
+      { rank: "6-7", name: "Arjun Dharangaonkar, Ivan Tsai" }, 
+      { rank: 8, name: "Vedanth Aswin" },
+      { rank: 9, name: "Kanika Dusad" }, 
+      { rank: 10, name: "Aswin Muthukumar" }, 
+      { rank: 11, name: "Chetan Kikil" },                               
+    ],
+    classB: [
+      { rank: 1, name: "Josef Lender" },
+      { rank: 2, name: "Kuntal Pal" },
+      { rank: 3, name: "Akash Krishnamurthy" },
+      { rank: 4, name: "Raymond Sacco" },
+      { rank: 5, name: "David Williams" },
+      { rank: 6, name: "Pavani Vishnubhotla" },
+     ],
+ },   
+ {
     date: "2026-06-21",  
     classA: [
       { rank: 1, name: "Dhruv Dusad" },
