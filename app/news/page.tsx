@@ -7,7 +7,7 @@ const currentNews = [
     title: "Table Tennis Beginners Class",
     content:
       "Aimed at teaching local youth the basic techniques, rules, regulations, & good sports conduct. Heights Recreation Center, Fridays 5:00pm - 6:00pm, July 10th - 31st.",
-    category: "Tournament",
+    category: "Youth",
     hasPhotos: false,
     links: [
       { text: "Information Flyer", url: "https://www.dfwtt.com/documents/Table Tennis Flyer 8.5x11 (1).pdf" },           
