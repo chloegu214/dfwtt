@@ -2,7 +2,19 @@ import Link from "next/link";
 import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
-    {
+   {
+    date: "July 8, 2026",
+    title: "Table Tennis Beginners Class",
+    content:
+      "Aimed at teaching local youth the basic techniques, rules, regulations, & good sports conduct. Heights Recreation Center, Fridays 5:00pm - 6:00pm, July 10th - 31st.",
+    category: "Tournament",
+    hasPhotos: false,
+    links: [
+      { text: "Information Flyer", url: "https://www.dfwtt.com/documents/Table Tennis Flyer 8.5x11 (1).pdf" },           
+      { text: "Sign up online - Richardson Parks & Recreation", url: "https://anc.apm.activecommunities.com/richardsontx/activity/search/detail/45706?onlineSiteId=0&from_original_cui=true" },
+    ],
+  }, 
+  {
     date: "April 13, 2026",
     title: "Coach Seth is back",
     content:
