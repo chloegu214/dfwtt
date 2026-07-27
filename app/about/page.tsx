@@ -104,7 +104,7 @@ export default function AboutPage() {
           <p>&nbsp;</p>
  */ }
 
-      {/* Upcoming Tournaments Section 
+      {/* Upcoming Tournaments Section */ }
  
           <Alert className="border-black-200 bg-yellow-50">
               <AlertDescription className="text-black-800">  
@@ -113,8 +113,8 @@ export default function AboutPage() {
                   Upcoming Tournaments:
                   </p>
                   <p>
-                   2026 DFWTT School Challenge March 29 (Sunday) at the Heights Recreation Center.&nbsp;
-                   <a href= "/documents/DFWTT 26 School Challenge R2.pdf"
+                   2026 Chinese Double Ten Celebration tournament on September 19 (Saturday) at the Cimarron Recreation Center in Irving.&nbsp;
+                   <a href= "/documents/2026DblTen.pdf"
                       className="font-medium text-blue-600 hover:text-blue-800 underline"                  
                       target="_blank">Entry Form
                    </a>
@@ -124,7 +124,6 @@ export default function AboutPage() {
           </Alert>  
 
           <p>&nbsp;</p>
-*/   }
 
       {/* School Players Section */}                 
           <Alert className="border-black-200 bg-yellow-50">
