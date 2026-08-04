@@ -70,6 +70,11 @@ export default function Footer() {
                   Sponsorship
                 </a>
               </li>
+              <li>
+                <a href="https://apps.apple.com/us/app/tt-scoreboard-calculator/id6778899767" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                  TT Scoreboard iOS App
+                </a>
+              </li>
             </ul>
           </div>
 
