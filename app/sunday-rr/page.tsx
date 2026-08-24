@@ -14,7 +14,7 @@ const roundRobinResults = [
  {
     date: "2026-08-23",  
     classA: [
-      { rank: "1", name: "Seth Pech" },
+      { rank: 1, name: "Seth Pech" },
       { rank: 2, name: "Keith Pech" },
       { rank: 3, name: "Ranjit Rayamajhi" },
       { rank: "4-5", name: "Dhruv Dusad, Vihaan Desaraju" },
