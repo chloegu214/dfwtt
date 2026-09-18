@@ -11,6 +11,13 @@ import {
 
 const donationHistory = [
   {
+    year: "2026",
+    donations: [
+      { amount: "130", organization: "Dallas Chinese Community Center" },      
+    ],
+    totalAmount: 130,
+  },
+  {
     year: "2025",
     donations: [
        {
@@ -380,7 +387,7 @@ export default function PatronsPage() {
             <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">
               Every tournament participant contributes to charity through our $2
               donation program. Together, we've donated{" "}
-              <span className="font-bold text-yellow-300">$15,187.57</span> to
+              <span className="font-bold text-yellow-300">$15,317.57</span> to
               support communities in need.
             </p>
 
