@@ -119,13 +119,6 @@ export default function AboutPage() {
                       target="_blank">Entry Form
                    </a>
                  </p> 
-                 <p>
-                   2026 Chinese Double Ten Celebration tournament on September 19 (Saturday) at the Cimarron Recreation Center in Irving.&nbsp;
-                   <a href= "/documents/2026DblTen.pdf"
-                      className="font-medium text-blue-600 hover:text-blue-800 underline"                  
-                      target="_blank">Entry Form
-                   </a>
-                 </p>                                                                     
               </div>
              </AlertDescription>  
           </Alert>  
