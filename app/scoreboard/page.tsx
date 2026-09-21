@@ -11,6 +11,137 @@ import { Search, Trophy, Calendar, Users } from "lucide-react"
 const tournamentData = {
    "2026": [
     {
+      title: "Chinese Double Ten",
+      date: "September 19, 2026",
+      events: [
+        {
+          category: "80 & Over Singles",
+          first: "Grant Bergmann",
+          second: "William T Garrard",
+        },
+        {
+          category: "70-79 Singles",
+          first: "Serena Kong",
+          second: "Che Nguyen",
+          third: "Mark Chen",          
+        },
+        {
+          category: "60-69 Singles",
+          first: "Allen Chuang",
+          second: "Rick Liou",
+          third: "Arief Khan",
+        },
+        {
+          category: "50-59 Singles",
+          first: "Takatoshi Mii",
+          second: "Hui Zhuz",
+          third: "Mohammed Siddiqui",
+        },
+        {
+          category: "40-49 (A) Singles",
+          first: "Pablo Frias",
+          second: "Arjun Namundappa",
+          third: "Razi Syed",         
+        },
+        {
+          category: "40-49 (B) Singles",
+          first: "Elango Kathiravan",
+          second: "Onitiju Omololu",
+          third: "N K Krishnamoorthy",
+        },
+        {
+          category: "Women Singles",
+          first: "Mary Nguyen",
+          second: "Allison Li",
+          third: "Aishwarya Marreddi",          
+        },
+        {
+          category: "20-39 (A) Singles",
+          first: "Travis Qualls",
+          second: "Mohit Kanti",
+          third: "Sairam Ramalingam",          
+        },
+        {
+          category: "20-39 (B) Singles",
+          first: "Mohammed Abdul Raoof",
+          second: "Miheeth Gala",
+          third: "Isaac Olowogbade",          
+        },        
+        {
+          category: "14-19 (A) Singles",
+          first: "Shrreshth Shah",
+          second: "Amudhan Elango",
+          third: "Srisaran Vasanthavado",          
+        },
+        {
+          category: "14-19 (B) Singles",
+          first: "Markie Sabedra",
+          second: "Hrishikesh Rao",
+          third: "Arnav Agashe",          
+        },        
+        {
+          category: "12-13 Singles",
+          first: "Franklin Du",
+          second: "Kushal Anand",
+          third: "Vedant Doddagovdar",
+        },
+        {
+          category: "10-11 Singles",
+          first: "Gabriel Zhu",
+          second: "Ethan Qu",
+          third: "Josheph Zhu",
+        },
+        {
+          category: "8-9 Singles",
+          first: "Agastya Arjun",
+          second: "Paari Elavaendhan",
+          third: "Paridhi Elavaendhan",         
+        },
+        {
+          category: "Open Singles Class A",
+          first: "Allen Chuang",
+          second: "Travis Qualls",
+          third: "Mohit Kanti",         
+        },
+        {
+          category: "Open Singles Class B",
+          first: "Amudhan Elango",
+          second: "Elango Kathiravan",
+          third: "Arjun Namundappa",          
+        },
+        {
+          category: "Open Singles Class C",
+          first: "Xianju Bi",
+          second: "Sheik Mohamed",
+          third: "Isaac Olowogbade",
+        }, 
+        {
+          category: "Open Singles Class D",
+          first: "Raymond Hor",
+          second: "Gabriel Zhu",
+          third: "Franklin Du",
+        },                                     
+        {
+          category: "Open Doubles Class B",
+          first: "Takatoshi Mii / Allen Chuang",
+          second: "Mark Sabedra / Travis Qualls",
+          third: "Ram Srinivasan / Sairam Ramalingam",         
+        },
+        {
+          category: "Open Doubles Class C",
+          first: "Arjun Namundappa / Agastya Arjun",
+          second: "Mohammed Siddiqui / Mohammed Abdul Raoof",
+          third: "Srisaran Vasanthavada / Shrreshth Shah",          
+        },
+        {
+          category: "Open Doubles Class D",
+          first: "Mary Nguyen / Sherrief Osmi",
+          second: "Markie Sabedra / Franklin Du",
+          third: "Aishwarya Marreddi / Miheeth Gala",
+        },
+      ],
+    },            
+    {
       title: "DFWTT School Challenge",
       date: "March 29, 2026",
       events: [
