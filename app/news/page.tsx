@@ -2,7 +2,21 @@ import Link from "next/link";
 import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
-   {
+  {
+    date: "September 19, 2026",
+    title: "2026 Chinese Double Ten",
+    content:
+      "DFWTT hosted its yearly Chinese Double Ten Celebration tournament on September 19th at the Irving Cimarron Recreation Center.",
+    category: "Tournament",
+    hasPhotos: true,
+    links: [
+      {
+        text: "Photos",
+        url: "https://1drv.ms/f/c/acd8701c94f053f8/IgBuR4ywEGQ-Rq4PvzmUJtmXAdod0STHF4E6Ayk94I_gHWE?e=aOEEZ2",
+      },
+    ],
+  }, 
+  {
     date: "July 8, 2026",
     title: "Table Tennis Beginners Class",
     content:
