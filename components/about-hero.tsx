@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import DFWTTSpringOpen from "../public/images/2026 DFWTT Spring Open.jpg";
+import DFWTTSpringOpen from "../public/images/2026 DFWTT Double Ten.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
