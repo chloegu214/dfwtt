@@ -86,7 +86,7 @@ export default function AboutPage() {
       <section className="py-12 bg-yellow-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      { /*Location Closings Section 
+      { /*Location Closings Section */ }
            
           <Alert className="border-black-200 bg-red-50">
              <AlertDescription className="text-red-800">
@@ -95,15 +95,14 @@ export default function AboutPage() {
                   Location Closings:
                 </p>
                 <p>
-                  Heights TT location will be closed on Friday, July 3rd. 
+                  The Heights TT club will be closed Both October 2 (Friday night) and October 4 (Sunday afternoon) due to a Corporation Challenge tournament. 
                 </p>
                </div>
             </AlertDescription>
           </Alert>
 
           <p>&nbsp;</p>
- */ }
-
+ 
       {/* Upcoming Tournaments Section */ }
  
           <Alert className="border-black-200 bg-yellow-50">
