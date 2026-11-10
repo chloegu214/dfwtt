@@ -2,6 +2,20 @@ import Link from "next/link";
 import { Calendar, Archive, ExternalLink, Camera, Trophy } from "lucide-react";
 
 const currentNews = [
+   {
+    date: "November 7, 2026",
+    title: "2026 DFWTT Fall Open",
+    content:
+      "DFWTT hosted its yearly Fall Open tournament on November 7th at the Irving Cimarron Recreation Center.",
+    category: "Tournament",
+    hasPhotos: true,
+    links: [
+      {
+        text: "Photos",
+        url: "https://1drv.ms/f/c/acd8701c94f053f8/IgCNeR94N3rVRL111YjkoewPAdRChThSp_FwWLTXqJZOR0c?e=rP6fuf",
+      },
+    ],
+  }, 
   {
     date: "September 19, 2026",
     title: "2026 Chinese Double Ten",
