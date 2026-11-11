@@ -11,6 +11,61 @@ import { Search, Trophy, Calendar, Users } from "lucide-react"
 const tournamentData = {
    "2026": [
     {
+      title: "DFWTT Fall Open",
+      date: "November 7, 2026",
+      events: [
+        {
+          category: "U-2250",
+          first: "Winfred Addy",
+          second: "Dhruv Dusad",
+          third: "Ramon Ridwan Abiola",
+          fourth: "Junho Park"
+        },
+        {
+          category: "U-1900",
+          first: "Aravind Parthasarathy",
+          second: "Chandu Jalasutram",
+          third: "Chetan Kokil",
+          fourth: "Kanika Dusad"
+        },
+        {
+          category: "U-1750",
+          first: "Max Flores",
+          second: "Sheik Mohamed",
+          third: "Serena Kong",
+          fourth: "Xiaoping Chen"
+        },
+        {
+          category: "U-1400",
+          first: "Dennis Ochei",
+          second: "Jin Roh",
+          third: "Nicholas Herrera",
+          fourth: "Velangani Divya Vard Bandi"
+        },
+        {
+          category: "U-1250",
+          first: "Dennis Ochei",
+          second: "Mi Kim",
+          third: "Hwahoon Jeong",
+          fourth: "David Williams"
+        },
+        {
+          category: "Open Singles",
+          first: "Nicolas Andrade",
+          second: "Winfred Addy",
+          third: "Ranjit Singh Rayamajhi",
+          fourth: "Dhruv Dusad"
+         },
+        {
+          category: "U-4000 Doubles",
+          first: "Isaac Olowogbade / Omololu Onitiju",
+          second: "Jeremy Wood / Nicholas Herrera",
+          third: "Ravali Mandala / Srisaran Vasanthavada",
+          fourth: "William Witten / John Wood",
+        },
+      ],
+    },    
+    {
       title: "Chinese Double Ten",
       date: "September 19, 2026",
       events: [
