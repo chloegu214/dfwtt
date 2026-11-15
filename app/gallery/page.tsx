@@ -5,6 +5,17 @@ import { Calendar, Camera, Users, Trophy, Search, Filter } from "lucide-react"
 import { useState } from "react"
 
 const galleryData = [
+ {
+    year: "2026",
+    title: "DFWTT Fall Open 2026",
+    description:
+      "Pictures DFWTT Fall Open",
+    imageCount: 146,
+    highlights: ["DFWTT Fall Open"],
+    oneDriveUrl: "https://1drv.ms/f/c/acd8701c94f053f8/IgCNeR94N3rVRL111YjkoewPAdRChThSp_FwWLTXqJZOR0c?e=rP6fuf",
+    coverImage: "linear-gradient(135deg, #2A7B9B 0%, #EDDD53 100%)",
+    featured: true,
+  },     
   {
     year: "2026",
     title: "Chinese Double Ten 2026",
