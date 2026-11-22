@@ -133,26 +133,45 @@ export default function AboutPage() {
                 <p className="font-semibold text-lg">
                   Flyers:
                 </p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>
-                    <a href="/documents/DFWTT%20Flyer%20Front%20091223.pdf"
-                       className="font-medium text-blue-600 hover:text-blue-800 underline"
-                       target="_blank" rel="noopener noreferrer">DFW Table Tennis Flyer (Locations, Hours &amp; Fees)
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/documents/DFWTT%20LOC%20122723.pdf"
-                       className="font-medium text-blue-600 hover:text-blue-800 underline"
-                       target="_blank" rel="noopener noreferrer">DFW Table Tennis Locations Map
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/documents/DFWTT%20HTS%20SndySnglsRR%20R1.pdf"
-                       className="font-medium text-blue-600 hover:text-blue-800 underline"
-                       target="_blank" rel="noopener noreferrer">Heights Sunday Singles Round Robin
-                    </a>
-                  </li>
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+                  {[
+                    {
+                      title: "DFW Table Tennis Flyer (Locations, Hours & Fees)",
+                      image: "/images/dfwtt-flyer.jpg",
+                      pdf: "/documents/DFWTT%20Flyer%20Front%20091223.pdf",
+                      alt: "DFW Table Tennis flyer with club locations, playing hours, and drop-by fees",
+                    },
+                    {
+                      title: "DFW Table Tennis Locations Map",
+                      image: "/images/dfwtt-locations-map.jpg",
+                      pdf: "/documents/DFWTT%20LOC%20122723.pdf",
+                      alt: "Map of DFW Table Tennis locations: Cimarron, Timberglen, Marcus, and Heights Recreation Centers",
+                    },
+                    {
+                      title: "Heights Sunday Singles Round Robin",
+                      image: "/images/sunday-singles-rr-flyer.jpg",
+                      pdf: "/documents/DFWTT%20HTS%20SndySnglsRR%20R1.pdf",
+                      alt: "Heights Sunday Singles Round Robin flyer: Sundays 2:00 PM - 4:50 PM at Heights Recreation Center",
+                    },
+                  ].map((flyer) => (
+                    <div key={flyer.pdf} className="flex flex-col items-center text-center">
+                      <a href={flyer.pdf} target="_blank" rel="noopener noreferrer" className="block w-full">
+                        <Image
+                          src={flyer.image}
+                          alt={flyer.alt}
+                          width={1344}
+                          height={1739}
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="w-full h-auto rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-shadow"
+                        />
+                      </a>
+                      <a href={flyer.pdf}
+                         className="mt-3 font-medium text-blue-600 hover:text-blue-800 underline"
+                         target="_blank" rel="noopener noreferrer">{flyer.title} (PDF)
+                      </a>
+                    </div>
+                  ))}
+                </div>
               </div>
             </AlertDescription>
           </Alert>
