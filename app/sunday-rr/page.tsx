@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { Search, Calendar, Users, Trophy } from "lucide-react"
+import { Search, Calendar, Users, Trophy, FileText } from "lucide-react"
 import { RRResultCard } from "@/components/rr-result-card"
 import { YearSelector } from "@/components/year-selector"
 import { parseISO, format } from "date-fns";
@@ -1972,6 +1972,15 @@ export default function SundayRRPage() {
             Weekly round robin tournament results featuring competitive play across multiple skill divisions. Track
             player progress and see how the competition has evolved over the years.
           </p>
+          <a
+            href="/documents/DFWTT%20HTS%20SndySnglsRR%20R1.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-4 font-medium text-blue-600 hover:text-blue-800 underline"
+          >
+            <FileText className="h-4 w-4" />
+            View Sunday Singles Round Robin Flyer
+          </a>
         </div>
 
         {/* Statistics Cards */}
