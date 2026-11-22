@@ -126,6 +126,39 @@ export default function AboutPage() {
           <p>&nbsp;</p>
     */ }
 
+      {/* Flyers Section */}
+          <Alert className="border-black-200 bg-blue-50">
+            <AlertDescription className="text-black-800">
+              <div className="space-y-2">
+                <p className="font-semibold text-lg">
+                  Flyers:
+                </p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>
+                    <a href="/documents/DFWTT%20Flyer%20Front%20091223.pdf"
+                       className="font-medium text-blue-600 hover:text-blue-800 underline"
+                       target="_blank" rel="noopener noreferrer">DFW Table Tennis Flyer (Locations, Hours &amp; Fees)
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/documents/DFWTT%20LOC%20122723.pdf"
+                       className="font-medium text-blue-600 hover:text-blue-800 underline"
+                       target="_blank" rel="noopener noreferrer">DFW Table Tennis Locations Map
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/documents/DFWTT%20HTS%20SndySnglsRR%20R1.pdf"
+                       className="font-medium text-blue-600 hover:text-blue-800 underline"
+                       target="_blank" rel="noopener noreferrer">Heights Sunday Singles Round Robin
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </AlertDescription>
+          </Alert>
+
+          <p>&nbsp;</p>
+
       {/* School Players Section */}                 
           <Alert className="border-black-200 bg-yellow-50">
              <AlertDescription className="text-yellow-800">
