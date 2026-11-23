@@ -3,10 +3,11 @@
 import { useState, useMemo } from "react"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { Search, Calendar, Users, Trophy } from "lucide-react"
+import { Search, Calendar, Users, Trophy, FileText } from "lucide-react"
 import { RRResultCard } from "@/components/rr-result-card"
 import { YearSelector } from "@/components/year-selector"
 import { parseISO, format } from "date-fns";
+import Image from "next/image"
 
 // Complete tournament results data from DFWTT website
 const roundRobinResults = [
@@ -1993,6 +1994,28 @@ export default function SundayRRPage() {
             Weekly round robin tournament results featuring competitive play across multiple skill divisions. Track
             player progress and see how the competition has evolved over the years.
           </p>
+        </div>
+
+        {/* Flyer */}
+        <div className="max-w-2xl mx-auto mb-12 text-center">
+          <Image
+            src="/images/sunday-singles-rr-flyer.jpg"
+            alt="Heights Sunday Singles Round Robin flyer: Sundays 2:00 PM - 4:50 PM at Heights Recreation Center, 711 W. Arapaho Rd, Richardson, TX 75080"
+            width={1344}
+            height={1739}
+            sizes="(max-width: 768px) 100vw, 672px"
+            className="w-full h-auto rounded-lg shadow-lg border border-gray-200"
+            priority
+          />
+          <a
+            href="/documents/DFWTT%20HTS%20SndySnglsRR%20R1.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-4 font-medium text-blue-600 hover:text-blue-800 underline"
+          >
+            <FileText className="h-4 w-4" />
+            Download / Print Flyer (PDF)
+          </a>
         </div>
 
         {/* Statistics Cards */}
